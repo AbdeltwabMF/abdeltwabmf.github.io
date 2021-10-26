@@ -1,0 +1,56 @@
+html, body {
+	padding: 0px;
+	margin: 0px;
+
+	background: #FFEA9D;
+
+	font-family: "Linux Biolinum";
+	font-size: 20px;
+}
+
+.content {
+	text-align: center;
+	padding: 24px 0;
+}
+
+.outline {
+	padding: 20px 0;
+	margin: 20px 0;
+}
+
+.outline_header {
+	font-size: 3em;
+}
+
+.contact li, .header li {
+	list-style: none;
+}
+
+.header ul, .header nav, .header li, .content li {
+	display: inline;
+}
+
+.header {
+	padding: 10px;
+	text-align: center;
+
+	font-family: "Fantasque Sans Mono";
+
+	background: #CFB666;
+}
+
+.header_left {
+	padding-right: 200px;
+}
+
+.header_right {
+	padding-left: 200px;
+}
+
+.footer {
+	padding: 10px 0;
+
+	text-align: center;
+
+	background: #CFB666;
+}
