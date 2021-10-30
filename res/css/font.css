@@ -4,42 +4,42 @@
 
 @font-face {
 	font-family: "Linux Libertine";
-	src: url("../res/fonts/LinLibertine_R.ttf");
+	src: url("../fonts/LinLibertine_R.ttf");
 	font-style: normal;
 }
 
 @font-face {
 	font-family: "Linux Biolinum";
-	src: url("../res/fonts/LinBiolinum_R.ttf");
+	src: url("../fonts/LinBiolinum_R.ttf");
 	font-style: normal;
 }
 
 @font-face {
 	font-family: "Ubuntu Arabic";
-	src: url("../res/fonts/Ubuntu-Arabic_R.ttf");
+	src: url("../fonts/Ubuntu-Arabic_R.ttf");
 	font-style: normal;
 }
 
 @font-face {
 	font-family: "Amiri Quran";
-	src: url("../res/fonts/Amiri-Regular.ttf");
+	src: url("../fonts/Amiri-Regular.ttf");
 	font-style: normal;
 }
 
 @font-face {
 	font-family: "Font Awesome";
-	src: url("../res/fonts/fontawesome-regular.ttf");
+	src: url("../fonts/fontawesome-regular.ttf");
 	font-style: normal;
 }
 
 @font-face {
 	font-family: "Ubuntu Monospaced";
-	src: url("../res/fonts/UbuntuMono-R.ttf");
+	src: url("../fonts/UbuntuMono-R.ttf");
 	font-style: normal;
 }
 
 @font-face {
 	font-family: "Fantasque Sans Mono";
-	src: url("../res/fonts/FantasqueSansMono-Regular.ttf");
+	src: url("../fonts/FantasqueSansMono-Regular.ttf");
 	font-style: normal;
 }
