@@ -12,7 +12,7 @@ html, body {
 
 /* body */
 .content {
-	padding: 64px 0 24px;
+	padding: 96px 0 24px;
 	text-align: center;
 
 	font-size: 28px;
@@ -37,7 +37,7 @@ html, body {
 }
 
 .contact {
-	padding: 20px 0px 0px;
+	padding: 64px 0px 0px;
 
 	text-align: center;
 }
