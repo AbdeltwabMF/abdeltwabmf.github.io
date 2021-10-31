@@ -25,26 +25,30 @@ li {
 	list-style: none;
 }
 
+p {
+	padding: 0px 0px 10px;
+}
+
 /* Body */
 .content {
-	padding: 96px 0 24px;
+	padding: 44px 0 32px;
 	text-align: center;
 
-	font-size: 28px;
+	font-size: 16px;
 }
 
 .outline {
-	padding: 20px 0 20px;
+	padding: 96px 0 32px;
 }
 
 .outline_header {
-	padding: 20px 0 20px;
-	font-size: 44px;
+	padding: 16px 0 16px;
+	font-size: 48px;
 }
 
 .outline_description {
 	font-family: "Ubuntu Monospaced";
-	font-size: 22px;
+	font-size: 20px;
 }
 
 /* Contacts */
@@ -126,6 +130,53 @@ li {
 	height: 16px;
 }
 
+/** About **/
+.subject {
+	padding: 32px 0px 32px;
+}
+
+.subject_header {
+	padding: 0px 0px 24px;
+	color: #006748;
+
+	font-size: 32px;
+}
+
+.regular_paragraph {
+	text-align: left;
+	padding: 0px 20px 0px;
+
+	font-family: "Ubuntu Monospaced";
+	font-size: 16px;
+	line-height: 24px;
+
+	display: grid;
+}
+
+.resume {
+	font-size: 20px;
+}
+
+/* Style buttons */
+.btn {
+  background-color: #006748;
+  color: white;
+
+	border: none;
+  padding: 5px 10px 5px;
+
+	cursor: pointer;
+
+	font-size: 16px;
+
+	margin: 16px 0px 16px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: #5F5FD7;
+}
+
 /*** Mobile View ***/
 @media only screen and (max-width: 720px) {
 	/* Header */
@@ -150,7 +201,7 @@ li {
 
 	/* Body */
 	.content {
-		padding: 96px 0 24px;
+		padding: 44px 0 32px;
 		text-align: center;
 
 		font-size: 16px;
@@ -174,6 +225,7 @@ li {
 	.contact {
 		padding-top: 32px;
 	}
+
 	/* Footer */
 	.footer {
 		padding: 8px 0 8px;
@@ -200,5 +252,10 @@ li {
 	.vim_icon {
 		width: 8px;
 		height: 8px;
+	}
+
+	/** About **/
+	.subject {
+		padding: 10px 0px 32px;
 	}
 }
