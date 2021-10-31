@@ -1,3 +1,4 @@
+/*** Default View: Desktop ***/
 /** INDEX **/
 /* Elements */
 * {
@@ -120,4 +121,84 @@ li {
 	color: #320D26;
 }
 
-/** ABOUT **/
+.vim_icon {
+	width: 16px;
+	height: 16px;
+}
+
+/*** Mobile View ***/
+@media only screen and (max-width: 720px) {
+	/* Header */
+	.header {
+		padding: 10px 0px 10px;
+		position: fixed;
+		width: 100%;
+
+		font-family: "Ubuntu Monospaced";
+		font-size: 10px;
+		font-weight: 500;
+
+		display: flex;
+		justify-content: space-between;
+
+		background: #CFB666;
+	}
+
+	.header_right, .header_left {
+		padding: 0px 10px 0px;
+	}
+
+	/* Body */
+	.content {
+		padding: 96px 0 24px;
+		text-align: center;
+
+		font-size: 16px;
+	}
+
+	.outline {
+		padding: 20px 0 10px;
+	}
+
+	.outline_header {
+		padding: 20px 0 20px;
+		font-size: 20px;
+	}
+
+	.outline_description {
+		font-family: "Ubuntu Monospaced";
+		font-size: 12px;
+	}
+
+	/* Contact */
+	.contact {
+		padding-top: 32px;
+	}
+	/* Footer */
+	.footer {
+		padding: 8px 0 8px;
+		position: fixed;
+		width: 100%;
+
+		bottom: 0;
+		left: 0;
+
+		font-family: "Ubuntu Monospaced";
+		font-size: 8px;
+		font-weight: 300;
+
+		display: flex;
+		justify-content: space-between;
+
+		background: #CFB666;
+	}
+
+	.footer_right, .footer_left {
+		padding: 0px 8px 0px;
+	}
+
+	.vim_icon {
+		width: 8px;
+		height: 8px;
+	}
+}
