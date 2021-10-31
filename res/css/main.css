@@ -12,14 +12,14 @@ html, body {
 
 /* body */
 .content {
+	padding: 64px 0 24px;
 	text-align: center;
+
 	font-size: 28px;
-	padding: 24px 0;
 }
 
 .outline {
 	padding: 20px 0 20px;
-	margin: 20px 0 20px;
 }
 
 .outline_header {
@@ -37,9 +37,9 @@ html, body {
 }
 
 .contact {
-	text-align: center;
-
 	padding: 20px 0px 0px;
+
+	text-align: center;
 }
 
 .header ul, .header nav, .header li, .content li {
@@ -52,26 +52,29 @@ a {
 }
 
 .header {
-	padding: 10px;
-	text-align: center;
+	padding: 10px 0px 10px;
+	position: fixed;
+	width: 100%;
 
 	font-family: "Fantasque Sans Mono";
+	font-size: 16px;
+	font-weight: 500;
+
+	display: flex;
+	justify-content: space-between;
 
 	background: #CFB666;
 }
 
-.header_left {
-	padding-right: 200px;
-}
-
-.header_right {
-	padding-left: 200px;
+.header_right, .header_left {
+	padding: 0px 40px 0px;
 }
 
 .footer {
 	padding: 10px 0 10px;
 	position: fixed;
 	width: 100%;
+
 	bottom: 0;
 	left: 0;
 
