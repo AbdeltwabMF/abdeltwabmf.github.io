@@ -63,11 +63,22 @@ a {
 }
 
 .footer {
-	padding: 10px;
+	padding: 10px 0 10px;
 	position: fixed;
 	width: 100%;
 	bottom: 0;
-	text-align: center;
+	left: 0;
+
+	font-family: "Ubuntu Monospaced";
+	font-size: 16px;
+	font-weight: 300;
+
+	display: flex;
+	justify-content: space-between;
 
 	background: #CFB666;
+}
+
+.footer_right, .footer_left {
+	padding: 0px 40px 0px;
 }
