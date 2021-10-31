@@ -1,7 +1,9 @@
-html, body {
+* {
 	padding: 0px;
 	margin: 0px;
+}
 
+html, body {
 	background: #FFEA9D;
 
 	font-family: "Linux Biolinum";
@@ -11,15 +13,17 @@ html, body {
 /* body */
 .content {
 	text-align: center;
+	font-size: 28px;
 	padding: 24px 0;
 }
 
 .outline {
-	padding: 20px 0;
-	margin: 20px 0;
+	padding: 20px 0 20px;
+	margin: 20px 0 20px;
 }
 
 .outline_header {
+	padding: 20px 0 20px;
 	font-size: 44px;
 }
 
@@ -32,8 +36,10 @@ html, body {
 	list-style: none;
 }
 
-.content {
-	font-size: 28px;
+.contact {
+	text-align: center;
+
+	padding: 20px 0px 0px;
 }
 
 .header ul, .header nav, .header li, .content li {
