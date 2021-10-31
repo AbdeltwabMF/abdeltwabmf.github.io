@@ -1,3 +1,4 @@
+/* Elements */
 * {
 	padding: 0px;
 	margin: 0px;
@@ -10,7 +11,19 @@ html, body {
 	font-size: 20px;
 }
 
-/* body */
+a {
+	text-decoration: none;
+}
+
+ul, nav, li {
+	display: inline;
+}
+
+li {
+	list-style: none;
+}
+
+/* Body */
 .content {
 	padding: 96px 0 24px;
 	text-align: center;
@@ -32,44 +45,18 @@ html, body {
 	font-size: 22px;
 }
 
-.contact li, .header li {
-	list-style: none;
-}
-
+/* Contacts */
 .contact {
 	padding: 64px 0px 0px;
 
 	text-align: center;
 }
 
-.header ul, .header nav, .header li, .content li {
-	display: inline;
-}
-
-a {
-	text-decoration: none;
-}
-
 .contact a i {
 	color: #086666;
 }
 
-.header a {
-	color: #0F3333;
-}
-
-.header a i {
-	color: #086666;
-}
-
-.fa-heart {
-	color: #ED181D;
-}
-
-.fa-linux {
-	color: #320D26;
-}
-
+/* Header */
 .header {
 	padding: 10px 0px 10px;
 	position: fixed;
@@ -89,6 +76,19 @@ a {
 	padding: 0px 40px 0px;
 }
 
+.header a {
+	color: #451E40;
+}
+
+.header a i {
+	color: #086666;
+}
+
+.header_left a i {
+	color: #963C8B;
+}
+
+/* Footer */
 .footer {
 	padding: 10px 0 10px;
 	position: fixed;
@@ -109,4 +109,12 @@ a {
 
 .footer_right, .footer_left {
 	padding: 0px 40px 0px;
+}
+
+.fa-heart {
+	color: #ED181D;
+}
+
+.fa-linux {
+	color: #320D26;
 }
