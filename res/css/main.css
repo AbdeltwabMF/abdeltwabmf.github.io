@@ -56,6 +56,8 @@ p {
 	padding: 64px 0px 0px;
 
 	text-align: center;
+
+	font-size: 28px;
 }
 
 .contact a i {
@@ -223,6 +225,27 @@ p {
 	padding-left: 16px;
 }
 
+.big_header {
+	padding: 32px 0px 32px;
+
+	font-size: 10em;
+	font-family: "Ubuntu Monospaced";
+
+	text-align: center;
+}
+
+.big_comment {
+	padding: 8px 0px 16px;
+
+	font-size: 2em;
+	font-family: "Ubuntu Monospaced";
+
+	text-align: center;
+}
+
+.apu_band {
+	padding: 0px 16px 0px;
+}
 
 /*** Mobile View ***/
 @media only screen and (max-width: 720px) {
@@ -314,6 +337,29 @@ p {
 
 	.blog_list {
 	padding-left: 8px;
+	}
+
+	.big_header {
+		padding: 16px 0px 16px;
+
+		font-size: 5em;
+		font-family: "Ubuntu Monospaced";
+
+		text-align: center;
+	}
+
+	.big_comment {
+		padding: 4px 0px 8px;
+
+		font-size: 1em;
+		font-family: "Ubuntu Monospaced";
+
+		text-align: center;
+	}
+
+	.apu_band {
+		width: 280px;
+		padding: 0px 5px 0px;
 	}
 
 	/* Footer */
