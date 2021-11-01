@@ -276,9 +276,82 @@ p {
 
 /*** Mobile View ***/
 @media only screen and (max-width: 720px) {
+	/* Body */
+	.content {
+		padding: 22px 8px 22px 8px;
+
+		text-align: center;
+	}
+
+	.outline {
+		padding: 16px 8px 8px 8px;
+
+		font-size: 18px;
+		font-family: "Linux Biolinum";
+
+		color: #006748;
+	}
+
+	.suboutline {
+		padding: 4px 8px 4px 8px;
+
+		font-size: 12px;
+	}
+
+	.section {
+		padding: 8px 8px 8px 8px;
+	}
+
+	.section_header {
+		padding: 7px 8px 14px 8px;
+
+		text-align: left;
+
+		font-size: 16px;
+
+		color: #66085E;
+	}
+
+	.subsection_header {
+		padding: 12px 8px 6px 8px;
+
+		font-size: 14px;
+
+		text-align: left;
+
+		color: #660821;
+	}
+
+	.subsubsection_header {
+		padding: 10px 8px 5px 8px;
+
+		font-size: 12px;
+
+		text-align: left;
+
+		color: #2E0866;
+	}
+
+	.huge {
+		padding: 96px 8px 16px 8px;
+
+		font-size: 20px;
+	}
+
+	/* Contacts */
+	.contact {
+		padding: 48px 8px 16px 8px;
+
+		text-align: center;
+
+		font-size: 20px;
+
+		color: #086666;
+	}
+
 	/* Header */
 	.header {
-		padding: 10px 0px 10px;
+		padding: 5px 0px 5px 0px;
 		position: fixed;
 		width: 100%;
 
@@ -292,106 +365,29 @@ p {
 		background: #CFB666;
 	}
 
-	.header_right, .header_left {
-		padding: 0px 10px 0px;
+	.header_right {
+		padding: 0px 10px 0px 0px;
 	}
 
-	/* Body */
-	.content {
-		padding: 44px 0 32px;
-		text-align: center;
-
-		font-size: 16px;
+	.header_left {
+		padding: 0px 0px 0px 10px;
 	}
 
-	.outline {
-		padding: 20px 0 10px;
+	.header a {
+		color: #451E40;
 	}
 
-	.outline_header {
-		padding: 20px 0 20px;
-		font-size: 20px;
+	.header a i {
+		color: #086666;
 	}
 
-	.outline_description {
-		font-family: "Ubuntu Monospaced";
-		font-size: 12px;
-	}
-
-	/* Contact */
-	.contact {
-		padding-top: 32px;
-	}
-
-
-	/** Blogs **/
-	.subject_body {
-	padding: 16px 0px 16px;
-	font-size: 16px;
-	}
-
-	.blog_year {
-	font-size: 20px;
-	}
-
-	.blog_item {
-	padding: 0px 0px 8px;
-
-	display: block;
-	justify-content: space-between;
-	}
-
-	.blog_item a {
-	padding: 0px 0px 4px;
-	border-bottom: 1px dashed #424;
-	}
-
-	.blog_title {
-	padding: 0px 70px 0px 0px;
-	}
-
-	.blog_day {
-	padding: 0px 0px 0px 70px;
-	}
-
-	.blog_year, .blog_list {
-	display: inline-flex;
-	}
-
-	.blog_year {
-	padding-right: 8px;
-	}
-
-	.blog_list {
-	padding-left: 8px;
-	}
-
-	.big_header {
-		padding: 16px 0px 16px;
-
-		font-size: 5em;
-		font-family: "Ubuntu Monospaced";
-
-		text-align: center;
-	}
-
-	.big_comment {
-		padding: 4px 0px 8px;
-
-		font-size: 1em;
-		font-family: "Ubuntu Monospaced";
-
-		text-align: center;
-	}
-
-	.apu_band {
-		width: 280px;
-		padding: 0px 5px 0px;
+	.header_left a i {
+		color: #963C8B;
 	}
 
 	/* Footer */
 	.footer {
-		padding: 8px 0 8px;
+		padding: 10px 0px 10px 0px;
 		position: fixed;
 		width: 100%;
 
@@ -399,7 +395,7 @@ p {
 		left: 0;
 
 		font-family: "Ubuntu Monospaced";
-		font-size: 8px;
+		font-size: 10px;
 		font-weight: 300;
 
 		display: flex;
@@ -408,17 +404,119 @@ p {
 		background: #CFB666;
 	}
 
-	.footer_right, .footer_left {
-		padding: 0px 8px 0px;
+	.footer_left {
+		padding: 0px 0px 0px 5px;
+	}
+
+	.footer_right {
+		padding: 0px 5px 0px 0px;
+	}
+
+	.fa-heart {
+		color: #ED181D;
+	}
+
+	.fa-linux {
+		color: #320D26;
 	}
 
 	.vim_icon {
-		width: 8px;
-		height: 8px;
+		width: 10px;
+		height: 10px;
 	}
 
+
 	/** About **/
-	.subject {
-		padding: 10px 0px 32px;
+	.paragraph {
+		text-align: left;
+		padding: 5px 8px 8px 8px;
+
+		font-family: "Ubuntu Monospaced";
+		font-size: 10px;
+		line-height: 14px;
+	}
+
+	/* Style buttons */
+	.btn {
+		background-color: #006748;
+		color: white;
+
+		border: none;
+		padding: 5px 8px 5px 8px;
+
+		cursor: pointer;
+
+		font-size: 14px;
+		margin: 8px 0px 4px 0px;
+	}
+
+	/* Darker background on mouse-over */
+	.btn:hover {
+		background-color: #5F5FD7;
+	}
+
+	/** Blogs **/
+	.blog_item {
+		padding: 0px 4px 8px 4px;
+
+		display: block;
+		justify-content: space-between;
+	}
+
+	.blog_item a {
+		padding: 0px 0px 8px 0px;
+		border-bottom: 1px dashed #5F005F;
+	}
+
+	.blog_title {
+		padding: 0px 60px 0px 0px;
+
+		color: #9B1320;
+
+		font-family: "Ubuntu Monospaced";
+		font-size: 14px;
+	}
+
+	.blog_day {
+		padding: 0px 0px 0px 60px;
+		color: #1F7977;
+
+		font-size: 12px;
+	}
+
+	.blog_year {
+		padding-right: 16px;
+
+		font-size: 18px;
+	}
+
+	.blog_list {
+		padding-left: 8px;
+	}
+
+	.blog_year, .blog_list {
+		display: inline-flex;
+	}
+
+	.apu_band {
+		padding: 0px 8px 0px 8px;
+	}
+
+	/** Uses **/
+	.quote {
+		font-size: 8px;
+
+		width: 100px;
+		display: inline-block;
+	}
+
+	.resume {
+		text-align: center;
+
+		padding: 8px 0px 8px 0px;
+	}
+
+	.paragraph_header_left, .paragraph_right {
+		display: inline;
 	}
 }
