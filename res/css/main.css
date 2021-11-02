@@ -33,7 +33,7 @@ p {
 
 /* Body */
 .content {
-	padding: 44px 0 44px 0px;
+	padding: 44px 24px 44px 24px;
 
 	text-align: center;
 }
@@ -47,6 +47,15 @@ p {
 	color: #006748;
 }
 
+.main_outline {
+	padding: 120px 0px 16px 0px;
+
+	font-size: 38px;
+	font-family: "Linux Biolinum";
+
+	color: #006748;
+}
+
 .suboutline {
 	padding: 8px 0px 8px 0px;
 
@@ -54,11 +63,11 @@ p {
 }
 
 .section {
-	padding: 16px 16px 16px 16px;
+	padding: 16px 0px 16px 0px;
 }
 
 .section_header {
-	padding: 7px 16px 14px 16px;
+	padding: 7px 0px 14px 0px;
 
 	text-align: left;
 
@@ -68,7 +77,7 @@ p {
 }
 
 .subsection_header {
-	padding: 12px 16px 6px 16px;
+	padding: 12px 0px 6px 0px;
 
 	font-size: 24px;
 
@@ -78,7 +87,7 @@ p {
 }
 
 .subsubsection_header {
-	padding: 10px 16px 5px 16px;
+	padding: 10px 0px 5px 0px;
 
 	font-size: 20px;
 
@@ -87,10 +96,20 @@ p {
 	color: #2E0866;
 }
 
-.huge {
-	padding: 96px 0px 32px 0px;
+.subsubsubsection_header {
+	padding: 10px 0px 5px 0px;
 
-	font-size: 48px;
+	font-size: 16px;
+
+	text-align: left;
+
+	color: #353535;
+}
+
+.project {
+	padding: 16px 16px 16px 16px;
+	margin: 16px 16px 16px 16px;
+	border: 1px dotted #004569;
 }
 
 /* Contacts */
@@ -99,9 +118,11 @@ p {
 
 	text-align: center;
 
-	font-size: 28px;
+	font-size: 32px;
+}
 
-	color: #086666;
+.contact .fab, .contact .fas, .contact .far {
+	color: #7B3876;
 }
 
 /* Header */
@@ -129,15 +150,11 @@ p {
 }
 
 .header a {
-	color: #451E40;
+	color: #000000;
 }
 
-.header a i {
+.header i {
 	color: #086666;
-}
-
-.header_left a i {
-	color: #963C8B;
 }
 
 /* Footer */
@@ -171,25 +188,24 @@ p {
 	color: #ED181D;
 }
 
-.fa-linux {
-	color: #320D26;
-}
-
-.vim_icon {
-	width: 16px;
+.footer_icon {
+	width: 14px;
 	height: 16px;
 }
 
-.copyleft {
-	width: 16px;
-	height: 16px;
+._404 {
+	padding: 32px 0px 0px 0px;
+	font-size: 96px;
 }
 
+.sub404 {
+	font-size: 32px;
+}
 
 /** About **/
 .paragraph {
 	text-align: left;
-	padding: 10px 16px 16px 16px;
+	padding: 10px 0px 16px 0px;
 
 	font-family: "Ubuntu Monospaced";
 	font-size: 16px;
@@ -243,13 +259,13 @@ p {
 }
 
 .blog_year {
-	padding-right: 16px;
+	padding: 0px 16px 0px 0px;
 
 	font-size: 32px;
 }
 
 .blog_list {
-	padding-left: 16px;
+	padding: 0px 0px 0px 16px;
 }
 
 .blog_year, .blog_list {
@@ -257,7 +273,7 @@ p {
 }
 
 .apu_band {
-	padding: 16px 16px 16px 16px;
+	padding: 16px 0px 16px 0px;
 }
 
 /** Uses **/
@@ -278,37 +294,50 @@ p {
 	display: inline;
 }
 
+.paragraph_right .paragraph {
+	padding: 0px 0px 0px 32px;
+}
+
 
 /*** Mobile View ***/
 @media only screen and (max-width: 720px) {
 	/* Body */
 	.content {
-		padding: 22px 8px 22px 8px;
+		padding: 38px 8px 38px 8px;
 
 		text-align: center;
 	}
 
 	.outline {
-		padding: 16px 8px 8px 8px;
+		padding: 16px 0px 8px 0px;
 
-		font-size: 18px;
+		font-size: 24px;
+		font-family: "Linux Biolinum";
+
+		color: #006748;
+	}
+
+	.main_outline {
+		padding: 120px 0px 16px 0px;
+
+		font-size: 22px;
 		font-family: "Linux Biolinum";
 
 		color: #006748;
 	}
 
 	.suboutline {
-		padding: 4px 8px 4px 8px;
+		padding: 8px 0px 8px 0px;
 
 		font-size: 12px;
 	}
 
 	.section {
-		padding: 8px 8px 8px 8px;
+		padding: 8px 0px 8px 0px;
 	}
 
 	.section_header {
-		padding: 7px 8px 14px 8px;
+		padding: 7px 0px 14px 0px;
 
 		text-align: left;
 
@@ -318,7 +347,7 @@ p {
 	}
 
 	.subsection_header {
-		padding: 12px 8px 6px 8px;
+		padding: 12px 0px 6px 0px;
 
 		font-size: 18px;
 
@@ -328,7 +357,7 @@ p {
 	}
 
 	.subsubsection_header {
-		padding: 10px 8px 5px 8px;
+		padding: 10px 0px 5px 0px;
 
 		font-size: 16px;
 
@@ -337,21 +366,28 @@ p {
 		color: #2E0866;
 	}
 
-	.huge {
-		padding: 96px 8px 16px 8px;
 
-		font-size: 22px;
+	.subsubsubsection_header {
+		padding: 10px 0px 5px 0px;
+
+		font-size: 14px;
+
+		text-align: left;
+
+		color: #353535;
 	}
 
 	/* Contacts */
 	.contact {
-		padding: 48px 8px 16px 8px;
+		padding: 32px 0px 16px 0px;
 
 		text-align: center;
 
-		font-size: 20px;
+		font-size: 16px;
+	}
 
-		color: #086666;
+	.contact .fab, .contact .fas, .contact .far {
+		color: #7B3876;
 	}
 
 	/* Header */
@@ -361,8 +397,9 @@ p {
 		width: 100%;
 
 		font-family: "Ubuntu Monospaced";
-		font-size: 16px;
+		font-size: 12px;
 		font-weight: 500;
+
 
 		display: flex;
 		justify-content: space-between;
@@ -371,23 +408,19 @@ p {
 	}
 
 	.header_right {
-		padding: 0px 10px 0px 0px;
+		padding: 0px 8px 0px 0px;
 	}
 
 	.header_left {
-		padding: 0px 0px 0px 10px;
+		padding: 0px 0px 0px 8px;
 	}
 
 	.header a {
-		color: #451E40;
+		color: #000000;
 	}
 
-	.header a i {
+	.header i {
 		color: #086666;
-	}
-
-	.header_left a i {
-		color: #963C8B;
 	}
 
 	/* Footer */
@@ -400,45 +433,33 @@ p {
 		left: 0;
 
 		font-family: "Ubuntu Monospaced";
-		font-size: 12px;
+		font-size: 10px;
 		font-weight: 300;
-
-		display: flex;
-		justify-content: space-between;
 
 		background: #CFB666;
 	}
 
 	.footer_left {
-		padding: 0px 0px 0px 5px;
+		padding: 0px 0px 0px 8px;
 	}
 
 	.footer_right {
-		padding: 0px 5px 0px 0px;
+		padding: 0px 8px 0px 0px;
 	}
 
 	.fa-heart {
 		color: #ED181D;
 	}
 
-	.fa-linux {
-		color: #320D26;
-	}
-
-	.vim_icon {
-		width: 12px;
-		height: 12px;
-	}
-
-	.copyleft {
-		width: 12px;
-		height: 12px;
+	.footer_icon {
+		width: 8px;
+		height: 10px;
 	}
 
 	/** About **/
 	.paragraph {
 		text-align: left;
-		padding: 5px 8px 8px 8px;
+		padding: 5px 0px 8px 0px;
 
 		font-family: "Ubuntu Monospaced";
 		font-size: 16px;
@@ -466,7 +487,7 @@ p {
 
 	/** Blogs **/
 	.blog_item {
-		padding: 0px 8px 8px 8px;
+		padding: 0px 0px 8px 0px;
 
 		display: block;
 		justify-content: space-between;
@@ -494,13 +515,13 @@ p {
 	}
 
 	.blog_year {
-		padding-right: 16px;
+		padding: 0px 16px 0px 0px;
 
 		font-size: 18px;
 	}
 
 	.blog_list {
-		padding-left: 8px;
+		padding: 0px 0px 0px 16px;
 	}
 
 	.blog_year, .blog_list {
@@ -508,13 +529,9 @@ p {
 	}
 
 	.apu_band {
-		padding: 16px 8px 16px 8px;
+		padding: 16px 0px 16px 0px;
 
 		width: 270px;
-	}
-
-	.mobile_huge {
-		font-size: 48px;
 	}
 
 	/** Uses **/
@@ -533,5 +550,14 @@ p {
 
 	.paragraph_header_left, .paragraph_right {
 		display: inline;
+	}
+
+	.mobile_404 {
+		padding: 64px 0px 0px 0px;
+		font-size: 96px;
+	}
+
+	.submobile_404 {
+		font-size: 24px;
 	}
 }
