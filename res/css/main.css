@@ -111,7 +111,7 @@ p {
 	width: 100%;
 
 	font-family: "Ubuntu Monospaced";
-	font-size: 16px;
+	font-size: 22px;
 	font-weight: 500;
 
 	display: flex;
@@ -176,6 +176,11 @@ p {
 }
 
 .vim_icon {
+	width: 16px;
+	height: 16px;
+}
+
+.copyleft {
 	width: 16px;
 	height: 16px;
 }
@@ -351,12 +356,12 @@ p {
 
 	/* Header */
 	.header {
-		padding: 5px 0px 5px 0px;
+		padding: 10px 0px 10px 0px;
 		position: fixed;
 		width: 100%;
 
 		font-family: "Ubuntu Monospaced";
-		font-size: 10px;
+		font-size: 16px;
 		font-weight: 500;
 
 		display: flex;
@@ -395,7 +400,7 @@ p {
 		left: 0;
 
 		font-family: "Ubuntu Monospaced";
-		font-size: 10px;
+		font-size: 12px;
 		font-weight: 300;
 
 		display: flex;
@@ -421,10 +426,14 @@ p {
 	}
 
 	.vim_icon {
-		width: 10px;
-		height: 10px;
+		width: 12px;
+		height: 12px;
 	}
 
+	.copyleft {
+		width: 12px;
+		height: 12px;
+	}
 
 	/** About **/
 	.paragraph {
