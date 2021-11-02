@@ -252,7 +252,7 @@ p {
 }
 
 .apu_band {
-	padding: 0px 16px 0px 0px;
+	padding: 16px 16px 16px 16px;
 }
 
 /** Uses **/
@@ -307,7 +307,7 @@ p {
 
 		text-align: left;
 
-		font-size: 16px;
+		font-size: 20px;
 
 		color: #66085E;
 	}
@@ -315,7 +315,7 @@ p {
 	.subsection_header {
 		padding: 12px 8px 6px 8px;
 
-		font-size: 14px;
+		font-size: 18px;
 
 		text-align: left;
 
@@ -325,7 +325,7 @@ p {
 	.subsubsection_header {
 		padding: 10px 8px 5px 8px;
 
-		font-size: 12px;
+		font-size: 16px;
 
 		text-align: left;
 
@@ -335,7 +335,7 @@ p {
 	.huge {
 		padding: 96px 8px 16px 8px;
 
-		font-size: 20px;
+		font-size: 22px;
 	}
 
 	/* Contacts */
@@ -432,8 +432,8 @@ p {
 		padding: 5px 8px 8px 8px;
 
 		font-family: "Ubuntu Monospaced";
-		font-size: 10px;
-		line-height: 14px;
+		font-size: 16px;
+		line-height: 18px;
 	}
 
 	/* Style buttons */
@@ -457,7 +457,7 @@ p {
 
 	/** Blogs **/
 	.blog_item {
-		padding: 0px 4px 8px 4px;
+		padding: 0px 8px 8px 8px;
 
 		display: block;
 		justify-content: space-between;
@@ -499,7 +499,13 @@ p {
 	}
 
 	.apu_band {
-		padding: 0px 8px 0px 8px;
+		padding: 16px 8px 16px 8px;
+
+		width: 270px;
+	}
+
+	.mobile_huge {
+		font-size: 48px;
 	}
 
 	/** Uses **/
