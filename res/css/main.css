@@ -294,8 +294,12 @@ p {
 	display: inline;
 }
 
+.paragraph_right .subsubsubsection_header {
+	padding: 0px 0px 0px 16px;
+}
+
 .paragraph_right .paragraph {
-	padding: 0px 0px 0px 32px;
+	padding: 0px 0px 16px 32px;
 }
 
 
@@ -375,6 +379,12 @@ p {
 		text-align: left;
 
 		color: #353535;
+	}
+
+	.project {
+		padding: 16px 8px 16px 8px;
+		margin: 16px 8px 16px 8px;
+		border: 1px dotted #004569;
 	}
 
 	/* Contacts */
