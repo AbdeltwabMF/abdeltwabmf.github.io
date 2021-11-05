@@ -1,0 +1,149 @@
+html {
+	overflow: auto;
+}
+
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	background-color: #FFEA9D;
+	color: #57274D;
+	font-family: "Ubuntu Monospaced";
+}
+
+a {
+	color: #005386;
+}
+
+#header {
+	background-color: #FFEA9D;
+	color: #000000;
+	font-size: 38px;
+	padding: 8px 16px;
+	text-align: center;
+}
+
+#header-link {
+	color: #005A52;
+	font-family: "Ubuntu Monospaced";
+	margin-left: 16px;
+}
+
+#header a,
+#nav a,
+#menu a {
+	text-decoration: none;
+}
+
+#menu {
+	color: #853975;
+	overflow: hidden;
+	background-color: #cfb666;
+	font-family: "Ubuntu Monospaced";
+	font-size: 24px;
+	padding: 4px 8px;
+	border-bottom: 1px solid #853975;
+	border-top: 1px solid #853975;
+}
+
+#menu a {
+	padding: 4px 16px;
+	color: #FFFFFF;
+}
+
+#menu a:hover {
+	background-color: #AD8E2C;
+}
+
+#footer {
+	background-color: #cfb666;
+	color: #005A52;
+	font-family: "Ubuntu Monospaced";
+	font-size: 16px;
+	padding: 4px 16px;
+	width: 100%;
+	position: fixed;
+	left: 0px;
+	bottom: 0px;
+
+	display: flex;
+	justify-content: space-around;
+}
+
+#footer img {
+	width: 15px;
+	height: 16px;
+}
+
+h1 {
+	margin: 1em 1ex 0.5ex 0;
+	font-size: 1.4em;
+}
+
+h2 {
+	margin: 1em 1ex 0.5ex 0;
+	font-size: 1.3em;
+}
+
+h3 {
+	margin: 1em 1ex 0.5ex 0;
+	font-size: 1.0em;
+}
+
+h4 {
+	margin: 1em 1ex 0.5ex 0;
+	font-size: 0.9em;
+}
+
+#content {
+	clear: both;
+	margin: 0;
+	padding: 0;
+	/*background-color: #fff;
+	overflow: hidden;*/
+}
+
+#nav {
+	float: left;
+	margin: 0 1px 0 0;
+	padding: 16px 0px;
+	font-family: "Ubuntu Monospaced";
+	font-size: 20px;
+	border-right: 2px dotted #853975;
+	width: 204px;
+}
+
+#nav li {
+	list-style: none;
+}
+
+#nav li ul {
+	padding-left: 0.6em !important;
+}
+
+#nav li a {
+	display: block;
+	padding: 0.8ex 2em 0.8ex 1em;
+}
+
+#main {
+	margin: 0 0 0 200px;
+	max-width: 50em;
+	padding: 1.5em;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+	margin: 0;
+	padding: 0;
+}
+
+.hidden {
+	display: none;
+}
