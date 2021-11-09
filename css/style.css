@@ -17,6 +17,20 @@ a {
 	color: #005386;
 }
 
+p {
+	margin: 16px 0px;
+	line-height: 22px;
+}
+
+code {
+	margin: 0px;
+	color: #560A86;
+}
+
+#contact li {
+	margin: 4px 0px;
+}
+
 #header {
 	background-color: #FFEA9D;
 	color: #000000;
@@ -78,23 +92,31 @@ a {
 }
 
 h1 {
-	margin: 1em 1ex 0.5ex 0;
+	margin: 16px 0px;
+	padding-left: 16px;
 	font-size: 1.4em;
+	border-left: 2px solid #11AAAF;
 }
 
 h2 {
-	margin: 1em 1ex 0.5ex 0;
+	margin: 16px 0px;
+	padding-left: 16px;
 	font-size: 1.3em;
+	border-left: 2px solid #DB6A1A;
 }
 
 h3 {
-	margin: 1em 1ex 0.5ex 0;
+	margin: 16px 0px;
+	padding-left: 16px;
 	font-size: 1.0em;
+	border-left: 2px solid #6C005D;
 }
 
 h4 {
-	margin: 1em 1ex 0.5ex 0;
+	margin: 16px 0px;
+	padding-left: 16px;
 	font-size: 0.9em;
+	border-left: 2px solid #016C00;
 }
 
 #content {
@@ -119,6 +141,16 @@ h4 {
 	list-style: none;
 }
 
+.contact-list li {
+	font-size: 24px;
+	display: inline;
+	list-style: none;
+}
+
+#contact ul {
+	margin: 16px;
+}
+
 #nav li ul {
 	padding-left: 0.6em !important;
 }
@@ -129,7 +161,7 @@ h4 {
 }
 
 #main {
-	margin: 0 0 0 200px;
+	margin: 0 0 0 204px;
 	max-width: 50em;
 	padding: 1.5em;
 }
@@ -146,4 +178,18 @@ h4 {
 
 .hidden {
 	display: none;
+}
+
+.btn {
+	padding: 8px 16px;
+	font-family: "Ubuntu Monospaced";
+	font-size: 16px;
+	background-color: #FA8C36;
+	border: 1px solid #8E3B3B;
+	border-radius: 4px;
+}
+
+.btn:hover {
+	background-color: #11AAAF;
+	border: 1px solid #005151;
 }
