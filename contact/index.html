@@ -8,16 +8,16 @@
 
 		<!-- Title -->
 		<title>
-			Abd El-Twab's Personal Site
+			Contact | Abd El-Twab MF
 		</title>
 
 		<!-- Favicon -->
 		<link rel="shortcut icon" type="image/png" href="/res/images/png/favicon.ico"/>
 
 		<!-- CSS links -->
-		<link rel="stylesheet" href="css/all.css"/>
-		<link rel="stylesheet" href="css/font.css"/>
-		<link rel="stylesheet" href="css/style.css"/>
+		<link rel="stylesheet" href="../css/all.css"/>
+		<link rel="stylesheet" href="../css/font.css"/>
+		<link rel="stylesheet" href="../css/style.css"/>
 	</head>
 
 	<body>
@@ -25,7 +25,7 @@
 		<div id="header">
 
 			<a href="/">
-				<img src="res/images/png/header.png" alt="amf-logo">
+				<img src="/res/images/png/header.png" alt="amf-logo">
 				&nbsp;
 				<span id="header-link">Abd El-Twab M. Fakhry's Webpage</span>
 			</a>
@@ -54,10 +54,10 @@
 			<div id="nav">
 
 				<ul>
-					<li><a href="/"><b>about</b></a></li>
-					<li><a href="/contact">contact</a></li>
+					<li><a href="/">about</a></li>
+					<li><a href="/contact"><b>contact</b></a></li>
 					<li><a href="/education">education</a></li>
-					<li><a href="/experience">experience/</a></li>
+					<li><a href="/experience">experience</a></li>
 					<li><a href="/resume">resume</a></li>
 					<li><a href="/donate">donate</a></li>
 					<li><a href="/other_links">other links</a></li>
@@ -71,20 +71,42 @@
 			<!-- Main Right -->
 			<div id="main">
 
-				<h1>
-					Hi, As-salamu alaykum, I am Abd El-Twab M. Fakhry <i class="fas fa-grin-beam"></i>
-				</h1>
-				<p>
-					Hi, my name is <strong>Abd El-Twab M. Fakhry</strong> aka (amf).
-				</p>
-				<p>
-					I am a <strong>software engineer</strong>, free software enthusiast, GNU/Linux user, and experienced C/C++, Java, Python programmer
-					with <strong>advanced knowledge of data structures and algorithms</strong>.
-				</p>
+				<div id="contact">
+					<h2>
+						Contact Information
+					</h2>
+					<p>
+						GPG key for encrypting mail if you know how, <a href="/amfgpg.gpg">here</a> or run:
+					</p>
+					<ul>
+						<li>
+							<code>curl -sL https://abdeltwabmf.github.io/amfgpg.gpg | gpg --import</code>
+						</li>
+						<li>
+							Fingerprint: <code>639D 7AB4 4905 A805 0CDB DFDE EF99 158D C5D4 CAE5</code>
+						</li>
+					</ul>
+					<p>
+						<strong>All legitimate emails from me will be signed with my GPG key.</strong>
+					</p>
 
-			<!-- End of Main -->
+					<h4>Get in touch</h4>
+					<ul class="contact-list">
+						<li><a href="mailto:abdeltwab.m.fakhry@protonmail.com" target="_blank"><i class="fas fa-envelope"></i></a></li>
+						&nbsp;&nbsp;
+						<li><a href="https://github.com/AbdeltwabMF" target="_blank"><i class="fab fa-github"></i></a></li>
+						&nbsp;&nbsp;
+						<li><a href="https://linkedin.com/in/AbdeltwabMF" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+						&nbsp;&nbsp;
+						<li><a href="https://twitter.com/AbdeltwabMF" target="_blank"><i class="fab fa-twitter"></i></a></li>
+						&nbsp;&nbsp;
+						<li><a href="https://t.me/AbdeltwabMF" target="_blank"><i class="fab fa-telegram"></i></a></li>
+					</ul>
+				</div>
+
+				<!-- End of Main -->
 			</div>
-		<!-- End of Content -->
+			<!-- End of Content -->
 		</div>
 
 		<hr class="hidden">
@@ -103,7 +125,7 @@
 				with <i class="fas fa-heart"> </i>
 			</span>
 
-		<!-- End of Footer -->
+			<!-- End of Footer -->
 		</div>
 	</body>
 </html>
