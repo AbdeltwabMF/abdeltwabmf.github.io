@@ -1,5 +1,5 @@
 html {
-	overflow-y: auto;
+	overflow: auto;
 }
 
 * {
@@ -35,7 +35,7 @@ code {
 	background-color: #FFEA9D;
 	color: #000000;
 	font-size: 38px;
-	padding: 8px 16px;
+	padding: 8px 24px;
 }
 
 #header-link {
@@ -157,7 +157,7 @@ h4 {
 
 #nav li a {
 	display: block;
-	padding: 0.8ex 2em 0.8ex 1em;
+	padding: 6px 24px;
 }
 
 #main {
