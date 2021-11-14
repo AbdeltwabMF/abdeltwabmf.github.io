@@ -1,5 +1,4 @@
 html {
-	overflow: auto;
 }
 
 * {
@@ -18,13 +17,14 @@ a {
 }
 
 p {
-	margin: 16px 0px;
-	line-height: 22px;
+	margin: 1.0em 0em;
+	line-height: 1.6em;
 }
 
 code {
 	margin: 0px;
 	color: #560A86;
+	cursor: copy;
 }
 
 #contact li {
@@ -32,16 +32,24 @@ code {
 }
 
 #header {
-	background-color: #FFEA9D;
 	color: #000000;
-	font-size: 38px;
+	font-size: 27px;
 	padding: 8px 24px;
 }
 
 #header-link {
-	color: #005A52;
 	font-family: "Ubuntu Monospaced";
-	font-size: 30px;
+	font-size: 24px;
+	letter-spacing: 4px;
+	font-variant: small-caps;
+	font-weight: bold;
+	color: #328E84;
+	display: inline-block;
+	padding-left: 0.45em;
+}
+
+#header img {
+	vertical-align: middle;
 }
 
 #header a,
@@ -63,7 +71,7 @@ code {
 
 #menu a {
 	padding: 4px 16px;
-	color: #FFFFFF;
+	color: #580046;
 }
 
 #menu a:hover {
@@ -91,39 +99,49 @@ code {
 }
 
 h1 {
-	margin: 16px 0px;
-	padding-left: 16px;
-	font-size: 1.4em;
-	border-left: 2px solid #11AAAF;
+	margin: 1.0em 0em 1.0em;
+	padding-left: 1.0em;
+	font-size: 2.0em;
+	border-left: 2px solid #1EEEEE;
+	letter-spacing: 2px;
 }
 
 h2 {
-	margin: 16px 0px;
-	padding-left: 16px;
-	font-size: 1.3em;
-	border-left: 2px solid #DB6A1A;
+	margin: 1.0em 0em 0.334em;
+	padding-left: 1.0em;
+	font-size: 1.8em;
+	border-left: 2px solid #FF6A00;
+	letter-spacing: 2px;
 }
 
 h3 {
-	margin: 16px 0px;
-	padding-left: 16px;
-	font-size: 1.0em;
-	border-left: 2px solid #6C005D;
+	margin: 1.0em 0em 0.334em;
+	padding-left: 1.0em;
+	font-size: 1.6em;
+	border-left: 2px solid #F51978;
+	letter-spacing: 2px;
 }
 
 h4 {
-	margin: 16px 0px;
-	padding-left: 16px;
-	font-size: 0.9em;
-	border-left: 2px solid #016C00;
+	margin: 1.0em 0em 0.334em;
+	padding-left: 1.0em;
+	font-size: 1.4em;
+	border-left: 2px solid #1FD51F;
+	letter-spacing: 2px;
+}
+
+h5 {
+	margin: 1.0em 0em 0.334em;
+	padding-left: 1.0em;
+	font-size: 1.2em;
+	border-left: 2px solid #D128D1;
+	letter-spacing: 2px;
 }
 
 #content {
 	clear: both;
 	margin: 0;
 	padding: 0;
-	/*background-color: #fff;
-	overflow: hidden;*/
 }
 
 #nav {
@@ -141,9 +159,10 @@ h4 {
 }
 
 .contact-list li {
-	font-size: 24px;
-	display: inline;
+	font-size: 2.0em;
+	display: inline-block;
 	list-style: none;
+	padding: 0em 0.5em;
 }
 
 #contact ul,
@@ -162,7 +181,6 @@ h4 {
 
 #main {
 	margin: 0 0 0 204px;
-	max-width: 50em;
 	padding: 1.5em;
 }
 
@@ -185,14 +203,41 @@ h4 {
 	padding: 8px 16px;
 	font-family: "Ubuntu Monospaced";
 	font-size: 16px;
-	background-color: #FA8C36;
+	background-color: #FA8C368F;
 	border: 1px solid #8E3B3B;
 	border-radius: 4px;
+}
+
+.btn a {
+	text-decoration: none;
+}
+
+.btn:hover a {
+	color: #000000;
 }
 
 .btn:hover {
 	background-color: #11AAAF;
 	border: 1px solid #005151;
+}
+
+::selection {
+	background-color: #57274D;
+	color: #FFEA9D;
+}
+
+#nav ::selection {
+	background-color: #005386;
+	color: #FFEA9D;
+}
+
+.rm-left-border {
+	border-left: none;
+	padding-left: 0em;
+}
+
+.center {
+	text-align: center;
 }
 
 @media only screen and (max-width: 720px) {
