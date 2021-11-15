@@ -16,7 +16,7 @@ a {
 
 p {
 	margin: 1.0em 0em;
-	line-height: 1.6em;
+	line-height: 1.5em;
 	font-size: 1.2em;
 	overflow: auto;
 }
@@ -254,13 +254,25 @@ h5 {
 	text-decoration: none;
 }
 
-.alter-list li {
+.alter-list li,
+#main li {
 	margin: 0.5em 0em;
-	background-color: #edb7b759;
+	background-color: #D6EDB75E;
 	padding: 0.5em;
 	border: 1px solid;
 	border-radius: 0.5em;
 	overflow: auto;
+}
+
+#main ul li a {
+	font-size: 1.5em;
+}
+
+#main ul img {
+	vertical-align: middle;
+	max-width: 2.0em;
+	max-height: 2.0em;
+	padding-right: 10px;
 }
 
 @media only screen and (max-width: 720px) {
