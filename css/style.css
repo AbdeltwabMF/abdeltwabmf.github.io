@@ -247,11 +247,12 @@ h5 {
 
 .alter-list {
 	list-style: none;
-	font-size: 2.0em;
+	font-size: 1.0em;
 }
 
 .alter-list a {
 	text-decoration: none;
+	font-size: 1.5em;
 }
 
 .alter-list li,
@@ -264,14 +265,10 @@ h5 {
 	overflow: auto;
 }
 
-#main ul li a {
-	font-size: 1.5em;
-}
-
 #main ul img {
 	vertical-align: middle;
-	max-width: 2.0em;
-	max-height: 2.0em;
+	max-width: 1.5em;
+	max-height: 1.5em;
 	padding-right: 10px;
 }
 
