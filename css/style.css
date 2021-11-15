@@ -257,6 +257,10 @@ h5 {
 
 .alter-list li {
 	margin: 0.5em 0em;
+	background-color: #edb7b759;
+	padding: 0.5em;
+	border: 1px solid;
+	border-radius: 0.5em;
 }
 
 @media only screen and (max-width: 720px) {
