@@ -241,5 +241,31 @@ h5 {
 	text-align: center;
 }
 
+.alter-list img {
+	width: 1.5em;
+	vertical-align: middle;
+}
+
+.alter-list {
+	list-style: none;
+	font-size: 2.0em;
+}
+
+.alter-list a {
+	text-decoration: none;
+}
+
+.alter-list li {
+	margin: 0.5em 0em;
+}
+
+.alter-list i {
+	vertical-align: middle;
+}
+
+.alter-list .fab {
+	font-size: 1.5em;
+}
+
 @media only screen and (max-width: 720px) {
 }
