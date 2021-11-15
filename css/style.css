@@ -1,9 +1,7 @@
-html {
-}
-
 * {
 	padding: 0px;
 	margin: 0px;
+	overflow: auto;
 }
 
 body {
@@ -20,6 +18,7 @@ p {
 	margin: 1.0em 0em;
 	line-height: 1.6em;
 	font-size: 1.2em;
+	overflow: auto;
 }
 
 code {
@@ -261,6 +260,7 @@ h5 {
 	padding: 0.5em;
 	border: 1px solid;
 	border-radius: 0.5em;
+	overflow: auto;
 }
 
 @media only screen and (max-width: 720px) {
