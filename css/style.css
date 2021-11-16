@@ -151,7 +151,7 @@ h5 {
 	font-family: "Ubuntu Monospaced";
 	font-size: 20px;
 	border-right: 2px dotted #853975;
-	width: 204px;
+	width: 10.3em;
 }
 
 #nav li {
@@ -180,7 +180,7 @@ h5 {
 }
 
 #main {
-	margin: 0 0 0 204px;
+	margin: 0 0 1.5em 13em;
 	padding: 1.5em;
 }
 
