@@ -24,6 +24,8 @@ p {
 code {
 	margin: 0px;
 	color: #560A86;
+	font-size: 1.2em;
+	line-height: 1.5em;
 	cursor: copy;
 }
 
@@ -85,7 +87,6 @@ code {
 	font-family: "Ubuntu Monospaced";
 	font-size: 1.2em;
 	padding: 0.3em;
-	position: fixed;
 	left: 0px;
 	bottom: 0px;
 	right: 0px;
