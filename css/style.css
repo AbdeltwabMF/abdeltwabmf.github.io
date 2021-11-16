@@ -240,11 +240,6 @@ h5 {
 	text-align: center;
 }
 
-.alter-list img {
-	width: 1.5em;
-	vertical-align: middle;
-}
-
 .alter-list {
 	list-style: none;
 	font-size: 1.0em;
@@ -252,11 +247,10 @@ h5 {
 
 .alter-list a {
 	text-decoration: none;
-	font-size: 1.5em;
+	font-size: 1.0em;
 }
 
-.alter-list li,
-#main li {
+.alter-list li {
 	margin: 0.5em 0em;
 	background-color: #D6EDB75E;
 	padding: 0.5em;
@@ -265,11 +259,15 @@ h5 {
 	overflow: auto;
 }
 
-#main ul img {
+.alter-list img {
 	vertical-align: middle;
 	max-width: 1.5em;
 	max-height: 1.5em;
 	padding-right: 10px;
+}
+
+li p {
+	margin: 10px 0px 0px;
 }
 
 @media only screen and (max-width: 720px) {
