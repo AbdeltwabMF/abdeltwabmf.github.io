@@ -39,13 +39,14 @@ code {
 
 #header-link {
 	font-family: "Ubuntu Monospaced";
-	font-size: 24px;
+	font-size: 27px;
 	letter-spacing: 4px;
 	font-variant: small-caps;
 	font-weight: bold;
 	color: #328E84;
 	display: inline-block;
 	padding-left: 0.45em;
+	vertical-align: bottom;
 }
 
 #header img {
