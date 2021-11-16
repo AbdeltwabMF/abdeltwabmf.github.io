@@ -83,13 +83,12 @@ code {
 	background-color: #cfb666;
 	color: #005A52;
 	font-family: "Ubuntu Monospaced";
-	font-size: 16px;
-	padding: 4px 16px;
-	width: 100%;
+	font-size: 1.2em;
+	padding: 0.3em;
 	position: fixed;
 	left: 0px;
 	bottom: 0px;
-
+	right: 0px;
 	display: flex;
 	justify-content: space-around;
 }
