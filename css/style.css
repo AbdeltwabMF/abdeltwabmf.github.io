@@ -24,7 +24,8 @@ p {
 code {
 	margin: 0px;
 	color: #560A86;
-	font-size: 1.2em;
+	font-size: 0.9em;
+	font-family: "Fantasque Sans Mono";
 	line-height: 1.5em;
 	cursor: copy;
 }
@@ -43,7 +44,7 @@ code {
 }
 
 #header-link {
-	font-family: "Ubuntu Monospaced";
+	font-family: "monofur55";
 	font-size: 27px;
 	letter-spacing: 4px;
 	font-variant: small-caps;
@@ -82,8 +83,11 @@ img,
 }
 
 #menu a {
-	padding: 4px 16px;
-	color: #580046;
+	padding: 4px 8px;
+	text-align: center;
+	margin: 0 0.5%;
+	width: 25%;
+	color: #720000;
 	font-size: 1.5em;
 }
 
