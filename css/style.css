@@ -54,7 +54,10 @@ code {
 	vertical-align: bottom;
 }
 
-#header img {
+img,
+.fab,
+.far,
+.fas {
 	vertical-align: middle;
 }
 
@@ -90,7 +93,7 @@ code {
 
 #footer {
 	background-color: #cfb666;
-	color: #005A52;
+	color: #6C1000;
 	font-family: "Ubuntu Monospaced";
 	padding: 0.3125em;
 	left: 0px;
@@ -99,6 +102,7 @@ code {
 	height: 1.5em;
 	display: flex;
 	justify-content: space-around;
+	align-items: center;
 }
 
 #footer img {
