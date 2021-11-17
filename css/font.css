@@ -36,3 +36,8 @@
 	font-family: "Fantasque Sans Mono";
 	src: url("../res/fonts/FantasqueSansMono-Regular.ttf");
 	font-style: normal; }
+
+@font-face {
+	font-family: "monofur55";
+	src: url("../res/fonts/monof55.ttf");
+	font-style: normal; }
