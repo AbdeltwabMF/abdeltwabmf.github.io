@@ -7,7 +7,7 @@
 body {
 	background-color: #FFEA9D;
 	color: #57274D;
-	font-family: "Ubuntu Monospaced";
+	font-family: "Inconsolata";
 }
 
 a {
@@ -44,7 +44,7 @@ code {
 }
 
 #header-link {
-	font-family: "monofur55";
+	font-family: "Monofur55";
 	font-size: 27px;
 	letter-spacing: 4px;
 	font-variant: small-caps;
@@ -72,7 +72,6 @@ img,
 	color: #853975;
 	overflow: hidden;
 	background-color: #cfb666;
-	font-family: "Ubuntu Monospaced";
 	padding: 4px 8px;
 	border-bottom: 1px solid #853975;
 	border-top: 1px solid #853975;
@@ -88,7 +87,7 @@ img,
 	margin: 0 0.5%;
 	width: 25%;
 	color: #720000;
-	font-family: "monofur55";
+	font-family: "Monofur55";
 	letter-spacing: 0.1em;
 	font-size: 1.5em;
 }
@@ -100,7 +99,7 @@ img,
 #footer {
 	background-color: #cfb666;
 	color: #6C1000;
-	font-family: "monofur55";
+	font-family: "Monofur55";
 	letter-spacing: 0.1em;
 	padding: 0.3125em;
 	left: 0px;
@@ -166,7 +165,6 @@ h5 {
 #nav {
 	float: left;
 	padding: 16px 0px;
-	font-family: "Ubuntu Monospaced";
 	border-right: 2px dotted #853975;
 	width: 20%;
 }
@@ -194,7 +192,7 @@ h5 {
 #nav a {
 	display: flex;
 	padding: 0.3em 1em;
-	font-family: "monofur55";
+	font-family: "Monofur55";
 	letter-spacing: 0.1em;
 	font-size: 1.4em;
 }
@@ -226,7 +224,6 @@ h5 {
 
 .btn {
 	padding: 8px 16px;
-	font-family: "Ubuntu Monospaced";
 	font-size: 16px;
 	background-color: #FA8C368F;
 	border: 1px solid #8E3B3B;

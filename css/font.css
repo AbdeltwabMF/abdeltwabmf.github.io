@@ -38,16 +38,26 @@
 	font-style: normal; }
 
 @font-face {
-	font-family: "monofur55";
+	font-family: "Monofur55";
 	src: url("../res/fonts/monof55.ttf");
 	font-style: normal; }
 
 @font-face {
-	font-family: "fixedsys";
+	font-family: "Fixedsys";
 	src: url("../res/fonts/FSEX302.ttf");
 	font-style: normal; }
 
 @font-face {
-	font-family: "unifont";
+	font-family: "Unifont";
 	src: url("../res/fonts/unifont-14.0.01.ttf");
+	font-style: normal; }
+
+@font-face {
+	font-family: "Victormono";
+	src: url("../res/fonts/VictorMono-Regular.ttf");
+	font-style: normal; }
+
+@font-face {
+	font-family: "Inconsolata";
+	src: url("../res/fonts/Inconsolata-Regular.ttf");
 	font-style: normal; }
