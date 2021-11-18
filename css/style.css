@@ -168,7 +168,7 @@ h5 {
 }
 
 #nav {
-	padding: 16px 0px;
+	padding: 1em 0;
 	border-right: 1px dotted #853975;
 	width: 20%;
 	font-size: 1.2em;
@@ -204,7 +204,7 @@ h5 {
 }
 
 #nav li {
-	padding: 0.3em 1em;
+	padding: 0.3em;
 	font-family: "Monofur55";
 	letter-spacing: 0.1em;
 }
@@ -350,6 +350,22 @@ li p {
 		line-height: 1.3em;
 		font-size: 1.0em;
 		overflow: auto;
+	}
+
+	#content {
+		display: flex;
+		flex-direction: column;
+		align-content: center;
+		justify-content: flex-start;
+		align-items: stretch;
+	}
+
+	#nav {
+		width: 100%;
+		border-bottom: 1px solid;
+		border-block-end: solid;
+		margin: 0 1em;
+		border-right: none;
 	}
 
 	#menu {
