@@ -41,6 +41,7 @@ code {
 	height: 1.8125em;
 	display: flex;
 	justify-content: flex-start;
+	flex-direction: column;
 }
 
 #header-link {
@@ -163,7 +164,6 @@ h5 {
 }
 
 #nav {
-	float: left;
 	padding: 16px 0px;
 	border-right: 2px dotted #853975;
 	width: 20%;
@@ -180,6 +180,10 @@ h5 {
 	padding: 0em 0.5em;
 }
 
+.contact-list li i:hover {
+	color: #000000;
+}
+
 #contact ul,
 .contact-list {
 	margin: 16px;
@@ -189,8 +193,12 @@ h5 {
 	padding-left: 0.6em !important;
 }
 
-#nav a {
+#nav ul {
 	display: flex;
+	flex-direction: column;
+}
+
+#nav a {
 	padding: 0.3em 1em;
 	font-family: "Monofur55";
 	letter-spacing: 0.1em;
@@ -295,4 +303,62 @@ li p {
 .quote {
 	font-style: italic;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 280px) {
+	h1 {
+		margin: 1.0em 0em 1.0em;
+		padding-left: 1.0em;
+		font-size: 1.2em;
+		border-left: 2px solid #1EEEEE;
+		letter-spacing: 2px;
+	}
+
+	#content {
+		flex-direction: column;
+	}
+
+	#nav {
+		width: 100%;
+		border: none;
+		height: 2.5em;
+		padding: 0px;
+		flex-direction: row;
+	}
+
+	#nav ul {
+		flex-direction: row;
+	}
+
+	#main {
+		width: 100%;
+		padding: 8px;
+	}
+
+	#header a {
+		text-align: center;
+	}
+
+	#header {
+		height: 3.16em;
+	}
+
+	#header-link {
+		font-family: "Monofur55";
+		font-size: 1em;
+		letter-spacing: 4px;
+		font-variant: small-caps;
+		font-weight: bold;
+		color: #328E84;
+		display: inline-block;
+		padding-top: 0.5em;
+		vertical-align: bottom;
+	}
+
+	#footer {
+		height:4.5em;
+		font-size: 0.8em;
+		padding: 0.2em 0.1em;
+		flex-direction: column;
+	}
 }
