@@ -83,11 +83,13 @@ img,
 }
 
 #menu a {
-	padding: 4px 8px;
+	padding: 0.2em 0.4em;
 	text-align: center;
 	margin: 0 0.5%;
 	width: 25%;
 	color: #720000;
+	font-family: "monofur55";
+	letter-spacing: 0.1em;
 	font-size: 1.5em;
 }
 
@@ -98,7 +100,8 @@ img,
 #footer {
 	background-color: #cfb666;
 	color: #6C1000;
-	font-family: "Ubuntu Monospaced";
+	font-family: "monofur55";
+	letter-spacing: 0.1em;
 	padding: 0.3125em;
 	left: 0px;
 	bottom: 0px;
@@ -188,9 +191,17 @@ h5 {
 	padding-left: 0.6em !important;
 }
 
-#nav li a {
-	display: block;
-	padding: 6px 24px;
+#nav a {
+	display: flex;
+	padding: 0.3em 1em;
+	font-family: "monofur55";
+	letter-spacing: 0.1em;
+	font-size: 1.4em;
+}
+
+#nav a:hover {
+	font-size: 1.6em;
+	background-color: #cfb666;
 }
 
 #main {
