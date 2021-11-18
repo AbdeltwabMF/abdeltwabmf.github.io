@@ -76,17 +76,17 @@ img,
 	padding: 4px 16px;
 	border-bottom: 1px solid #853975;
 	border-top: 1px solid #853975;
-	height: 4em;
+	height: 1.5em;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	align-content: center;
 	flex-direction: row;
 	flex-wrap: wrap;
+	justify-content: space-evenly;
+  align-items: stretch;
+  align-content: space-around;
 }
 
 #menu a {
-	padding: 0.2em 0.4em;
+	padding: 0.2em 1.0em;
 	text-align: center;
 	margin: 0 0.5%;
 	width: fit-content;
@@ -98,6 +98,7 @@ img,
 
 #menu a:hover {
 	background-color: #AD8E2C;
+	border-radius: 1em;
 }
 
 #footer {
@@ -170,6 +171,7 @@ h5 {
 	padding: 16px 0px;
 	border-right: 1px dotted #853975;
 	width: 20%;
+	font-size: 1.2em;
 }
 
 #nav li {
@@ -205,12 +207,6 @@ h5 {
 	padding: 0.3em 1em;
 	font-family: "Monofur55";
 	letter-spacing: 0.1em;
-	font-size: 1.4em;
-}
-
-#nav li:hover {
-	font-size: 1.5em;
-	background-color: #cfb666;
 }
 
 #main {
@@ -308,60 +304,70 @@ li p {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-@media only screen and (min-width: 0px) and (max-width: 280px) {
+@media only screen and (max-width: 720px) {
 	h1 {
 		margin: 1.0em 0em 1.0em;
 		padding-left: 1.0em;
-		font-size: 1.2em;
+		font-size: 1.6em;
 		border-left: 2px solid #1EEEEE;
 		letter-spacing: 2px;
 	}
 
-	#content {
-		flex-direction: column;
+	h2 {
+		margin: 1.0em 0em 0.334em;
+		padding-left: 1.0em;
+		font-size: 1.4em;
+		border-left: 2px solid #FF6A00;
+		letter-spacing: 2px;
 	}
 
-	#nav {
-		width: 100%;
-		border: none;
-		height: 2.5em;
-		padding: 0px;
-		flex-direction: row;
+	h3 {
+		margin: 1.0em 0em 0.334em;
+		padding-left: 1.0em;
+		font-size: 1.2em;
+		border-left: 2px solid #F51978;
+		letter-spacing: 2px;
 	}
 
-	#nav ul {
-		flex-direction: row;
+	h4 {
+		margin: 1.0em 0em 0.334em;
+		padding-left: 1.0em;
+		font-size: 1.0em;
+		border-left: 2px solid #1FD51F;
+		letter-spacing: 2px;
+	}
+
+	h5 {
+		margin: 1.0em 0em 0.334em;
+		padding-left: 1.0em;
+		font-size: 0.8em;
+		border-left: 2px solid #D128D1;
+		letter-spacing: 2px;
+	}
+
+	p {
+		margin: 1.0em 0em;
+		line-height: 1.3em;
+		font-size: 1.0em;
+		overflow: auto;
+	}
+
+	#menu {
+		height: 1.6em;
 	}
 
 	#main {
 		width: 100%;
-		padding: 8px;
-	}
-
-	#header a {
-		text-align: center;
-	}
-
-	#header {
-		height: 3.16em;
-	}
-
-	#header-link {
-		font-family: "Monofur55";
-		font-size: 1em;
-		letter-spacing: 4px;
-		font-variant: small-caps;
-		font-weight: bold;
-		color: #328E84;
-		display: inline-block;
-		padding-top: 0.5em;
-		vertical-align: bottom;
+		padding: 1.0em;
 	}
 
 	#footer {
-		height:4.5em;
-		font-size: 0.8em;
+		height: 4.5em;
 		padding: 0.2em 0.1em;
 		flex-direction: column;
+	}
+
+	#footer span {
+		font-size: 1.2em;
 	}
 }
