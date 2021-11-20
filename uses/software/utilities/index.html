@@ -15,32 +15,34 @@
 		<link rel="shortcut icon" type="image/png" href="/res/images/site-related/favicon.ico"/>
 
 		<!-- CSS links -->
-		<link rel="stylesheet" href="../../../css/all.css"/>
-		<link rel="stylesheet" href="../../../css/font.css"/>
-		<link rel="stylesheet" href="../../../css/style.css"/>
+		<link rel="stylesheet" href="/css/all.css"/>
+		<link rel="stylesheet" href="/css/font.css"/>
+		<link rel="stylesheet" href="/css/style.css"/>
 	</head>
 
 	<body>
 		<!-- Header -->
 		<div id="header">
 
-			<a href="/">
-				<img src="/res/images/site-related/header.png" alt="amf-logo">
-				<span id="header-link">Abd el-twab M. Fakhry</span>
-			</a>
+			<ul id="header-logo-name">
+				<li>
+					<a href="/" id="header-logo">
+						<img src="/res/images/site-related/header.png" alt="amf-logo" class="lg-icon-img">
+					</a>
+				</li>
+				<li>
+					<a href="/" id="header-name">Abd el-twab M. Fakhry</a>
+				</li>
+			</ul>
+
+			<ul id="header-menu">
+				<li><a href="/"><b>home</b></a></li>
+				<li><a href="/blogs">blogs</a></li>
+				<li><a href="/projects">projects</a></li>
+				<li><a href="/uses">uses</a></li>
+			</ul>
 
 		<!-- End of Header -->
-		</div>
-
-		<!-- Menu -->
-		<div id="menu">
-
-			<a href="/">home</a>
-			<a href="/blogs">blogs</a>
-			<a href="/projects">projects</a>
-			<a href="/uses"><b>uses</b></a>
-
-		<!-- End of Menu -->
 		</div>
 
 		<!-- Body -->
@@ -77,14 +79,15 @@
 		<!-- Footer -->
 		<div id="footer">
 
-			<span class="footer_left">
-				<i class="far fa-copyright"> </i> 2021 Abd El-Twab M. Fakhry
+			<span id="footer-left">
+				<i class="far fa-copyright"></i> 2021 Abd El-Twab M. Fakhry
 			</span>
-			<span class="footer_right">
+
+			<span id="footer-right">
 				Created in
-				<img src="/res/images/oss/gnu.svg" alt="GNU"> +
-				<img src="/res/images/oss/linux.svg" alt="Linux">
-				& <img src="/res/images/apps/vim.svg" alt="Vim Icon">
+				<img src="/res/images/oss/gnu.svg" alt="GNU" class="sm-icon-img"> &plus;
+				<img src="/res/images/oss/linux.svg" alt="Linux" class="sm-icon-img">
+				&amp; <img src="/res/images/apps/vim.svg" alt="Vim Icon" class="sm-icon-img">
 				with <i class="fas fa-heart"> </i>
 			</span>
 
