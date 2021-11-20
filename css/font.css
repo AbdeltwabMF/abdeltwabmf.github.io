@@ -61,3 +61,8 @@
 	font-family: "Inconsolata";
 	src: url("../res/fonts/Inconsolata-Regular.ttf");
 	font-style: normal; }
+
+@font-face {
+	font-family: "Binchotan";
+	src: url("../res/fonts/Binchotan-Sharp.ttf");
+	font-style: normal; }
