@@ -24,23 +24,25 @@
 		<!-- Header -->
 		<div id="header">
 
-			<a href="/">
-				<img src="/res/images/site-related/header.png" alt="amf-logo">
-				<span id="header-link">Abd el-twab M. Fakhry</span>
-			</a>
+			<ul id="header-logo-name">
+				<li>
+					<a href="/" id="header-logo">
+						<img src="/res/images/site-related/header.png" alt="amf-logo" class="lg-icon-img">
+					</a>
+				</li>
+				<li>
+					<a href="/" id="header-name">Abd el-twab M. Fakhry</a>
+				</li>
+			</ul>
+
+			<ul id="header-menu">
+				<li><a href="/"><b>home</b></a></li>
+				<li><a href="/blogs">blogs</a></li>
+				<li><a href="/projects">projects</a></li>
+				<li><a href="/uses">uses</a></li>
+			</ul>
 
 		<!-- End of Header -->
-		</div>
-
-		<!-- Menu -->
-		<div id="menu">
-
-			<a href="/">home</a>
-			<a href="/blogs">blogs</a>
-			<a href="/projects">projects</a>
-			<a href="/uses"><b>uses</b></a>
-
-		<!-- End of Menu -->
 		</div>
 
 		<!-- Body -->
@@ -68,10 +70,10 @@
 			<!-- Main Right -->
 			<div id="main">
 
-				<ul class="alter-list">
+				<ul>
 					<li>
 						<a target="_blank" href="https://github.com/openstyles/stylus">
-							<img src="../../../res/images/addons/stylus.png">Stylus
+							<img src="/res/images/addons/stylus.png">Stylus
 						</a>
 						<p>
 							Userstyles Manager.
@@ -79,7 +81,7 @@
 					</li>
 					<li>
 						<a target="_blank" href="https://github.com/code4charity/YouTube-Extension">
-							<img src="../../../res/images/addons/improveyt.jpg">Improve YouTube!
+							<img src="/res/images/addons/improveyt.jpg">Improve YouTube!
 						</a>
 						<p>
 							A YouTube Extension for all Browsers, that modifies video player &amp;
@@ -88,7 +90,7 @@
 					</li>
 					<li>
 						<a target="_blank" href="https://github.com/Cookie-AutoDelete/Cookie-AutoDelete">
-							<img src="../../../res/images/addons/cookieautodelete.png">Cookie AutoDelete
+							<img src="/res/images/addons/cookieautodelete.png">Cookie AutoDelete
 						</a>
 						<p>
 							Control your cookies! This extension is inspired by Self-Destructing Cookies.
@@ -98,7 +100,7 @@
 					</li>
 					<li>
 						<a target="_blank" href="https://github.com/xbrowsersync/app">
-							<img src="../../../res/images/addons/xbrowsersync.png">xBrowserSync
+							<img src="/res/images/addons/xbrowsersync.png">xBrowserSync
 						</a>
 						<p>
 							A free tool for syncing browser data between different browsers and devices, built for privacy and anonymity.
@@ -106,7 +108,7 @@
 					</li>
 					<li>
 						<a target="_blank" href="https://github.com/tosdr/browser-extensions">
-							<img src="../../../res/images/addons/tosdr.png">Terms of Service; Didn't Read
+							<img src="/res/images/addons/tosdr.png">Terms of Service; Didn't Read
 						</a>
 						<p>
 							<span class="quote">“I have read and agree to the Terms”</span>
@@ -118,7 +120,7 @@
 					</li>
 					<li>
 						<a target="_blank" href="https://github.com/gorhill/uBlock">
-							<img src="../../../res/images/addons/ublockorigin.png">uBlock Origin
+							<img src="/res/images/addons/ublockorigin.png">uBlock Origin
 						</a>
 						<p>
 							A wide-spectrum blocker, which happens to be able to function as a mere "ad blocker".
@@ -127,7 +129,7 @@
 					</li>
 					<li>
 						<a target="_blank" href="https://github.com/gorhill/uMatrix">
-							<img src="../../../res/images/addons/umatrix.png">uMatrix
+							<img src="/res/images/addons/umatrix.png">uMatrix
 						</a>
 						<p>
 							Point and click matrix to filter net requests according to source, destination and type.
@@ -137,7 +139,7 @@
 					</li>
 					<li>
 						<a target="_blank" href="https://github.com/philc/vimium">
-							<img src="../../../res/images/addons/vimium.svg">Vimium
+							<img src="/res/images/addons/vimium.svg">Vimium
 						</a>
 						<p>
 							Vimium is a browser extension that provides keyboard-based navigation and control of the web
@@ -146,7 +148,7 @@
 					</li>
 					<li>
 						<a target="_blank" href="https://github.com/bitwarden/mobile">
-							<img src="../../../res/images/apps/bitwarden.svg">Bitwarden
+							<img src="/res/images/apps/bitwarden.svg">Bitwarden
 						</a>
 						<p>
 							Easy to use, modern, cross platform and convenient.
@@ -154,7 +156,7 @@
 					</li>
 					<li>
 						<a target="_blank" href="https://git.synz.io/Synzvato/decentraleyes">
-							<img src="../../../res/images/addons/decentraleyes.png">Decentraleyes
+							<img src="/res/images/addons/decentraleyes.png">Decentraleyes
 						</a>
 						<p>
 							A web browser extension that emulates Content Delivery Networks to improve your online privacy.
@@ -164,7 +166,7 @@
 					</li>
 					<li>
 						<a target="_blank" href="https://github.com/ClearURLs/Addon">
-							<img src="../../../res/images/addons/clearurls.png">ClearURLs
+							<img src="/res/images/addons/clearurls.png">ClearURLs
 						</a>
 						<p>
 							This extension will automatically remove tracking elements from URLs to help protect your privacy
@@ -181,14 +183,15 @@
 		<!-- Footer -->
 		<div id="footer">
 
-			<span class="footer_left">
-				<i class="far fa-copyright"> </i> 2021 Abd El-Twab M. Fakhry
+			<span id="footer-left">
+				<i class="far fa-copyright"></i> 2021 Abd El-Twab M. Fakhry
 			</span>
-			<span class="footer_right">
+
+			<span id="footer-right">
 				Created in
-				<img src="/res/images/oss/gnu.svg" alt="GNU"> +
-				<img src="/res/images/oss/linux.svg" alt="Linux">
-				& <img src="/res/images/apps/vim.svg" alt="Vim Icon">
+				<img src="/res/images/oss/gnu.svg" alt="GNU" class="sm-icon-img"> &plus;
+				<img src="/res/images/oss/linux.svg" alt="Linux" class="sm-icon-img">
+				&amp; <img src="/res/images/apps/vim.svg" alt="Vim Icon" class="sm-icon-img">
 				with <i class="fas fa-heart"> </i>
 			</span>
 
