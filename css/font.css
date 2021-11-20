@@ -1,68 +1,57 @@
 /* 	Font configuration
  */
 
+/** serif fonts **/
 @font-face {
-	font-family: "Linux Libertine";
-	src: url("../res/res/fonts/LinLibertine_R.ttf");
-	src: url("../res/fonts/LinLibertine_R.ttf");
+	font-family: "linux-libertine";
+	src: url("../res/fonts/linux-libertine.ttf");
+	font-style: normal; }
+
+/** sans-serif fonts **/
+@font-face {
+	font-family: "linux-biolinum";
+	src: url("../res/fonts/linux-biolinum.ttf");
+	font-style: normal; }
+
+/** arabic fonts **/
+@font-face {
+	font-family: "ubuntu-arabic";
+	src: url("../res/fonts/ubuntu-arabic.ttf");
 	font-style: normal; }
 
 @font-face {
-	font-family: "Linux Biolinum";
-	src: url("../res/fonts/LinBiolinum_R.ttf");
+	font-family: "amiri-quran";
+	src: url("../res/fonts/amiri-quran.ttf");
+	font-style: normal; }
+
+/** glyphs **/
+@font-face {
+	font-family: "fontawesome";
+	src: url("../res/fonts/fontawesome.ttf");
+	font-style: normal; }
+
+/** monospaced fonts **/
+@font-face {
+	font-family: "binchotan";
+	src: url("../res/fonts/binchotan.ttf");
 	font-style: normal; }
 
 @font-face {
-	font-family: "Ubuntu Arabic";
-	src: url("../res/fonts/Ubuntu-Arabic_R.ttf");
+	font-family: "fantasque-sans-mono";
+	src: url("../res/fonts/fantasque-sans-mono.ttf");
 	font-style: normal; }
 
 @font-face {
-	font-family: "Amiri Quran";
-	src: url("../res/fonts/Amiri-Regular.ttf");
+	font-family: "ubuntu-monospaced";
+	src: url("../res/fonts/ubuntu-monospaced.ttf");
 	font-style: normal; }
 
 @font-face {
-	font-family: "Font Awesome";
-	src: url("../res/fonts/fontawesome-regular.ttf");
+	font-family: "monofur55";
+	src: url("../res/fonts/monofur55.ttf");
 	font-style: normal; }
 
 @font-face {
-	font-family: "Ubuntu Monospaced";
-	src: url("../res/fonts/UbuntuMono-R.ttf");
-	font-style: normal; }
-
-@font-face {
-	font-family: "Fantasque Sans Mono";
-	src: url("../res/fonts/FantasqueSansMono-Regular.ttf");
-	font-style: normal; }
-
-@font-face {
-	font-family: "Monofur55";
-	src: url("../res/fonts/monof55.ttf");
-	font-style: normal; }
-
-@font-face {
-	font-family: "Fixedsys";
-	src: url("../res/fonts/FSEX302.ttf");
-	font-style: normal; }
-
-@font-face {
-	font-family: "Unifont";
-	src: url("../res/fonts/unifont-14.0.01.ttf");
-	font-style: normal; }
-
-@font-face {
-	font-family: "Victormono";
-	src: url("../res/fonts/VictorMono-Regular.ttf");
-	font-style: normal; }
-
-@font-face {
-	font-family: "Inconsolata";
-	src: url("../res/fonts/Inconsolata-Regular.ttf");
-	font-style: normal; }
-
-@font-face {
-	font-family: "Binchotan";
-	src: url("../res/fonts/Binchotan-Sharp.ttf");
+	font-family: "unifont";
+	src: url("../res/fonts/unifont.ttf");
 	font-style: normal; }
