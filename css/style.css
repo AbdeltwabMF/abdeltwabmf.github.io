@@ -31,9 +31,17 @@
 	--bg-3: #bdae93;
 	--bg-4: #a89984;
 
-	--font-monospaced: "binchotan";
+	--font-serif: "linux-libertine";
+	--font-sans-serif: "linux-biolinum";
+	--font-monospaced-1: "binchotan";
+	--font-monospaced-2: "fantasque-sans-mono";
+	--font-monospaced-3: "ubuntu-monospaced";
+	--font-monospaced-4: "monofur55";
+	--font-monospaced-5: "unifont";
+	--font-arabic-1: "amiri-quran";
+	--font-arabic-2: "ubuntu-arabic";
 
-	--body-font-family: var(--font-monospaced, mono);
+	--body-font-family: var(--font-monospaced-1, binchotan);
 	--body-font-size: 1rem;
 	--body-font-weight: 400;
 	--body-line-height: 1.5em;
@@ -49,11 +57,25 @@
 }
 
 body {
-	background-color: var(--bg-3, #a89984);
-	color: var(--fg, #282828);
+	background-color: var(--bg-1, #ebdbb2);
+	color: var(--fg-1, #3c3836);
 
-	font-family: var(--body-font-family, Tahoma);
+	font-family: var(--body-font-family, ubuntu-arabic);
 	font-size: var(--body-font-size, 1rem);
 	font-weight: var(--body-font-weight, 400);
 	line-height: var(--body-line-height, 1.5em);
+}
+
+#footer {
+	background-color: var(--bg-3, #bdae93);
+	color: var(--fg-3, #665c54);
+
+	height: 8em;
+	padding: 1em 0.25em;
+	line-height: 2.5em;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
 }
