@@ -1,51 +1,51 @@
-:root {
-	--bg: #fbf1c7;
-	--red: #cc241d;
-	--green: #98971a;
-	--yellow: #d79921;
-	--blue: #458388;
-	--purple: #b16286;
-	--aqua: #689d6a;
-	--gray: #7c6f64;
-	--orange: #d65d0e;
+/* :root { */
+/* 	--bg: #fbf1c7; */
+/* 	--red: #cc241d; */
+/* 	--green: #98971a; */
+/* 	--yellow: #d79921; */
+/* 	--blue: #458388; */
+/* 	--purple: #b16286; */
+/* 	--aqua: #689d6a; */
+/* 	--gray: #7c6f64; */
+/* 	--orange: #d65d0e; */
 
-	--fg: #3c3836;
-	--aqua-off: #427b58;
-	--purple-off: #8f3f71;
-	--blue-off: #076678;
-	--yellow-off: #b57614;
-	--green-off: #79740e;
-	--red-off: #9d0006;
-	--gray-off: #928374;
-	--orange-off: #af3a03;
+/* 	--fg: #3c3836; */
+/* 	--aqua-off: #427b58; */
+/* 	--purple-off: #8f3f71; */
+/* 	--blue-off: #076678; */
+/* 	--yellow-off: #b57614; */
+/* 	--green-off: #79740e; */
+/* 	--red-off: #9d0006; */
+/* 	--gray-off: #928374; */
+/* 	--orange-off: #af3a03; */
 
-	--fg-0: #282828;
-	--fg-1: #3c3836;
-	--fg-2: #504945;
-	--fg-3: #665c54;
-	--fg-4: #7c6f64;
+/* 	--fg-0: #282828; */
+/* 	--fg-1: #3c3836; */
+/* 	--fg-2: #504945; */
+/* 	--fg-3: #665c54; */
+/* 	--fg-4: #7c6f64; */
 
-	--bg-0: #fbf1c7;
-	--bg-1: #ebdbb2;
-	--bg-2: #d5c4a1;
-	--bg-3: #bdae93;
-	--bg-4: #a89984;
+/* 	--bg-0: #fbf1c7; */
+/* 	--bg-1: #ebdbb2; */
+/* 	--bg-2: #d5c4a1; */
+/* 	--bg-3: #bdae93; */
+/* 	--bg-4: #a89984; */
 
-	--font-serif: "linux-libertine";
-	--font-sans-serif: "linux-biolinum";
-	--font-monospaced-1: "binchotan";
-	--font-monospaced-2: "fantasque-sans-mono";
-	--font-monospaced-3: "ubuntu-monospaced";
-	--font-monospaced-4: "monofur55";
-	--font-monospaced-5: "unifont";
-	--font-arabic-1: "amiri-quran";
-	--font-arabic-2: "ubuntu-arabic";
+/* 	--font-serif: "linux-libertine"; */
+/* 	--font-sans-serif: "linux-biolinum"; */
+/* 	--font-monospaced-1: "binchotan"; */
+/* 	--font-monospaced-2: "fantasque-sans-mono"; */
+/* 	--font-monospaced-3: "ubuntu-monospaced"; */
+/* 	--font-monospaced-4: "monofur55"; */
+/* 	--font-monospaced-5: "unifont"; */
+/* 	--font-arabic-1: "amiri-quran"; */
+/* 	--font-arabic-2: "ubuntu-arabic"; */
 
-	--body-font-family: var(--font-monospaced-1, binchotan);
-	--body-font-size: 1rem;
-	--body-font-weight: 400;
-	--body-line-height: 1.5em;
-}
+/* 	--body-font-family: var(--font-monospaced-1, binchotan); */
+/* 	--body-font-size: 1rem; */
+/* 	--body-font-weight: 400; */
+/* 	--body-line-height: 1.5em; */
+/* } */
 
 * {
 	padding: 0px;
@@ -60,17 +60,75 @@ body {
 	background-color: var(--bg-1, #ebdbb2);
 	color: var(--fg-1, #3c3836);
 
-	font-family: var(--body-font-family, ubuntu-arabic);
+	font-family: var(--body-font-family, binchotan);
 	font-size: var(--body-font-size, 1rem);
 	font-weight: var(--body-font-weight, 400);
 	line-height: var(--body-line-height, 1.5em);
+}
+
+#header {
+	background-color: var(--bg-2, #d5c4a1);
+	color: var(--fg-2, #504945);
+	/* border-bottom: 5px solid var(--aqua, #689d6a); */
+	box-shadow: 0 0.1em 1em;
+
+	height: 6em;
+	padding: 1em 2em;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#header-logo-name {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#header-name {
+	color: var(--aqua-off, #427b58);
+	text-decoration: none;
+
+	padding: 0.5em 1em;
+	font-size: 1.6em;
+
+	display: none;
+}
+
+#header-menu {
+	position: relative;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#header ul,
+#nav ul {
+	list-style: none;
+}
+
+#header a,
+#nav a {
+	text-decoration: none;
+}
+
+#header-menu a {
+	color: var(--purple, #b16286);
+	padding: 0.2em 0.8em;
+
+	font-size: 1.5em;
 }
 
 #footer {
 	background-color: var(--bg-3, #bdae93);
 	color: var(--fg-3, #665c54);
 
-	height: 8em;
+	height: 7em;
 	padding: 1em 0.25em;
 	line-height: 2.5em;
 
@@ -78,4 +136,51 @@ body {
 	flex-direction: column;
 	align-items: center;
 	align-content: center;
+}
+
+#content {
+	min-height: calc(100vh - 240px);
+	margin: 1em 0;
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	align-content: center;
+}
+
+#nav {
+	margin: 0 1em;
+	padding: 1em 1em 3em;
+}
+
+#main {
+	padding: 0.2em 1em;
+}
+
+.sm-icon-img {
+	width: 1em;
+	height: 1em;
+}
+
+.md-icon-img {
+	width: 3em;
+	height: 3em;
+}
+
+.lg-icon-img {
+	width: 6em;
+	height: 6em;
+}
+
+.fas,
+.fab,
+.bar,
+.sm-icon-img,
+.md-icon-img,
+.lg-icon-img {
+	vertical-align: middle;
+}
+
+#footer-right {
+	font-size: 2em;
 }
