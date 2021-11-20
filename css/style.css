@@ -31,9 +31,9 @@
 	--bg-3: #bdae93;
 	--bg-4: #a89984;
 
-	--font-monospaced: "Binchotan";
+	--font-monospaced: "binchotan";
 
-	--body-font-family: var(--font-monospaced, "Binchotan");
+	--body-font-family: var(--font-monospaced, mono);
 	--body-font-size: 1rem;
 	--body-font-weight: 400;
 	--body-line-height: 1.5em;
@@ -49,8 +49,8 @@
 }
 
 body {
-	background-color: var(--bg-3,--bg);
-	color: var(--fg, --fg-0);
+	background-color: var(--bg-3, #a89984);
+	color: var(--fg, #282828);
 
 	font-family: var(--body-font-family, Tahoma);
 	font-size: var(--body-font-size, 1rem);
