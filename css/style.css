@@ -69,8 +69,7 @@ body {
 #header {
 	background-color: var(--bg-2, #d5c4a1);
 	color: var(--fg-2, #504945);
-	/* border-bottom: 5px solid var(--aqua, #689d6a); */
-	box-shadow: 0 0.1em 1em 0 #a89984;
+	box-shadow: 0 0.1em 1em 0 var(--bg-4, #a89984);
 
 	height: 3em;
 	padding: 1em 2em;
@@ -136,8 +135,8 @@ body {
 
 #header-menu a:hover {
 	color: var(--purple, #b16286);
-	border-top: 0.0em solid #8f3f71;
-	border-bottom: 0.0em solid #b16286;
+	border-top: 0.0em solid var(--purple-off, #8f3f71);
+	border-bottom: 0.0em solid var(--purple, #b16286);
 	background-color: var(--bg-1, #ebdbb2);
 	border-radius: 1em;
 }
@@ -169,7 +168,7 @@ body {
 #nav {
 	margin: 1em 1em;
 	padding: 1em 1em 1em;
-	box-shadow: 0.1em 0.1em 0.2em 0 #d79921;
+	box-shadow: 0.1em 0.1em 0.2em 0 var(--yellow, #d79921);
 
 	min-width: 20%;
 }
@@ -227,27 +226,32 @@ p {
 
 h1 {
 	margin: 1em 0 0.5em;
-	font-size: 3em;
+	font-size: 2em;
 }
 
 h2 {
 	margin: 0.9em 0 0.4em;
+	font-size: 1.8em;
 }
 
 h3 {
 	margin: 0.8em 0 0.3em;
+	font-size: 1.6em;
 }
 
 h4 {
 	margin: 0.7em 0 0.2em;
+	font-size: 1.4em;
 }
 
 h5 {
 	margin: 0.6em 0 0.2em;
+	font-size: 1.2em;
 }
 
 h6 {
 	margin: 0.5em 0 0.2em;
+	font-size: 1em;
 }
 
 .uses-list {
@@ -272,4 +276,8 @@ h6 {
 
 .uses-list .uses-list-title {
 	font-size: 1.4em;
+}
+
+.link {
+	color: var(--green-off, #79740e);
 }
