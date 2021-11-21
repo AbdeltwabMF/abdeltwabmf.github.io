@@ -127,8 +127,7 @@ body {
 	font-size: 1.4em;
 }
 
-#header-menu a,
-#nav a {
+#header-menu a {
 	transition-duration: 250ms;
 	transition-delay: 12ms;
 	transition-property: all;
@@ -185,7 +184,6 @@ body {
 #nav a:hover {
 	color: var(--orange, #d65d0e);
 	font-size: 1.3em;
-	margin-left: 1em;
 }
 
 #main {
