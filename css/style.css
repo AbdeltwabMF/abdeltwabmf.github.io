@@ -344,3 +344,38 @@ code {
 	background-color: var(--yellow, #d79921);
 	border: 0.2em solid var(--bg-0, #fbf1c7);
 }
+
+.donation {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+
+.input {
+	margin: 0.8em 0 2em;
+	padding: 0.7em;
+	color: var(--fg-3, #665c54);
+	background-color: var(--bg-2, #d5c4a1);
+	font-family: var(--font-monospaced-2, "fantasque-sans-mono");
+
+	border: 0.1em solid var(--aqua, #689d6a);
+	border-radius: 1em;
+	overflow: visible;
+}
+
+.input:hover {
+	padding: 0.6em;
+	color: var(--fg-0, #282828);
+	background-color: var(--bg-0, #fbf1c7);
+	border: 0.2em solid var(--aqua-off, #427b58);
+}
+
+::selection {
+	color: var(--bg-0, #fbf1c7);
+	background-color: var(--fg-0, #282828);
+}
+
+.label-title {
+	font-size: 1.3em;
+	margin-left: 0.3em;
+}
