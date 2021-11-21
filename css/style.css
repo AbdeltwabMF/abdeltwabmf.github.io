@@ -67,7 +67,7 @@ body {
 }
 
 #header {
-	background-color: var(--bg-2, #d5c4a1);
+	background-color: var(--bg-0, #fbf1c7);
 	color: var(--fg-2, #504945);
 	box-shadow: 0 0.1em 1em 0 var(--bg-4, #a89984);
 
@@ -134,10 +134,10 @@ body {
 }
 
 #header-menu a:hover {
-	color: var(--purple, #b16286);
+	color: var(--fg-1, #3c3836);
 	border-top: 0.0em solid var(--purple-off, #8f3f71);
 	border-bottom: 0.0em solid var(--purple, #b16286);
-	background-color: var(--bg-1, #ebdbb2);
+	background-color: var(--bg-2, #d5c4a1);
 	border-radius: 1em;
 }
 
@@ -163,6 +163,8 @@ body {
 	flex-direction: column;
 	align-items: flex-start;
 	align-content: center;
+
+	overflow: auto;
 }
 
 #nav {
@@ -171,6 +173,8 @@ body {
 	box-shadow: 0.1em 0.1em 0.2em 0 var(--yellow, #d79921);
 
 	min-width: 20%;
+
+	overflow: hidden;
 }
 
 #nav a {
@@ -203,6 +207,34 @@ body {
 .lg-icon-img {
 	width: 6em;
 	height: 6em;
+}
+
+.sm-icon-glyph {
+	font-size: 1em;
+}
+
+.md-icon-glyph {
+	font-size: 3em;
+}
+
+.lg-icon-glyph {
+	font-size: 6em;
+}
+
+.contact-list {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+
+	list-style: none;
+}
+
+.contact-list a {
+	color: var(--orange, #d65d0e);
+}
+
+.contact-list a:hover {
+	color: var(--orange-off, #af3a03);
 }
 
 .fas,
@@ -280,4 +312,35 @@ h6 {
 
 .link {
 	color: var(--green-off, #79740e);
+	text-decoration: none;
+}
+
+code {
+	font-family: var(--font-monospaced-2, "fantasque-sans-mono");
+	font-size: 0.9em;
+	line-height: 1.4em;
+}
+
+.btn {
+	padding: 0.75em 1.5em;
+	border-radius: 1.4em;
+	border: 0.2em solid var(--aqua-off, #427b58);
+	background-color: var(--bg-1, #ebdbb2);
+}
+
+.btn a {
+	color: var(--fg-1, #3c3836);
+	text-decoration: none;
+	font-size: 1.1em;
+}
+
+.btn .far,
+.btn .fas,
+.btn .fab {
+	margin: 0 0.4em 0 0;
+}
+
+.btn:hover {
+	background-color: var(--yellow, #d79921);
+	border: 0.2em solid var(--bg-0, #fbf1c7);
 }
