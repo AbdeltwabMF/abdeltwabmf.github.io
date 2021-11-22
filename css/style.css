@@ -1,51 +1,51 @@
-:root {
-	--bg: #fbf1c7;
-	--red: #cc241d;
-	--green: #98971a;
-	--yellow: #d79921;
-	--blue: #458388;
-	--purple: #b16286;
-	--aqua: #689d6a;
-	--gray: #7c6f64;
-	--orange: #d65d0e;
+/* :root { */
+/* 	--bg: #fbf1c7; */
+/* 	--red: #cc241d; */
+/* 	--green: #98971a; */
+/* 	--yellow: #d79921; */
+/* 	--blue: #458388; */
+/* 	--purple: #b16286; */
+/* 	--aqua: #689d6a; */
+/* 	--gray: #7c6f64; */
+/* 	--orange: #d65d0e; */
 
-	--fg: #3c3836;
-	--aqua-off: #427b58;
-	--purple-off: #8f3f71;
-	--blue-off: #076678;
-	--yellow-off: #b57614;
-	--green-off: #79740e;
-	--red-off: #9d0006;
-	--gray-off: #928374;
-	--orange-off: #af3a03;
+/* 	--fg: #3c3836; */
+/* 	--aqua-off: #427b58; */
+/* 	--purple-off: #8f3f71; */
+/* 	--blue-off: #076678; */
+/* 	--yellow-off: #b57614; */
+/* 	--green-off: #79740e; */
+/* 	--red-off: #9d0006; */
+/* 	--gray-off: #928374; */
+/* 	--orange-off: #af3a03; */
 
-	--fg-0: #282828;
-	--fg-1: #3c3836;
-	--fg-2: #504945;
-	--fg-3: #665c54;
-	--fg-4: #7c6f64;
+/* 	--fg-0: #282828; */
+/* 	--fg-1: #3c3836; */
+/* 	--fg-2: #504945; */
+/* 	--fg-3: #665c54; */
+/* 	--fg-4: #7c6f64; */
 
-	--bg-0: #fbf1c7;
-	--bg-1: #ebdbb2;
-	--bg-2: #d5c4a1;
-	--bg-3: #bdae93;
-	--bg-4: #a89984;
+/* 	--bg-0: #fbf1c7; */
+/* 	--bg-1: #ebdbb2; */
+/* 	--bg-2: #d5c4a1; */
+/* 	--bg-3: #bdae93; */
+/* 	--bg-4: #a89984; */
 
-	--font-serif: "linux-libertine";
-	--font-sans-serif: "linux-biolinum";
-	--font-monospaced-1: "binchotan";
-	--font-monospaced-2: "fantasque-sans-mono";
-	--font-monospaced-3: "ubuntu-monospaced";
-	--font-monospaced-4: "monofur55";
-	--font-monospaced-5: "unifont";
-	--font-arabic-1: "amiri-quran";
-	--font-arabic-2: "ubuntu-arabic";
+/* 	--font-serif: "linux-libertine"; */
+/* 	--font-sans-serif: "linux-biolinum"; */
+/* 	--font-monospaced-1: "binchotan"; */
+/* 	--font-monospaced-2: "fantasque-sans-mono"; */
+/* 	--font-monospaced-3: "ubuntu-monospaced"; */
+/* 	--font-monospaced-4: "monofur55"; */
+/* 	--font-monospaced-5: "unifont"; */
+/* 	--font-arabic-1: "amiri-quran"; */
+/* 	--font-arabic-2: "ubuntu-arabic"; */
 
-	--body-font-family: var(--font-monospaced-1, binchotan);
-	--body-font-size: 1rem;
-	--body-font-weight: 400;
-	--body-line-height: 1.5em;
-}
+/* 	--body-font-family: var(--font-monospaced-1, binchotan); */
+/* 	--body-font-size: 1rem; */
+/* 	--body-font-weight: 400; */
+/* 	--body-line-height: 1.5em; */
+/* } */
 
 * {
 	padding: 0px;
@@ -172,7 +172,7 @@ body {
 	padding: 1em 1em 1em;
 	box-shadow: 0.1em 0.1em 0.2em 0 var(--yellow, #d79921);
 
-	min-width: 20%;
+	width: 20%;
 
 	overflow: hidden;
 }
@@ -181,12 +181,16 @@ body {
 	color: var(--fg-1, #3c3836);
 	font-size: 1.3em;
 
-	line-height: 1.5em;
+	line-height: 1.3em;
 }
 
 #nav a:hover {
 	color: var(--orange, #d65d0e);
 	font-size: 1.3em;
+}
+
+#nav li {
+	margin-bottom: 0.6em;
 }
 
 #main {
