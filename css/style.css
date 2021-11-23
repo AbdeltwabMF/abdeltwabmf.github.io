@@ -148,6 +148,7 @@ body {
 
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	align-items: center;
 	align-content: center;
 }
@@ -229,11 +230,6 @@ body {
 	#content {
 		flex-direction: column;
 		justify-content: space-between;
-	}
-
-	#footer {
-		height: 5em;
-		line-height: 1.6em;
 	}
 
 	#footer-right {
