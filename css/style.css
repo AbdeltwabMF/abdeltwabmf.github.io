@@ -198,6 +198,18 @@ body {
 	padding: 0.2em 1em;
 }
 
+.really-big {
+	font-size: 9em;
+}
+
+.really-mid {
+	font-size: 3em;
+}
+
+.center-text {
+	text-align: center;
+}
+
 @media (max-width: 1023px) {
 	#content {
 		flex-direction: column;
@@ -223,6 +235,11 @@ body {
 	#header-name {
 		padding: 0;
 		font-size: 1.2em;
+	}
+
+	.banner-img {
+		margin-top: 2em;
+		width: 32em;
 	}
 }
 
@@ -251,6 +268,11 @@ body {
 	#header-name {
 		display: none;
 	}
+
+	.banner-img {
+		margin-top: 2em;
+		width: 20em;
+	}
 }
 
 
@@ -269,6 +291,11 @@ body {
 
 	#footer-right {
 		font-size: 2em;
+	}
+
+	.banner-img {
+		margin-top: 7em;
+		width: 48em;
 	}
 }
 
