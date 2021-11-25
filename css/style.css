@@ -498,3 +498,7 @@ code {
 	font-size: 1.3em;
 	margin-left: 0.3em;
 }
+
+li {
+	list-style-position: inside;
+}
