@@ -41,7 +41,7 @@
 /* 	--font-arabic-1: "amiri-quran"; */
 /* 	--font-arabic-2: "ubuntu-arabic"; */
 
-/* 	--body-font-family: var(--font-monospaced-1, binchotan); */
+/* 	--body-font-family: var(--font-monospaced-2, fantasque-sans-mono); */
 /* 	--body-font-size: 1rem; */
 /* 	--body-font-weight: 400; */
 /* 	--body-line-height: 1.5em; */
@@ -60,7 +60,7 @@ body {
 	background-color: var(--bg-1, #ebdbb2);
 	color: var(--fg-1, #3c3836);
 
-	font-family: var(--body-font-family, binchotan);
+	font-family: var(--body-font-family, fantasque-sans-mono);
 	font-size: var(--body-font-size, 1rem);
 	font-weight: var(--body-font-weight, 400);
 	line-height: var(--body-line-height, 1.5em);
