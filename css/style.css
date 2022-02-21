@@ -251,7 +251,7 @@ body {
 .contact-list {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-evenly;
 	align-content: space-around;
 	align-items: center;
 	flex-wrap: wrap;
@@ -259,8 +259,12 @@ body {
 	list-style: none;
 }
 
+.contact-list a {
+	color: var(--blue-off, #076678);
+}
+
 .contact-list a:hover {
-	color: var(--orange-off, #af3a03);
+	color: var(--purple, #b16286);
 }
 
 #footer .contact-list {
@@ -360,22 +364,22 @@ h6 {
 }
 
 code {
-	font-family: var(--font-monospaced-2, "fantasque-sans-mono");
+	font-family: var(--font-monospaced-3, "ubuntu-monospaced");
 	font-size: 0.9em;
 	line-height: 1.4em;
+
+	color: var(--purple-off, #8f3f71);
 }
 
 .btn {
-	padding: 0.75em 1.5em;
-	border-radius: 1.4em;
-	border: 0.2em solid var(--aqua-off, #427b58);
-	background-color: var(--bg-1, #ebdbb2);
-}
+	padding: 0.55em 1.3em;
+	border-radius: 1.1em;
 
-.btn a {
-	color: var(--fg-1, #3c3836);
-	text-decoration: none;
-	font-size: 1.1em;
+	border: 0em solid var(--blue, #458388);
+	background-color: var(--blue, #458388);
+	color: var(--bg, #fbf1c7);
+
+	font-size: 1.0em;
 }
 
 .btn .far,
@@ -385,8 +389,7 @@ code {
 }
 
 .btn:hover {
-	background-color: var(--yellow, #d79921);
-	border: 0.2em solid var(--bg-0, #fbf1c7);
+	background-color: var(--purple-off, #8f3f71);
 }
 
 .donation {
