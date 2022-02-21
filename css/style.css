@@ -163,11 +163,10 @@ body {
 	align-items: flex-start;
 	align-content: center;
 
-	overflow: auto;
+	overflow-x: auto;
 }
 
 #nav {
-	margin: 1em 1em;
 	padding: 1em 1em 1em;
 	box-shadow: 0.1em 0.1em 0.2em 0 var(--fg-2, #504945);
 
@@ -370,6 +369,17 @@ code {
 	color: var(--purple-off, #8f3f71);
 }
 
+.highlight {
+	background-color: var(--gray-off, #928374);
+	padding: 1em;
+
+	overflow-x: auto;
+}
+
+.highlight code {
+	color: var(--bg-0, #fbf1c7);
+}
+
 .btn {
 	padding: 0.55em 1.3em;
 	border-radius: 1.1em;
@@ -518,12 +528,16 @@ li {
 		flex-direction: row;
 	}
 
+	#main {
+		width: 70%;
+	}
+
 	#header-logo-name {
 		flex-direction: row;
 	}
 
 	#nav {
-		width: calc(35% - 32px);
+		width: calc(30% - 32px);
 	}
 
 	.banner-img {
