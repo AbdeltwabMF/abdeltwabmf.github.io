@@ -64,6 +64,8 @@ body {
 	font-size: var(--body-font-size, 1rem);
 	font-weight: var(--body-font-weight, 400);
 	line-height: var(--body-line-height, 1.5em);
+
+	overflow: auto;
 }
 
 #header {
@@ -162,13 +164,13 @@ body {
 	flex-direction: column;
 	align-items: flex-start;
 	align-content: center;
-
-	overflow-x: auto;
 }
 
 #nav {
 	padding: 1em 1em 1em;
 	box-shadow: 0.1em 0.1em 0.2em 0 var(--fg-2, #504945);
+
+	margin: 1em;
 
 	overflow: hidden;
 }
@@ -332,6 +334,14 @@ h6 {
 	font-size: 1em;
 }
 
+li ul {
+	margin: 0.6em 1em;
+}
+
+.arabic-text {
+	direction: rtl;
+}
+
 .uses-list {
 	list-style: none;
 }
@@ -420,6 +430,20 @@ code {
 	overflow: visible;
 }
 
+.photo {
+	width: 20em;
+	margin: 0.5em;
+}
+
+.gallery {
+	display: flow-root;
+}
+
+.gallery img:hover {
+	width: 30em;
+	cursor: pointer;
+}
+
 .input:hover {
 	padding: 0.6em;
 	color: var(--fg-0, #282828);
@@ -476,9 +500,13 @@ li {
 		width: 32em;
 		margin-top: 3em;
 	}
+
+	.photo {
+		width: 20em;
+	}
 }
 
-@media (max-width: 560px) {
+@media (max-width: 676px) {
 	#content {
 		flex-direction: column;
 		justify-content: flex-start;
@@ -519,6 +547,10 @@ li {
 
 	.really-mid {
 		font-size: 2em;
+	}
+
+	.photo {
+		width: 16em;
 	}
 }
 
