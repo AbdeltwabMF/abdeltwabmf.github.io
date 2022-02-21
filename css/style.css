@@ -136,7 +136,7 @@ body {
 	border-top: 0.0em solid var(--purple-off, #8f3f71);
 	border-bottom: 0.0em solid var(--purple, #b16286);
 	background-color: var(--bg-2, #d5c4a1);
-	border-radius: 1em;
+	border-radius: 0.55em 0em;
 }
 
 #footer {
@@ -297,7 +297,6 @@ body {
 	vertical-align: middle;
 }
 
-
 p {
 	margin: 1em 0;
 	font-size: 1.1em;
@@ -379,7 +378,8 @@ code {
 	background-color: var(--blue, #458388);
 	color: var(--bg, #fbf1c7);
 
-	font-size: 1.0em;
+	font-size: 1.1em;
+	text-decoration: none;
 }
 
 .btn .far,
