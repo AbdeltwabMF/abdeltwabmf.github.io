@@ -12,7 +12,7 @@
 /* 	--fg: #3c3836; */
 /* 	--aqua-off: #427b58; */
 /* 	--purple-off: #8f3f71; */
-/* 	--blue-off: #076678; */
+/* 	--blue-off: #008080; */
 /* 	--yellow-off: #b57614; */
 /* 	--green-off: #79740e; */
 /* 	--red-off: #9d0006; */
@@ -46,15 +46,6 @@
 /* 	--body-font-weight: 400; */
 /* 	--body-line-height: 1.5em; */
 /* } */
-
-* {
-	padding: 0px;
-	margin: 0px;
-
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
 
 body {
 	background-color: var(--bg-1, #ebdbb2);
@@ -298,42 +289,6 @@ body {
 	vertical-align: middle;
 }
 
-p {
-	margin: 1em 0;
-	font-size: 1.1em;
-	line-height: 1.5;
-}
-
-h1 {
-	margin: 2em 0 1.2em;
-	font-size: 2em;
-}
-
-h2 {
-	margin: 1.9em 0 1.1em;
-	font-size: 1.8em;
-}
-
-h3 {
-	margin: 1.8em 0 1.0em;
-	font-size: 1.6em;
-}
-
-h4 {
-	margin: 1.7em 0 0.9em;
-	font-size: 1.4em;
-}
-
-h5 {
-	margin: 1.6em 0 0.8em;
-	font-size: 1.2em;
-}
-
-h6 {
-	margin: 1.5em 0em 0.7em;
-	font-size: 1em;
-}
-
 li ul {
 	margin: 0.6em 1em;
 }
@@ -390,26 +345,24 @@ code {
 	color: var(--bg-0, #fbf1c7);
 }
 
-.btn {
-	padding: 0.55em 1.3em;
-	border-radius: 1.1em;
+.my-btn {
+	padding: 0.4em 0.8em;
+	border-radius: 1em;
 
-	border: 0em solid var(--blue, #458388);
 	background-color: var(--blue, #458388);
-	color: var(--bg, #fbf1c7);
+	color: var(--bg, #ffffff);
 
-	font-size: 1.1em;
+	font-size: 1em;
 	text-decoration: none;
 }
 
-.btn .far,
-.btn .fas,
-.btn .fab {
-	margin: 0 0.4em 0 0;
+.my-btn:hover {
+	background-color: var(--purple-off, #8f3f71);
+	color: var(--bg, #ffffff);
 }
 
-.btn:hover {
-	background-color: var(--purple-off, #8f3f71);
+.navbar-expand-lg .navbar-collapse {
+    justify-content: flex-end;
 }
 
 .donation {
@@ -459,10 +412,6 @@ code {
 .label-title {
 	font-size: 1.3em;
 	margin-left: 0.3em;
-}
-
-li {
-	list-style-position: inside;
 }
 
 @media (max-width: 1023px) {
