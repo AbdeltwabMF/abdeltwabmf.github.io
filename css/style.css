@@ -361,10 +361,6 @@ code {
 	color: var(--bg, #ffffff);
 }
 
-.navbar-expand-lg .navbar-collapse {
-    justify-content: flex-end;
-}
-
 .donation {
 	display: flex;
 	flex-direction: column;
