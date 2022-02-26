@@ -1,7 +1,7 @@
 # AbdeltwabMF's Personal Webpage
 
 
-![under construction](/res/images/others/Under-Construction.jpg)
+![under construction](/assets/images/meta/under-construction.jpg)
 
 
 > find it here [Abd El-Twab Webpage](https://abdeltwabmf.github.io)
