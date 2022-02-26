@@ -12,50 +12,44 @@
 		</title>
 
 		<!-- Favicon -->
-		<link rel="shortcut icon" type="image/png" href="/res/images/site-related/favicon.ico"/>
+		<link rel="shortcut icon" type="image/png" href="/assets/images/meta/favicon.ico"/>
 
 		<!-- CSS links -->
-		<link rel="stylesheet" href="/css/bootstrap/bootstrap.css"/>
-		<link rel="stylesheet" href="/css/bootstrap/bootstrap.rtl.css"/>
-		<link rel="stylesheet" href="/css/bootstrap/bootstrap-grid.css"/>
-		<link rel="stylesheet" href="/css/bootstrap/bootstrap-grid.rtl.css"/>
-		<link rel="stylesheet" href="/css/bootstrap/bootstrap-reboot.css"/>
-		<link rel="stylesheet" href="/css/bootstrap/bootstrap-reboot.rtl.css"/>
-		<link rel="stylesheet" href="/css/bootstrap/bootstrap-utilities.css"/>
-		<link rel="stylesheet" href="/css/bootstrap/bootstrap-utilities.rtl.css"/>
-		<link rel="stylesheet" href="/css/fontawesome/all.css"/>
-		<link rel="stylesheet" href="/css/font.css"/>
-		<link rel="stylesheet" href="/css/style.css"/>
+		<link rel="stylesheet" href="/static/css/bootstrap.rtl.css"/>
+		<link rel="stylesheet" href="/static/css/fontawesome/all.css"/>
+		<link rel="stylesheet" href="/static/css/font.css"/>
+		<link rel="stylesheet" href="/static/css/style.css"/>
 	</head>
 
-	<body>
+	<body onload="draw2dw()">
 		<!-- Header -->
+
 		<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #d5c4a1;">
 			<div class="container-fluid">
 
-				<nav class="navbar navbar-light">
-					<div class="container-fluid">
-						<a class="navbar-brand" href="/">
-							<img src="/res/images/site-related/header.png" alt="amf-logo" height="48" class="d-inline-block align-text-top">
-						</a>
-					</div>
-				</nav>
+				<a class="navbar-brand me-4" href="/">
+					<img src="/assets/images/meta/header.png" alt="amf-logo" height="48" class="d-inline-block align-text-top">
+				</a>
 
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<button class="navbar-toggler ms-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<div class="collapse navbar-collapse" id="navbarNav">
+
+				<div class="collapse navbar-collapse ms-4 justify-content-end" id="navbarNav">
 					<ul class="navbar-nav">
-						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="/">About</a>
+						<li class="nav-item ms-2">
+							<a class="nav-link active fs-4" aria-current="page" href="/">Home</a>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link disabled" href="/Blogs">Blogs</a>
+						<li class="nav-item ms-2">
+							<a class="nav-link disabled fs-4" href="/content/blog/">Blogs</a>
 						</li>
+						<li class="nav-item ms-2">
+							<a class="nav-link fs-4" href="/content/project/">Projects</a></li>
 						<li class="nav-item">
-							<a class="nav-link" href="/Projects">Projects</a></li>
-						<li class="nav-item">
-							<a class="nav-link" href="/Uses">Uses</a>
+							<a class="nav-link fs-4" href="/content/use/">Uses</a>
+						</li>
+						<li class="nav-item ms-2">
+							<a class="nav-link disabled fs-4" href="/content/about">About</a>
 						</li>
 					</ul>
 				</div>
@@ -70,7 +64,7 @@
 			<div id="nav">
 
 				<ul>
-					<li><a href="/"><b>about</b></a></li>
+					<li><a href="/content/about"><b>About</b></a></li>
 					<li><a href="/contact">contact</a></li>
 					<li><a href="/resume">resume</a></li>
 					<li><a href="/donate">donate</a></li>
@@ -107,40 +101,74 @@
 		</div>
 
 		<!-- Footer -->
-		<div id="footer">
+		<footer class="footer mt-auto">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4 col-md-6 col-sm-8 col-xs-12">
+						Created in
+						<img style="width: 24px;" src="/assets/images/uses/os/gnu.svg" alt="GNU" class="sm-icon-img">
+						&sol;
+						<img style="width: 24px;" src="/assets/images/uses/os/linux.svg" alt="Linux" class="sm-icon-img">
+						&amp;
+						<img style="width: 24px;" src="/assets/images/uses/app/vim.svg" alt="Vim Icon" class="sm-icon-img">
+						with
+						<i class="fas fa-heart fs-4 text-danger"> </i>
 
-			<span id="footer-left">
-				&copy;
-				<span>2021</span>
-				<span>Abd El-Twab M. Fakhry</span>
-			</span>
+						<hr>
 
-			<span>
-				<ul class="contact-list">
-					<li><a href="mailto:abdeltwab.m.fakhry@protonmail.com" target="_blank"><i class="fas fa-envelope sm-icon-glyph"></i></a></li>
-					<li><a href="https://github.com/AbdeltwabMF" target="_blank"><i class="fab fa-github sm-icon-glyph"></i></a></li>
-					<li><a href="https://linkedin.com/in/AbdeltwabMF" target="_blank"><i class="fab fa-linkedin sm-icon-glyph"></i></a></li>
-					<li><a href="https://twitter.com/AbdeltwabMF" target="_blank"><i class="fab fa-twitter sm-icon-glyph"></i></a></li>
-					<li><a href="https://t.me/AbdeltwabMF" target="_blank"><i class="fab fa-telegram sm-icon-glyph"></i></a></li>
-				</ul>
-			</span>
+						&copy;
+						<span>2021</span>
+						<span>Abd El-Twab M. Fakhry</span>
+					</div>
 
-			<span id="footer-right">
-				Created in
-				<img src="/res/images/oss/gnu.svg" alt="GNU" class="sm-icon-img">
-				&sol;
-				<img src="/res/images/oss/linux.svg" alt="Linux" class="sm-icon-img">
-				&amp;
-				<img src="/res/images/apps/vim.svg" alt="Vim Icon" class="sm-icon-img">
-				with
-				<i class="fas fa-heart"> </i>
-			</span>
+					<div class="col-lg-2 col-md-6 col-sm-4 col-xs-12">
+						<ul class="contact-list">
+							<li>
+								<a href="mailto:abdeltwab.m.fakhry@protonmail.com" target="_blank">
+									<i class="fas fa-envelope fs-2"></i>
+								</a>
+							</li>
+							<li>
+								<a href="https://github.com/AbdeltwabMF" target="_blank">
+									<i class="fab fa-github fs-2"></i>
+								</a>
+							</li>
+							<li>
+								<a href="https://linkedin.com/in/AbdeltwabMF" target="_blank">
+									<i class="fab fa-linkedin fs-2"></i>
+								</a>
+							</li>
+							<li>
+								<a href="https://t.me/AbdeltwabMF" target="_blank">
+									<i class="fab fa-telegram fs-2"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 
+			<!-- live 2d widget -->
+			<canvas
+				id="live2dcanvas"
+				height="250"
+				width="187.5"
+				class="position-fixed bottom-0 start-0"
+				>
+			</canvas>
 		<!-- End of Footer -->
 		</div>
 
-		<script src="js/bootstrap.js"></script>
-		<script src="js/bootstrap.esm.js"></script>
-		<script src="js/bootstrap.bundle.js"></script>
+		<!-- Scripts -->
+		<script src="/static/js/bootstrap.bundle.js"></script>
+		<script src="/static/js/lib2dw/device.min.js"></script>
+		<script>
+			function draw2dw()
+			{
+				const modelUrl = "/assets/lib2dw/haru01/haru01.model.json";
+				loadlive2d("live2dcanvas", modelUrl);
+			}
+		</script>
+		<script src="/static/js/lib2dw/bundle.js"></script>
 	</body>
 </html>
