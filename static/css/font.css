@@ -1,0 +1,57 @@
+/* 	Font configuration
+ */
+
+/** serif fonts **/
+@font-face {
+	font-family: "linux-libertine";
+	src: url("../../assets/fonts/linux-libertine.ttf");
+	font-style: normal; }
+
+/** sans-serif fonts **/
+@font-face {
+	font-family: "linux-biolinum";
+	src: url("../../assets/fonts/linux-biolinum.ttf");
+	font-style: normal; }
+
+/** arabic fonts **/
+@font-face {
+	font-family: "ubuntu-arabic";
+	src: url("../../assets/fonts/ubuntu-arabic.ttf");
+	font-style: normal; }
+
+@font-face {
+	font-family: "amiri-quran";
+	src: url("../../assets/fonts/amiri-quran.ttf");
+	font-style: normal; }
+
+/** glyphs **/
+@font-face {
+	font-family: "fontawesome";
+	src: url("../../assets/fonts/fontawesome.ttf");
+	font-style: normal; }
+
+/** monospaced fonts **/
+@font-face {
+	font-family: "binchotan";
+	src: url("../../assets/fonts/binchotan.ttf");
+	font-style: normal; }
+
+@font-face {
+	font-family: "fantasque-sans-mono";
+	src: url("../../assets/fonts/fantasque-sans-mono.ttf");
+	font-style: normal; }
+
+@font-face {
+	font-family: "ubuntu-monospaced";
+	src: url("../../assets/fonts/ubuntu-monospaced.ttf");
+	font-style: normal; }
+
+@font-face {
+	font-family: "monofur55";
+	src: url("../../assets/fonts/monofur55.ttf");
+	font-style: normal; }
+
+@font-face {
+	font-family: "unifont";
+	src: url("../../assets/fonts/unifont.ttf");
+	font-style: normal; }
