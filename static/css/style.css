@@ -148,3 +148,11 @@ ol, ul, dl {
 	margin-top: 0;
 	margin-bottom: 0;
 }
+
+.btn-gc {
+	background-color: teal;
+}
+
+.fs-t {
+	font-size: 0.668em;
+}
