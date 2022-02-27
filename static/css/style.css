@@ -54,9 +54,8 @@ html {
 }
 
 body {
-	background-color: var(--bg-1, #ebdbb2);
+  background: linear-gradient(270deg, #fbf1c7 40%, #ebdbb2 60%);
 	color: var(--fg-1, #3c3836);
-  background: linear-gradient(340deg, #fbf1c7 40%, #ebdbb2 60%);
 
 	font-family: var(--body-font-family, fantasque-sans-mono);
 	font-size: var(--body-font-size, 1rem);
