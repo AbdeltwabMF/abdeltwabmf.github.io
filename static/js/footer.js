@@ -1,4 +1,8 @@
 document.write(`
+		<!-- live 2d widget -->
+		<script src="/static/js/lib2dw/device.min.js"></script>
+		<script src="/static/js/lib2dw/bundle.js"></script>
+
 		<div class="container">
 			<div class="row justify-content-start">
 				<div class="row col-8">
@@ -67,4 +71,6 @@ document.write(`
 			width="150"
 			class="position-fixed bottom-0 start-0"
 			>
-		</canvas>`);
+		</canvas>
+
+		<script>loadlive2d("live2dcanvas", "/assets/lib2dw/haru02/haru02.model.json");</script>`);

@@ -21,7 +21,7 @@
 		<link rel="stylesheet" href="/static/css/style.css"/>
 	</head>
 
-	<body onload="draw2dw()">
+	<body>
 		<!-- Header -->
 		<header>
 			<nav class="navbar navbar-expand-md navbar-light" style="background-color: #d5c4a1;">
@@ -151,22 +151,11 @@
 		</main>
 
 		<!-- Footer -->
-		<footer class="footer mt-auto py-3">
+		<footer class="footer">
 			<script src="/static/js/footer.js"></script>
 		</footer>
 
 		<!-- Bootstrap 5 -->
 		<script src="/static/js/bootstrap.bundle.js"></script>
-
-		<!-- live 2d widget -->
-		<script src="/static/js/lib2dw/device.min.js"></script>
-		<script>
-			function draw2dw()
-			{
-				const modelUrl = "/assets/lib2dw/haru01/haru01.model.json";
-				loadlive2d("live2dcanvas", modelUrl);
-			}
-		</script>
-		<script src="/static/js/lib2dw/bundle.js"></script>
 	</body>
 </html>
