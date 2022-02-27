@@ -21,7 +21,7 @@
 		<link rel="stylesheet" href="/static/css/style.css"/>
 	</head>
 
-	<body onload="draw2dw()">
+	<body>
 		<!-- Header -->
 		<header>
 			<nav class="navbar navbar-expand-md navbar-light" style="background-color: #d5c4a1;">
@@ -65,7 +65,7 @@
 		</header>
 
 		<!-- Main -->
-		<main class="mt-2 mb-auto">
+		<main>
 			<h1 class="me-3">Hi, I am Abd El-Twab M. Fakhry</h1>
 			<p class="me-4">
 				And this is my little corner on the web.
@@ -90,7 +90,7 @@
 		</main>
 
 		<!-- Footer -->
-		<footer class="footer mt-auto py-3">
+		<footer class="footer">
 			<script src="/static/js/footer.js"></script>
 		</footer>
 
@@ -99,13 +99,7 @@
 
 		<!-- live 2d widget -->
 		<script src="/static/js/lib2dw/device.min.js"></script>
-		<script>
-			function draw2dw()
-			{
-				const modelUrl = "/assets/lib2dw/haru01/haru01.model.json";
-				loadlive2d("live2dcanvas", modelUrl);
-			}
-		</script>
 		<script src="/static/js/lib2dw/bundle.js"></script>
+		<script>loadlive2d("live2dcanvas", "/assets/lib2dw/haru02/haru02.model.json");</script>
 	</body>
 </html>
