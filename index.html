@@ -82,7 +82,7 @@
 				</div>
 			</div>
 
-			<p class="me-4">
+			<p class="me-4 mt-3">
 			<span class="fs-4">A</span>nd this is my little corner on the web.
 				I am Egyptian,
 				<a href="https://en.wikipedia.org/wiki/Al-Azhar_University">Azhari</a>,
@@ -97,7 +97,10 @@
 				I am not the best, but I’m pretty good.
 			</p>
 			<p class="me-4">
-				I love reading, and specially reading history.
+				I love reading history books, camping in a remote place, playing football.<br>
+				In my copious free time I enjoy configuring my GNU/linux,
+				solving algorithmic problems,
+				and giving back to the free and open-source community through engaging in their projects or even developing new ones.
 			</p>
 
 			<p class="me-4">
@@ -106,20 +109,20 @@
 				You can use my
 				<a href="/data/amf-key.gpg"> PGP-key</a>
 				if it’s top-secret.
+				<br>
 				I’m also reachable through my
 				<a class="text-decoration-none" href="https://t.me/AbdeltwabMF">
 					<i class="fab fa-telegram"></i> Telegram
 				</a>
 				and
 				<a class="text-decoration-none" href="https://twitter.com/AbdeltwabMF">
-					<i class="fab fa-twitter"></i> Twitter
-				</a>.
+					<i class="fab fa-twitter"></i> Twitter</a>.
 			</p>
 
-			<h3 class="me-3">Why this webpage exist?</h3>
+			<h3 class="me-3 mt-4">Why this webpage exist?</h3>
 			<ul>
-				<li>This place is a home for all my thoughts, philosophy, and also work</li>
-				<li>A place where I am in control, no censorship, no manipulations.</li>
+				<li>This place is a home for all my thoughts, philosophy, publications, experiences and also work.</li>
+				<li>A place where I am in control, no tracking, no censorship, no manipulations, no nudity ads.</li>
 				<li>A place where my words don't get mixed up with noise.</li>
 			</ul>
 		<!-- End of Main -->
@@ -132,5 +135,11 @@
 
 		<!-- Bootstrap 5 -->
 		<script src="/static/js/bootstrap.bundle.js"></script>
+		<script>
+			var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+			var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+				return new bootstrap.Popover(popoverTriggerEl)
+			});
+		</script>
 	</body>
 </html>
