@@ -8,7 +8,7 @@
 
 		<!-- Title -->
 		<title>
-			Abd El-Twab's Personal Site
+			Home | Abd El-Twab MF's Personal Webpage
 		</title>
 
 		<!-- Favicon -->
@@ -23,144 +23,81 @@
 
 	<body onload="draw2dw()">
 		<!-- Header -->
+		<header>
+			<nav class="navbar navbar-expand-md navbar-light" style="background-color: #d5c4a1;">
+				<div class="container-fluid">
 
-		<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #d5c4a1;">
-			<div class="container-fluid">
+					<!-- Brand -->
+					<a class="navbar-brand me-4" href="/">
+						<img src="/assets/images/meta/header.png" alt="amf-logo" height="48" class="d-inline-block align-text-top">
+					</a>
 
-				<a class="navbar-brand me-4" href="/">
-					<img src="/assets/images/meta/header.png" alt="amf-logo" height="48" class="d-inline-block align-text-top">
-				</a>
+					<!-- Hamburger -->
+					<button class="navbar-toggler ms-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
 
-				<button class="navbar-toggler ms-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-
-				<div class="collapse navbar-collapse ms-4 justify-content-end" id="navbarNav">
-					<ul class="navbar-nav">
-						<li class="nav-item ms-2">
-							<a class="nav-link active fs-4" aria-current="page" href="/">Home</a>
-						</li>
-						<li class="nav-item ms-2">
-							<a class="nav-link disabled fs-4" href="/content/blog/">Blogs</a>
-						</li>
-						<li class="nav-item ms-2">
-							<a class="nav-link fs-4" href="/content/project/">Projects</a></li>
-						<li class="nav-item">
-							<a class="nav-link fs-4" href="/content/use/">Uses</a>
-						</li>
-						<li class="nav-item ms-2">
-							<a class="nav-link disabled fs-4" href="/content/about">About</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-
-		<!-- End of Header -->
-		</nav>
-
-		<!-- Body -->
-		<div id="content">
-			<!-- Navigation Left -->
-			<div id="nav">
-
-				<ul>
-					<li><a href="/content/about"><b>About</b></a></li>
-					<li><a href="/contact">contact</a></li>
-					<li><a href="/resume">resume</a></li>
-					<li><a href="/donate">donate</a></li>
-				</ul>
-
-			<!-- End of Navigation -->
-			</div>
-
-			<!-- Main Right -->
-			<div id="main">
-
-				<h1>
-					Hi, As-salamu alaykum <i class="fas fa-grin-beam"></i>
-				</h1>
-				<h3>About Me</h3>
-				<p>
-					my name is <strong>Abd El-Twab M. Fakhry</strong> aka (amf).
-				</p>
-				<p>
-					I am a <strong>software engineer</strong>, free software enthusiast, GNU/Linux user, and experienced C/C++, Java, Python programmer
-					with <strong>advanced knowledge of data structures and algorithms</strong>.
-				</p>
-				<h3>Education</h3>
-				<p>
-					In sha' Allah, I'll receive my <strong>Bachelor's in Computers & Systems Engineering</strong> from Al-Azhar University in 2022.
-				</p>
-				<p>
-					My <strong>scientific interests</strong> are in the area of Algorithmic Problems, Computational Science, Blockchain, Cryptography.
-				</p>
-
-			<!-- End of Main -->
-			</div>
-		<!-- End of Content -->
-		</div>
-
-		<!-- Footer -->
-		<footer class="footer mt-auto">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-4 col-md-6 col-sm-8 col-xs-12">
-						Created in
-						<img style="width: 24px;" src="/assets/images/uses/os/gnu.svg" alt="GNU" class="sm-icon-img">
-						&sol;
-						<img style="width: 24px;" src="/assets/images/uses/os/linux.svg" alt="Linux" class="sm-icon-img">
-						&amp;
-						<img style="width: 24px;" src="/assets/images/uses/app/vim.svg" alt="Vim Icon" class="sm-icon-img">
-						with
-						<i class="fas fa-heart fs-4 text-danger"> </i>
-
-						<hr>
-
-						&copy;
-						<span>2021</span>
-						<span>Abd El-Twab M. Fakhry</span>
-					</div>
-
-					<div class="col-lg-2 col-md-6 col-sm-4 col-xs-12">
-						<ul class="contact-list">
-							<li>
-								<a href="mailto:abdeltwab.m.fakhry@protonmail.com" target="_blank">
-									<i class="fas fa-envelope fs-2"></i>
-								</a>
+					<!-- Dropdown navbar -->
+					<div class="collapse navbar-collapse ms-4 justify-content-end" id="navbarNav">
+						<ul class="navbar-nav">
+							<li class="nav-item ms-2">
+								<a class="nav-link fs-4 active" aria-current="page" href="/">Home</a>
 							</li>
-							<li>
-								<a href="https://github.com/AbdeltwabMF" target="_blank">
-									<i class="fab fa-github fs-2"></i>
-								</a>
+							<li class="nav-item ms-2">
+								<a class="nav-link fs-4" href="/content/blog">Blogs</a>
 							</li>
-							<li>
-								<a href="https://linkedin.com/in/AbdeltwabMF" target="_blank">
-									<i class="fab fa-linkedin fs-2"></i>
-								</a>
+							<li class="nav-item ms-2">
+								<a class="nav-link fs-4" href="/content/project">Projects</a></li>
+							<li class="nav-item ms-2">
+								<a class="nav-link fs-4" href="/content/use">Uses</a>
 							</li>
-							<li>
-								<a href="https://t.me/AbdeltwabMF" target="_blank">
-									<i class="fab fa-telegram fs-2"></i>
-								</a>
+							<li class="nav-item ms-2">
+								<a class="nav-link fs-4" href="/content/quote">Quotes</a>
+							</li>
+							<li class="nav-item ms-2">
+								<a class="nav-link fs-4" href="/content/about">About</a>
 							</li>
 						</ul>
 					</div>
 				</div>
-			</div>
+			</nav>
+		<!-- End of Header -->
+		</header>
 
-			<!-- live 2d widget -->
-			<canvas
-				id="live2dcanvas"
-				height="250"
-				width="187.5"
-				class="position-fixed bottom-0 start-0"
-				>
-			</canvas>
-		<!-- End of Footer -->
-		</div>
+		<!-- Main -->
+		<main class="mt-2 mb-auto">
+			<h1 class="me-3">Hi, I am Abd El-Twab M. Fakhry</h1>
+			<p class="me-4">
+				And this is my little corner on the web.
+				I am a Hacker. Emacs fanatic. Lover of parentheses.
+				Firebrand. Just another programmer with too many opinions.
+				I’m not the best, but I’m pretty good.
+			</p>
+			<p class="me-4">
+				I'm an experienced C/C++, Java, Python programmer with working knowledge
+				of Linux and advanced knowledge of data structures and algorithms, I'm Free
+				Software Enthusiast and I'm interested in Algorithmic
+				Problems and Computational Science.
+			</p>
 
-		<!-- Scripts -->
+			<h3 class="me-3">Why this webpage exist?</h3>
+			<ul>
+				<li>This place is a home for all my psychological dysfunctioning.</li>
+				<li>A place where I am in control, no censorship, no manipulations.</li>
+				<li>A place where my words don't get mixed up with noise.</li>
+			</ul>
+		<!-- End of Main -->
+		</main>
+
+		<!-- Footer -->
+		<footer class="footer mt-auto py-3">
+			<script src="/static/js/footer.js"></script>
+		</footer>
+
+		<!-- Bootstrap 5 -->
 		<script src="/static/js/bootstrap.bundle.js"></script>
+
+		<!-- live 2d widget -->
 		<script src="/static/js/lib2dw/device.min.js"></script>
 		<script>
 			function draw2dw()
