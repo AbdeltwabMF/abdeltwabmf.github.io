@@ -197,73 +197,12 @@ body {
 	width: 100%;
 }
 
-.contact-list {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-content: space-around;
-	flex-wrap: nowrap;
-	list-style: none;
-
-	margin: 0em;
-	padding: 0em;
-}
-
-.contact-list a {
-	color: var(--fg-0, #282828);
-	opacity: 85%;
-}
-
-.contact-list a:hover {
-	opacity: 100%;
-}
-
 .fas,
 .fab,
 .bar {
 	vertical-align: middle;
 }
 
-<<<<<<< HEAD:css/style.css
-li ul {
-	margin: 0.6em 1em;
-}
-
-.arabic-text {
-	direction: rtl;
-}
-
-.uses-list {
-	list-style: none;
-}
-
-.uses-list a {
-	text-decoration: none;
-	color: var(--orange, #d65d0e);
-}
-
-.uses-list li {
-	border: 1px solid var(--orange-off, #af3a03);
-	border-radius: 1em;
-	margin: 1em 0em;
-	padding: 1em;
-}
-
-.uses-list .md-icon-img {
-	margin: 0 1em 0 0;
-}
-
-.uses-list .uses-list-title {
-	font-size: 1.4em;
-}
-
-.link {
-	color: var(--green-off, #79740e);
-	text-decoration: none;
-}
-
-=======
->>>>>>> react-bootstrap:static/css/style.css
 code {
 	font-family: var(--font-monospaced-3, "ubuntu-monospaced");
 	font-size: 0.9em;
@@ -276,20 +215,6 @@ code {
 	padding: 0.4em 0.8em;
 	border-radius: 1em;
 
-<<<<<<< HEAD:css/style.css
-	overflow-x: auto;
-}
-
-.highlight code {
-	color: var(--bg-0, #fbf1c7);
-}
-
-.my-btn {
-	padding: 0.4em 0.8em;
-	border-radius: 1em;
-
-=======
->>>>>>> react-bootstrap:static/css/style.css
 	background-color: var(--blue, #458388);
 	color: var(--bg, #ffffff);
 
@@ -300,19 +225,6 @@ code {
 .my-btn:hover {
 	background-color: var(--purple-off, #8f3f71);
 	color: var(--bg, #ffffff);
-<<<<<<< HEAD:css/style.css
-}
-
-.navbar-expand-lg .navbar-collapse {
-    justify-content: flex-end;
-}
-
-.donation {
-	display: flex;
-	flex-direction: column;
-	align-items: stretch;
-=======
->>>>>>> react-bootstrap:static/css/style.css
 }
 
 .input {
@@ -339,125 +251,28 @@ code {
 	background-color: var(--fg-0, #282828);
 }
 
-<<<<<<< HEAD:css/style.css
-.label-title {
-	font-size: 1.3em;
-	margin-left: 0.3em;
-}
-
-@media (max-width: 1023px) {
-	#content {
-		flex-direction: column;
-		justify-content: flex-start;
-	}
-
-	#header-menu a {
-		padding: 0.2em 0.4em;
-		margin-left: 0.25em;
-
-		font-size: 1.2em;
-	}
-
-	#header {
-		height: 5em;
-		padding: 1em;
-	}
-
-	#header-logo-name {
-		flex-direction: column;
-	}
-
-	#header-name {
-		padding: 0;
-		font-size: 1.2em;
-	}
-
-	#nav {
-		width: calc(100% - 32px);
-	}
-
-	.banner-img {
-		width: 32em;
-		margin-top: 3em;
-	}
-
-	.photo {
-		width: 20em;
-	}
-}
-
-@media (max-width: 676px) {
-	#content {
-		flex-direction: column;
-		justify-content: flex-start;
-	}
-
-	#header-menu a {
-		padding: 0.2em 0.4em;
-		margin-left: 0.25em;
-
-		font-size: 1.0em;
-	}
-
-	#header {
-		height: 3em;
-		padding: 1em;
-	}
-
-	#header-name {
-		display: none;
-	}
-
-	#nav {
-		width: calc(100% - 32px);
-	}
-
-	#footer {
-		height: 6em;
-	}
-
-	.banner-img {
-		width: 20em;
-		margin-top: 2em;
-	}
-
-	.really-big {
-		font-size: 6em;
-	}
-
-	.really-mid {
-		font-size: 2em;
-	}
-
-	.photo {
-		width: 16em;
-	}
-}
-
-
-@media (min-width: 1024px) {
-	#content {
-		flex-direction: row;
-	}
-
-	#main {
-		width: 70%;
-	}
-
-	#header-logo-name {
-		flex-direction: row;
-	}
-
-	#nav {
-		width: calc(30% - 32px);
-	}
-
-	.banner-img {
-		width: 40em;
-		margin-top: 6em;
-	}
-=======
 .list-unstyled {
     padding: 0;
->>>>>>> react-bootstrap:static/css/style.css
+}
+
+.nav-link {
+	transition-duration: 150ms;
+	transition-delay: 7ms;
+	transition-property: all;
+	transition-timing-function: ease-in-out;
+}
+
+.nav-link:hover {
+	box-shadow: 2px 3px 0 0 var(--purple, #b16286);
+	border-radius: 1em;
+}
+
+.navbar-nav .nav-link {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+ol, ul, dl {
+	margin-top: 0;
+	margin-bottom: 0;
 }
