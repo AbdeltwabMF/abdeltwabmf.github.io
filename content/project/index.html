@@ -8,15 +8,14 @@
 
 		<!-- Title -->
 		<title>
-			Projects | Abd El-Twab MF
+			Projects | Next Prayer | Abd El-Twab MF
 		</title>
 
 		<!-- Favicon -->
 		<link rel="shortcut icon" type="image/png" href="/res/images/site-related/favicon.ico"/>
 
 		<!-- CSS links -->
-		<link rel="stylesheet" href="/css/bootstrap/bootstrap.rtl.css"/>
-		<link rel="stylesheet" href="/css/fontawesome/all.css"/>
+		<link rel="stylesheet" href="/css/all.css"/>
 		<link rel="stylesheet" href="/css/font.css"/>
 		<link rel="stylesheet" href="/css/style.css"/>
 	</head>
@@ -52,8 +51,8 @@
 			<div id="nav">
 
 				<ul>
-					<li><a href="/projects/"><b>about</b></a></li>
-					<li><a href="/projects/next-prayer">next prayer</a></li>
+					<li><a href="/projects/">about</a></li>
+					<li><a href="/projects/next-prayer"><b>next prayer</b></a></li>
 				</ul>
 
 			<!-- End of Navigation -->
@@ -62,6 +61,37 @@
 			<!-- Main Right -->
 			<div id="main">
 
+				<div>
+					<h3>description</h3>
+					<p>Islamic prayers reminder for status bars.</p>
+				</div>
+
+				<div>
+					<h3>Usage & Flags</h3>
+					<pre class="highlight"><code>-n, --next     		The next prayer and its time.
+-p, --prev  		The previous prayer and its time.
+-i, --hybrid  		Display the elapsed time since the previous prayer until the elapsed time reach threshold time determined in config file, Then it will display the next prayer and its time.
+-e, --elapsed  		The elapsed time since the previous prayer.
+-l, --left    		The time left until the next prayer.
+-a, --adhan   		Display if it's the time for adhan by returning "yes" or "no".
+-h, --help    		Display this help information.
+-v, --version  		The current version.</code></pre>
+				</div>
+
+				<div>
+					<h3>technologies</h3>
+					<ul>
+						<li>c++</li>
+						<li>bash</li>
+						<li>python</li>
+						<li>groff</li>
+					</ul>
+				</div>
+
+				<div>
+					<h3>source code</h3>
+					<a target="_blank" class="btn" href="https://github.com/AbdeltwabMF/next-prayer"><i class="fab fa-github"></i>next prayer</a>
+				</div>
 
 			<!-- End of Main -->
 			</div>
@@ -101,6 +131,4 @@
 		<!-- End of Footer -->
 		</div>
 	</body>
-
-		<script src="js/bootstrap.bundle.js"></script>
 </html>

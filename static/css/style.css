@@ -61,8 +61,6 @@ body {
 	font-size: var(--body-font-size, 1rem);
 	font-weight: var(--body-font-weight, 400);
 	line-height: var(--body-line-height, 1.5em);
-
-	overflow: auto;
 }
 
 main {
@@ -80,9 +78,7 @@ main {
 	overflow: hidden;
 }
 
-.fas,
-.fab,
-.bar {
+.va-md {
 	vertical-align: middle;
 }
 
@@ -106,6 +102,38 @@ code {
 .fs-t {
 	font-size: 0.668em;
 	color: var(--fg-4, #7c6f64);
+}
+
+.toc {
+	background-color: #75697a1a;
+	font-family: var(--font-monospaced-4);
+}
+
+.toc-header,
+.toc-item {
+	border-bottom: 1px solid #45838854;
+	border-left: 1px solid #45838854;
+	border-right: 1px solid #45838854;
+
+	padding: 0.2em 1em;
+	border-radius: 0.2em;
+
+	overflow: auto;
+}
+
+.toc-header {
+	border-top: 1px solid #45838854;
+	text-align: center;
+	color: var(--purple-off);
+	margin: 0em;
+}
+
+.ff-sans-1 {
+	font-family: var(--font-sans-serif, "linux-biolinum");
+}
+
+.ff-ss-1 {
+	font-family: var(--font-serif, "linux-libertine");
 }
 
 /** Override Bootstrap Start **/
