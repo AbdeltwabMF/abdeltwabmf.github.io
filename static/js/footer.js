@@ -39,7 +39,7 @@ document.write(`
 					</div>
 
 					<!-- Made with Love and Faith -->
-					<div class="col-12 text-center">
+					<div class="col-12 text-center fw-light">
 						Created in
 						<a href="https://www.gnu.org/"><img style="width: 24px;" src="/assets/images/uses/os/gnu.svg" alt="GNU" class="sm-icon-img"></a>
 						&sol;
@@ -51,12 +51,12 @@ document.write(`
 					</div>
 
 					<!-- Inspiration -->
-					<div class="col-12 text-center mt-2">
+					<div class="col-12 text-center mt-2 fw-light">
 						The theme is inspired by <a class="text-decoration-none" href="https://github.com/morhetz/gruvbox">gruvbox</a>.
 					</div>
 
 					<!-- Copyleft -->
-					<div class="col-12 text-center">
+					<div class="col-12 text-center fw-light">
 						<hr>
 						&copy;
 						<span>2021, 2022</span>
