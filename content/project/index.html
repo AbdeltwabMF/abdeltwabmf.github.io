@@ -8,127 +8,74 @@
 
 		<!-- Title -->
 		<title>
-			Projects | Next Prayer | Abd El-Twab MF
+			Projects | Abd El-Twab MF
 		</title>
 
 		<!-- Favicon -->
-		<link rel="shortcut icon" type="image/png" href="/res/images/site-related/favicon.ico"/>
+		<link rel="shortcut icon" type="image/png" href="/assets/images/meta/favicon.ico"/>
 
 		<!-- CSS links -->
-		<link rel="stylesheet" href="/css/all.css"/>
-		<link rel="stylesheet" href="/css/font.css"/>
-		<link rel="stylesheet" href="/css/style.css"/>
+		<link rel="stylesheet" href="/static/css/bootstrap.rtl.css"/>
+		<link rel="stylesheet" href="/static/css/fontawesome/all.css"/>
+		<link rel="stylesheet" href="/static/css/font.css"/>
+		<link rel="stylesheet" href="/static/css/style.css"/>
 	</head>
 
 	<body>
 		<!-- Header -->
-		<div id="header">
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<div class="container-fluid">
 
-			<ul id="header-logo-name">
-				<li>
-					<a href="/" id="header-logo">
-						<img src="/res/images/site-related/header.png" alt="amf-logo" class="md-icon-img">
+					<!-- Brand -->
+					<a class="navbar-brand me-4" href="/">
+						<img src="/assets/images/meta/header.png" alt="amf-logo" height="48" class="d-inline-block align-text-top">
 					</a>
-				</li>
-				<li>
-					<a href="/" id="header-name">Abd el-twab M. Fakhry</a>
-				</li>
-			</ul>
 
-			<ul id="header-menu">
-				<li><a href="/">home</a></li>
-				<li><a href="/blogs">blogs</a></li>
-				<li><a href="/projects"><b>projects</b></a></li>
-				<li><a href="/uses">uses</a></li>
-			</ul>
+					<!-- Hamburger -->
+					<button class="navbar-toggler ms-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
 
+					<!-- Dropdown navbar -->
+					<div class="collapse navbar-collapse ms-4 justify-content-end" id="navbarNav">
+						<ul class="navbar-nav">
+							<li class="nav-item ms-2">
+								<a class="nav-link fs-4 text-capitalize" href="/">home</a>
+							</li>
+							<li class="nav-item ms-2">
+								<a class="nav-link fs-4 text-capitalize" href="/content/publication">publications</a>
+							</li>
+							<li class="nav-item ms-2">
+								<a class="nav-link fs-4 text-capitalize active" aria-current="page" href="/content/project">projects</a></li>
+							<li class="nav-item ms-2">
+								<a class="nav-link fs-4 text-capitalize" href="/content/philosophy">philosophy</a>
+							</li>
+							<li class="nav-item ms-2">
+								<a class="nav-link fs-4 text-capitalize" href="/content/contact">contact</a>
+							</li>
+							<li class="nav-item ms-2">
+								<a class="nav-link fs-4 text-capitalize" href="/content/about">about</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
 		<!-- End of Header -->
-		</div>
+		</header>
 
-		<!-- Body -->
-		<div id="content">
-			<!-- Navigation Left -->
-			<div id="nav">
-
-				<ul>
-					<li><a href="/projects/">about</a></li>
-					<li><a href="/projects/next-prayer"><b>next prayer</b></a></li>
-				</ul>
-
-			<!-- End of Navigation -->
-			</div>
-
-			<!-- Main Right -->
-			<div id="main">
-
-				<div>
-					<h3>description</h3>
-					<p>Islamic prayers reminder for status bars.</p>
-				</div>
-
-				<div>
-					<h3>Usage & Flags</h3>
-					<pre class="highlight"><code>-n, --next     		The next prayer and its time.
--p, --prev  		The previous prayer and its time.
--i, --hybrid  		Display the elapsed time since the previous prayer until the elapsed time reach threshold time determined in config file, Then it will display the next prayer and its time.
--e, --elapsed  		The elapsed time since the previous prayer.
--l, --left    		The time left until the next prayer.
--a, --adhan   		Display if it's the time for adhan by returning "yes" or "no".
--h, --help    		Display this help information.
--v, --version  		The current version.</code></pre>
-				</div>
-
-				<div>
-					<h3>technologies</h3>
-					<ul>
-						<li>c++</li>
-						<li>bash</li>
-						<li>python</li>
-						<li>groff</li>
-					</ul>
-				</div>
-
-				<div>
-					<h3>source code</h3>
-					<a target="_blank" class="btn" href="https://github.com/AbdeltwabMF/next-prayer"><i class="fab fa-github"></i>next prayer</a>
-				</div>
-
-			<!-- End of Main -->
-			</div>
-		<!-- End of Content -->
-		</div>
+		<!-- Main -->
+		<main>
+		<!-- End of Main -->
+		</main>
 
 		<!-- Footer -->
-		<div id="footer">
+		<footer class="footer">
+			<script src="/static/js/footer.js"></script>
+		</footer>
 
-			<span id="footer-left">
-				&copy;
-				<span>2021</span>
-				<span>Abd El-Twab M. Fakhry</span>
-			</span>
-
-			<span>
-				<ul class="contact-list">
-					<li><a href="mailto:abdeltwab.m.fakhry@protonmail.com" target="_blank"><i class="fas fa-envelope sm-icon-glyph"></i></a></li>
-					<li><a href="https://github.com/AbdeltwabMF" target="_blank"><i class="fab fa-github sm-icon-glyph"></i></a></li>
-					<li><a href="https://linkedin.com/in/AbdeltwabMF" target="_blank"><i class="fab fa-linkedin sm-icon-glyph"></i></a></li>
-					<li><a href="https://twitter.com/AbdeltwabMF" target="_blank"><i class="fab fa-twitter sm-icon-glyph"></i></a></li>
-					<li><a href="https://t.me/AbdeltwabMF" target="_blank"><i class="fab fa-telegram sm-icon-glyph"></i></a></li>
-				</ul>
-			</span>
-
-			<span id="footer-right">
-				Created in
-				<img src="/res/images/oss/gnu.svg" alt="GNU" class="sm-icon-img">
-				&sol;
-				<img src="/res/images/oss/linux.svg" alt="Linux" class="sm-icon-img">
-				&amp;
-				<img src="/res/images/apps/vim.svg" alt="Vim Icon" class="sm-icon-img">
-				with
-				<i class="fas fa-heart"> </i>
-			</span>
-
-		<!-- End of Footer -->
-		</div>
+		<!-- Bootstrap 5 -->
+		<script src="/static/js/bootstrap.bundle.min.js"></script>
+		<script src="/static/js/script.js"></script>
 	</body>
 </html>
