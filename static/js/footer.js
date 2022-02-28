@@ -5,9 +5,9 @@ document.write(`
 
 		<div class="container">
 			<div class="row justify-content-start">
-				<div class="row col-8">
+				<div class="row justify-content-center col-xxl-3 col-lg-4 col-md-5 col-8">
 					<!-- Social Media -->
-					<div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-8">
+					<div class="col-12 mt-2">
 						<ul class="list-unstyled navbar">
 							<li>
 								<a href="mailto:abdeltwab.m.fakhry@protonmail.com" target="_blank">
@@ -17,6 +17,11 @@ document.write(`
 							<li>
 								<a href="https://github.com/AbdeltwabMF" target="_blank">
 									<i class="fab fa-github fs-2 text-dark"></i>
+								</a>
+							</li>
+							<li>
+								<a href="https://twitter.com/AbdeltwabMF" target="_blank">
+									<i class="fab fa-twitter fs-2 text-dark"></i>
 								</a>
 							</li>
 							<li>
@@ -34,7 +39,7 @@ document.write(`
 					</div>
 
 					<!-- Made with Love and Faith -->
-					<div class="col-12">
+					<div class="col-12 text-center">
 						Created in
 						<a href="https://www.gnu.org/"><img style="width: 24px;" src="/assets/images/uses/os/gnu.svg" alt="GNU" class="sm-icon-img"></a>
 						&sol;
@@ -46,16 +51,13 @@ document.write(`
 					</div>
 
 					<!-- Inspiration -->
-					<div class="col-12">
-						The theme is heavily inspired by <a class="text-decoration-none" href="https://github.com/morhetz/gruvbox">gruvbox</a>.
-					</div>
-
-					<div class="col-12">
-						Powered by <a class="text-decoration-none" href="https://getbootstrap.com/"><i class="fab fa-bootstrap fs-3 text-primary"></i> Bootstrap</a>
+					<div class="col-12 text-center mt-2">
+						The theme is inspired by <a class="text-decoration-none" href="https://github.com/morhetz/gruvbox">gruvbox</a>.
 					</div>
 
 					<!-- Copyleft -->
-					<div class="col-12">
+					<div class="col-12 text-center">
+						<hr>
 						&copy;
 						<span>2021, 2022</span>
 						<span>Abd El-Twab M. Fakhry</span>

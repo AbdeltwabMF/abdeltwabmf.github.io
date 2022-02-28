@@ -24,7 +24,7 @@
 	<body>
 		<!-- Header -->
 		<header>
-			<nav class="navbar navbar-expand-md navbar-light" style="background-color: #d5c4a1;">
+			<nav class="navbar navbar-expand-md navbar-light">
 				<div class="container-fluid">
 
 					<!-- Brand -->
@@ -66,65 +66,63 @@
 
 		<!-- Main -->
 		<main>
-			<div class="text-center mt-4">
+			<div class="text-center mt-4 container">
 				<h2>Hi, my name is Abd El-Twab M. Fakhry (amf)</h2>
 				<p class="fs-t">
 					Software Engineer | Full Stack Blockchain Developer | Competitive Programmer.
 				</p>
-			</div>
 
-			<!-- Horizontal -->
-			<div class="container">
-				<div class="row">
-					<div class="col-3"></div>
-					<hr class="col-6">
-					<div class="col-3"></div>
+				<!-- Horizontal -->
+				<div class="row justify-content-center">
+					<hr class="col-sm-6">
 				</div>
 			</div>
 
-			<p class="me-4 mt-3">
-			<span class="fs-4">A</span>nd this is my little corner on the web.
-				I am Egyptian,
-				<a href="https://en.wikipedia.org/wiki/Al-Azhar_University">Azhari</a>,
-				and live in Egypt
-				<img style="width: 1.5em;" src="/assets/images/home/egypt.ico">.
-			</p>
-			<p class="me-4">
-				I am an experienced C/C++, Java, Python programmer with working knowledge
-				of Linux and advanced knowledge of data structures and algorithms.
-				I am Free Software Enthusiast.
-				Just another programmer with too many opinions.
-				I am not the best, but I’m pretty good.
-			</p>
-			<p class="me-4">
-				I love reading history books, camping in a remote place, playing football.<br>
-				In my copious free time I enjoy configuring my GNU/linux,
-				solving algorithmic problems,
-				and giving back to the free and open-source community through engaging in their projects or even developing new ones.
-			</p>
+			<div class="container">
+				<p class="me-2 mt-3">
+				<span class="fs-4">A</span>nd this is my little corner on the web.
+					I am Egyptian,
+					<a href="https://en.wikipedia.org/wiki/Al-Azhar_University">Azhari</a>,
+					and live in Egypt
+					<img style="width: 1.5em;" src="/assets/images/home/egypt.ico">.
+				</p>
+				<p class="me-2">
+					I am an experienced C/C++, Java, Python programmer with working knowledge
+					of Linux and advanced knowledge of data structures and algorithms.
+					I am Free Software Enthusiast.
+					Just another programmer with too many opinions.
+					I am not the best, but I’m pretty good.
+				</p>
+				<p class="me-2">
+					I love reading history books, camping in a remote place, playing football.<br>
+					In my copious free time I enjoy configuring my GNU/linux,
+					solving algorithmic problems,
+					and giving back to the free and open-source community through engaging in their projects or even developing new ones.
+				</p>
 
-			<p class="me-4">
-				I’m reachable through
-				<a class="text-decoration-none" href="mailto:abdeltwab.m.fakhry@protonmail.com"><i class="fas fa-envelope"></i> e-mail</a>;
-				You can use my
-				<a href="/data/amf-key.gpg"> PGP-key</a>
-				if it’s top-secret.
-				<br>
-				I’m also reachable through my
-				<a class="text-decoration-none" href="https://t.me/AbdeltwabMF">
-					<i class="fab fa-telegram"></i> Telegram
-				</a>
-				and
-				<a class="text-decoration-none" href="https://twitter.com/AbdeltwabMF">
-					<i class="fab fa-twitter"></i> Twitter</a>.
-			</p>
+				<p class="me-2">
+					I’m reachable through
+					<a class="text-decoration-none" href="mailto:abdeltwab.m.fakhry@protonmail.com"><i class="fas fa-envelope"></i> e-mail</a>;
+					You can use my
+					<a href="/data/amf-key.gpg"> PGP-key</a>
+					if it’s top-secret.
+					<br>
+					I’m also reachable through my
+					<a class="text-decoration-none" href="https://t.me/AbdeltwabMF">
+						<i class="fab fa-telegram"></i> Telegram
+					</a>
+					and
+					<a class="text-decoration-none" href="https://twitter.com/AbdeltwabMF">
+						<i class="fab fa-twitter"></i> Twitter</a>.
+				</p>
 
-			<h3 class="me-3 mt-4">Why this webpage exist?</h3>
-			<ul>
-				<li>This place is a home for all my thoughts, philosophy, publications, experiences and also work.</li>
-				<li>A place where I am in control, no tracking, no censorship, no manipulations, no nudity ads.</li>
-				<li>A place where my words don't get mixed up with noise.</li>
-			</ul>
+				<h3 class="mt-4">Why this webpage exist?</h3>
+				<ul>
+					<li>This place is a home for all my thoughts, philosophy, publications, experiences and also work.</li>
+					<li>A place where I am in control, no tracking, no censorship, no manipulations, no nudity ads.</li>
+					<li>A place where my words don't get mixed up with noise.</li>
+				</ul>
+			</div>
 		<!-- End of Main -->
 		</main>
 
@@ -134,12 +132,7 @@
 		</footer>
 
 		<!-- Bootstrap 5 -->
-		<script src="/static/js/bootstrap.bundle.js"></script>
-		<script>
-			var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
-			var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-				return new bootstrap.Popover(popoverTriggerEl)
-			});
-		</script>
+		<script src="/static/js/bootstrap.bundle.min.js"></script>
+		<script src="/static/js/script.js"></script>
 	</body>
 </html>
