@@ -47,12 +47,12 @@ document.write(`
 						&amp;
 						<a href="https://github.com/neovim/neovim"><img style="width: 24px;" src="/assets/images/uses/app/vim.svg" alt="Vim Icon" class="sm-icon-img"></a>
 						with
-						<i class="fas fa-heart fs-4 text-danger"> </i>
+						<i class="fas fa-heart fa-beat fa-lg text-danger" style="--fa-animation-duration: 0.5s;" > </i>
 					</div>
 
 					<!-- Inspiration -->
 					<div class="col-12 text-center mt-2 fw-light">
-						The theme is inspired by <a class="text-decoration-none" href="https://github.com/morhetz/gruvbox">gruvbox</a>.
+						The theme is inspired by <a class="fs-5 text-decoration-none" href="https://github.com/morhetz/gruvbox">gruvbox</a>
 					</div>
 
 					<!-- Copyleft -->
