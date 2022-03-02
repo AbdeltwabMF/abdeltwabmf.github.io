@@ -47,6 +47,11 @@
 	--body-line-height: 1.5em;
 }
 
+* {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
 body,
 html {
 	width: 100%;
@@ -74,7 +79,7 @@ main {
 
 	font-family: var(--font-sans-serif, "linux-biolinum");
 
-	min-height: 217.89px;
+	min-height: 13.618125em;
 	overflow: hidden;
 }
 
@@ -209,3 +214,7 @@ header .nav-link:hover {
 }
 
 /** Override Bootstrap End **/
+
+/** Media Query Start **/
+
+/** Media Query End **/
