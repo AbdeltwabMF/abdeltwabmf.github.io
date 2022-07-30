@@ -1,14 +1,14 @@
 const siteMetadata = {
   title: 'Abd El-Twab M. Fakhry | Personal Website',
-  author: 'AbdeltwabMF',
-  headerTitle: 'AMF',
+  author: 'Abd El-Twab M. Fakhry',
+  headerTitle: 'AbdeltwabMF',
   description: 'Abd El-Twab M. Fakhry | Personal Website',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://abdeltwabmf.github.io',
   siteRepo: 'https://github.com/AbdeltwabMF/amfium.git',
-  siteLogo: '/logo.png',
-  image: '/logo.png',
+  siteLogo: 'logo.png',
+  image: 'logo.png',
   socialBanner: '/static/images/twitter-card.png',
   email: 'abdeltwab.m.fakhry@gmail.com',
   github: 'https://github.com/AbdeltwabMF',
