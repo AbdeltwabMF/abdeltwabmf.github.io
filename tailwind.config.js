@@ -10,6 +10,7 @@ module.exports = {
     './components/**/*.js',
     './layouts/**/*.js',
     './lib/**/*.js',
+    './utils/**/*.js',
     './data/**/*.mdx',
   ],
   darkMode: 'class',
@@ -25,9 +26,10 @@ module.exports = {
         14: '3.5rem',
       },
       fontFamily: {
-        ...defaultTheme.fontFamily,
-        sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
-        primary: ['comfortaa-regular'],
+        sans: ['comfortaa-regular', ...defaultTheme.fontFamily.sans],
+        serif: ['librebaskerville-bold', ...defaultTheme.fontFamily.serif],
+        serif_it: ['librebaskerville-italic', ...defaultTheme.fontFamily.serif],
+        mono: ['fantasquesansmono-regular', ...defaultTheme.fontFamily.mono],
       },
       colors: {
         primary: colors.teal,

@@ -81,3 +81,21 @@
   src: url('../public/fonts/FantasqueSansMono-Bold.otf');
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'librebaskerville-italic';
+  src: url('../public/fonts/LibreBaskerville-Italic.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'librebaskerville-regular';
+  src: url('../public/fonts/LibreBaskerville-Regular.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'librebaskerville-bold';
+  src: url('../public/fonts/LibreBaskerville-Bold.ttf');
+  font-style: normal;
+}
