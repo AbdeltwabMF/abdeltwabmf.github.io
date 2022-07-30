@@ -1,0 +1,83 @@
+@font-face {
+  font-family: 'comfortaa-regular';
+  src: url('../public/fonts/Comfortaa-Regular.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'comfortaa-bold';
+  src: url('../public/fonts/Comfortaa-Bold.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'comfortaa-thin';
+  src: url('../public/fonts/Comfortaa-Light.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'dosis-regular';
+  src: url('../public/fonts/Dosis-Regular.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'dosis-bold';
+  src: url('../public/fonts/Dosis-Bold.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'dosis-thin';
+  src: url('../public/fonts/Dosis-Light.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'jost-regular';
+  src: url('../public/fonts/Jost-Regular.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'jost-bold';
+  src: url('../public/fonts/Jost-Bold.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'jost-thin';
+  src: url('../public/fonts/Jost-Thin.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'montserrat-regular';
+  src: url('../public/fonts/Montserrat-Regular.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'montserrat-bold';
+  src: url('../public/fonts/Montserrat-Bold.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'montserrat-thin';
+  src: url('../public/fonts/Montserrat-Thin.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'fantasquesansmono-regular';
+  src: url('../public/fonts/FantasqueSansMono-Regular.otf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'fantasquesansmono-bold';
+  src: url('../public/fonts/FantasqueSansMono-Bold.otf');
+  font-style: normal;
+}

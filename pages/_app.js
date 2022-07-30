@@ -1,5 +1,6 @@
-import '@/css/tailwind.css'
-import '@/css/prism.css'
+import '@/styles/tailwind.css'
+import '@/styles/prism.css'
+import '@/styles/main.css'
 import 'katex/dist/katex.css'
 
 import '@fontsource/inter/variable-full.css'
