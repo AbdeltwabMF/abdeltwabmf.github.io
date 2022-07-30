@@ -10,8 +10,8 @@ import GitHub from '../public/icons/github.svg'
 export default function Footer () {
   return (
     <footer>
-      <div className='flex flex-col items-center mt-16'>
-        <div className='flex mb-5 space-x-6'>
+      <div className='flex flex-col items-center mt-12'>
+        <div className='flex mb-3 space-x-6'>
           <a
             className='text-sm text-gray-500 transition hover:text-gray-600'
             target='_blank'
@@ -19,7 +19,7 @@ export default function Footer () {
             href={`mailto:${siteMetadata.email}`}
           >
             <Mail
-              className={`fill-current text-yellow-600 hover:text-yellow-700 dark:text-yellow-600 dark:hover:text-yellow-700 h-${8} w-${8}`}
+              className={`fill-current text-gray-700 hover:text-blue-700 dark:text-gray-200 dark:hover:text-blue-600 h-${8} w-${8}`}
             />
           </a>
           <a
@@ -29,7 +29,7 @@ export default function Footer () {
             href={siteMetadata.twitter}
           >
             <Twitter
-              className={`fill-current text-blue-500 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-600 h-${8} w-${8}`}
+              className={`fill-current text-gray-700 hover:text-blue-700 dark:text-gray-200 dark:hover:text-blue-600 h-${8} w-${8}`}
             />
           </a>
           <a
@@ -39,7 +39,7 @@ export default function Footer () {
             href={siteMetadata.youtube}
           >
             <Youtube
-              className={`fill-current text-red-600 hover:text-red-800 dark:text-red-600 dark:hover:text-red-700 h-${8} w-${8}`}
+              className={`fill-current text-gray-700 hover:text-blue-700 dark:text-gray-200 dark:hover:text-blue-600 h-${8} w-${8}`}
             />
           </a>
           <a
@@ -49,7 +49,7 @@ export default function Footer () {
             href={siteMetadata.linkedin}
           >
             <Linkedin
-              className={`fill-current text-blue-700 hover:text-blue-800 dark:text-blue-600 dark:hover:text-blue-700 h-${8} w-${8}`}
+              className={`fill-current text-gray-700 hover:text-blue-700 dark:text-gray-200 dark:hover:text-blue-600 h-${8} w-${8}`}
             />
           </a>
           <a
@@ -59,13 +59,19 @@ export default function Footer () {
             href={siteMetadata.github}
           >
             <GitHub
-              className={`fill-current text-gray-700 hover:text-blue-500 dark:text-gray-200 dark:hover:text-blue-400 h-${8} w-${8}`}
+              className={`fill-current text-gray-700 hover:text-blue-700 dark:text-gray-200 dark:hover:text-blue-600 h-${8} w-${8}`}
             />
           </a>
         </div>
-        <div className='flex mb-5 font-mono text-sm text-gray-500 space-x-2 dark:text-gray-400'>
+        <div className='flex items-center mb-2 font-mono text-sm text-teal-700 space-x-2 dark:text-teal-600'>
           <div>
-            <Image src='/favicon-32x32.png' alt='logo' width='20px' height='20px' />
+            <Image
+              src='/favicon-32x32.png'
+              alt='logo'
+              width='24px'
+              height='24px'
+              className='align-middle'
+            />
           </div>
           <div>{`© ${new Date().getFullYear()}`}</div>
           <div>{' • '}</div>
