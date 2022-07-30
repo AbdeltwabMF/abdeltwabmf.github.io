@@ -1,6 +1,6 @@
 ---
 name: Abd El-Twab M. Fakhry
-avatar: /static/images/amf-ecpc.png
+avatar: /images/amf-ecpc.png
 occupation: Software Engineer
 company: Al-Azhar University
 ---
