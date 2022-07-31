@@ -18,14 +18,16 @@ export default function Projects () {
             {projects.map((d) => (
               <Card
                 key={d.title}
+                slug={d.slug}
                 title={d.title}
                 description={d.description}
                 banner={d.banner}
-                tools={d.tools}
+                stack={d.stack}
                 keywords={d.keywords}
-                source={d.source}
-                link={d.link}
-                href={d.href}
+                screenshots={d.screenshots}
+                repository={d.repository}
+                website={d.website}
+                deployment={d.deployment}
               />
             ))}
           </div>

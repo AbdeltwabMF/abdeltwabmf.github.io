@@ -4,7 +4,7 @@ import { faRss, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 export default function SocialIcon (props) {
   const { kind, size, color } = props
-  const sizeClass = size ? `h-${size} w-${size}` : 'h-8 w-8'
+  const sizeClass = size > 0 ? `h-${size} w-${size}` : 'h-6 w-6'
   let icon
   switch (kind) {
     case 'rss':
