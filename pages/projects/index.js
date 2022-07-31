@@ -17,17 +17,11 @@ export default function Projects () {
           <div className='flex flex-wrap -m-4'>
             {projects.map((d) => (
               <Card
-                key={d.title}
-                slug={d.slug}
+                key={d.slug}
                 title={d.title}
                 description={d.description}
                 banner={d.banner}
-                stack={d.stack}
-                keywords={d.keywords}
-                screenshots={d.screenshots}
-                repository={d.repository}
-                website={d.website}
-                deployment={d.deployment}
+                href={`/projects/${d.slug}`}
               />
             ))}
           </div>
