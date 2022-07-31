@@ -17,10 +17,10 @@ export default function FourZeroFour () {
             Sorry we couldn't find this page.
           </p>
           <p className='mb-8'>
-            But dont worry, you can find plenty of other things on our homepage.
+            But do not worry, you can find plenty of other things on my homepage.
           </p>
           <Link href='/'>
-            <button className='inline px-4 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-lg shadow focus:shadow-outline-blue leading-5 transition-colors duration-150 hover:bg-blue-700 focus:outline-none dark:hover:bg-blue-500'>
+            <button className='inline px-4 py-2 text-sm font-medium text-white bg-teal-600 border border-transparent rounded-lg shadow focus:shadow-outline-teal leading-5 transition-colors duration-150 hover:bg-teal-700 focus:outline-none dark:hover:bg-teal-500'>
               Back to homepage
             </button>
           </Link>
