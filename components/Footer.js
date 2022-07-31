@@ -1,35 +1,29 @@
 import Link from './Link'
 import Image from './Image'
 import siteMetadata from '@/data/siteMetadata'
-import SocialIcon from '@/components/SocialIcons'
+import SocialIconLink from '@/components/SocialIconsLink'
 
 export default function Footer () {
   return (
-    <footer className='mt-12 border-t'>
-      <div className='flex flex-col items-center mt-4'>
-        <div className='flex flex-row items-center justify-center mb-4 space-x-6'>
-          <SocialIcon kind='rss' href={siteMetadata.rss} size={6} />
-          <SocialIcon kind='email' href={siteMetadata.email} size={6} />
-          <SocialIcon kind='github' href={siteMetadata.github} size={6} />
-          <SocialIcon kind='youtube' href={siteMetadata.youtube} size={6} />
-          <SocialIcon kind='linkedin' href={siteMetadata.linkedin} size={6} />
-          <SocialIcon kind='twitter' href={siteMetadata.twitter} size={6} />
-          <SocialIcon kind='telegram' href={siteMetadata.telegram} size={6} />
+    <footer className='mt-12'>
+      <div className='flex flex-col items-center justify-center mt-4'>
+        <div className='flex flex-row flex-wrap items-center justify-center mb-4 space-x-3'>
+          <SocialIconLink kind='rss' href={siteMetadata.rss} size={6} color='yellow' />
+          <SocialIconLink kind='email' href={`mailto:${siteMetadata.email}`} size={6} color='purple' />
+          <SocialIconLink kind='telegram' href={siteMetadata.telegram} size={6} color='blue' />
+          <SocialIconLink kind='github' href={siteMetadata.github} size={6} color='slate' />
         </div>
-
-        <div className='flex items-center mb-2 font-mono text-sm text-teal-700 space-x-2 dark:text-teal-600'>
-          <div>
-            <Image
-              src={siteMetadata.siteLogo}
-              alt='logo'
-              width='24px'
-              height='24px'
-              className='align-middle'
-            />
-          </div>
+        <div className='flex items-center mb-2 font-mono text-teal-700 text-md space-x-2 dark:text-teal-600'>
+          <Image
+            src={siteMetadata.siteLogo}
+            alt='logo'
+            width='32px'
+            height='32px'
+            className='align-middle'
+          />
           <div>{`© ${new Date().getFullYear()}`}</div>
-          <div>{' • '}</div>
-          <Link href='/'>{siteMetadata.author}</Link>
+          <div className='sr-only'>{' • '}</div>
+          <Link href='/about'>{siteMetadata.author}</Link>
         </div>
       </div>
     </footer>

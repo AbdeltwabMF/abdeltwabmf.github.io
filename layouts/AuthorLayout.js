@@ -1,8 +1,9 @@
 import Image from '@/components/Image'
 import { PageSEO } from '@/components/SEO'
+import siteMetadata from '@/data/siteMetadata'
 
 export default function AuthorLayout ({ children, frontMatter }) {
-  const { name, avatar, occupation, company } = frontMatter
+  const { name, occupation, company } = frontMatter
 
   return (
     <>
@@ -16,7 +17,7 @@ export default function AuthorLayout ({ children, frontMatter }) {
         <div className='items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0'>
           <div className='flex flex-col items-center pt-8'>
             <Image
-              src={avatar}
+              src={siteMetadata.avatar}
               alt='avatar'
               width='256px'
               height='256px'
