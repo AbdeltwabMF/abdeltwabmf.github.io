@@ -25,10 +25,16 @@ export default function AuthorLayout ({ children, frontMatter }) {
             <h3 className='pt-4 pb-2 text-2xl font-bold tracking-tight font-primary leading-8'>
               {name}
             </h3>
-            <div className='text-gray-500 dark:text-gray-400'>{occupation}</div>
+            <div className='flex flex-col items-center justify-center text-gray-500 dark:text-gray-400'>
+              {occupation.map((item, index) => (
+                <span className={`text-${index + 1}x`} key={index}>{item}</span>
+              ))}
+            </div>
             <div className='text-gray-500 dark:text-gray-400'>{company}</div>
           </div>
-          <div className='pt-8 pb-8 prose max-w-none dark:prose-dark xl:col-span-2'>{children}</div>
+          <div className='pt-8 pb-8 prose max-w-none dark:prose-dark xl:col-span-2'>
+            {children}
+          </div>
         </div>
       </div>
     </>

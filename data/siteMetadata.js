@@ -7,14 +7,15 @@ const siteMetadata = {
   theme: 'system', // system, dark or light
   siteUrl: 'https://abdeltwabmf.github.io',
   siteRepo: 'https://github.com/AbdeltwabMF/abdeltwabmf.github.io.git',
-  siteLogo: './logo.png',
-  image: './logo.png',
+  siteLogo: '../images/logo.png',
   socialBanner: '/images/twitter-card.png',
   email: 'abdeltwab.m.fakhry@gmail.com',
   github: 'https://github.com/AbdeltwabMF',
   twitter: 'https://twitter.com/AbdeltwabMF',
   youtube: 'https://www.youtube.com/channel/UCyenpZrfrwtgCGXut-t5AYg',
   linkedin: 'https://www.linkedin.com/in/abdeltwabmf/',
+  telegram: 'https://t.me/AbdeltwabMF',
+  rss: 'https://abdeltwabmf.github.io/feed.xml',
   locale: 'en-US',
   analytics: {
     // If you want to use an analytics provider you have to add it to the

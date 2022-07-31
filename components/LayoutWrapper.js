@@ -11,11 +11,11 @@ const LayoutWrapper = ({ children }) => {
   return (
     <SectionContainer>
       <div className='flex flex-col justify-between h-screen'>
-        <header className='flex items-center justify-between py-5'>
+        <header className='flex items-center justify-between py-2'>
           <div>
             <Link href='/' aria-label={siteMetadata.headerTitle}>
               <div>
-                <Image src='/images/logo.png' alt={siteMetadata.headerTitle} width={48} height={48} />
+                <Image src={siteMetadata.siteLogo} alt={siteMetadata.headerTitle} width={48} height={48} />
               </div>
             </Link>
           </div>

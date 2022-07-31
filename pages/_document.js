@@ -12,7 +12,6 @@ class MyDocument extends Document {
           <link rel='manifest' href='/favicons/site.webmanifest' />
           <link rel='mask-icon' href='/favicons/safari-pinned-tab.svg' color='#5bbad5' />
           <link rel='alternate' type='application/rss+xml' href='/feed.xml' />
-          <meta content='width=device-width, initial-scale=1' name='viewport' />
           <meta name='msapplication-TileColor' content='#00aba9' />
           <meta name='theme-color' content='#ffffff' />
           <meta name='msapplication-TileColor' content='#000000' />

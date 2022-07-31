@@ -1,36 +1,22 @@
-import Mail from './mail.svg'
-import Github from './github.svg'
-import Youtube from './youtube.svg'
-import Linkedin from './linkedin.svg'
-import Twitter from './twitter.svg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faYoutube, faLinkedin, faTwitter, faTelegram } from '@fortawesome/free-brands-svg-icons'
+import { faRss, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
-// Icons taken from: https://simpleicons.org/
-
-const components = {
-  mail: Mail,
-  github: Github,
-
-  youtube: Youtube,
-  linkedin: Linkedin,
-  twitter: Twitter
-}
-
-const SocialIcon = ({ kind, href, size = 8 }) => {
-  const SocialSvg = components[kind]
+export default function SocialIcon (props) {
+  const { kind, href, size } = props
 
   return (
     <a
-      className='text-sm text-gray-500 transition hover:text-gray-600'
+      className='text-sm text-gray-500 transition hover:text-gray-600 h-6 w-6'
       target='_blank'
       rel='noopener noreferrer'
       href={href}
     >
-      <span className='sr-only'>{kind}</span>
-      <SocialSvg
-        className={`fill-current text-gray-700 hover:text-blue-700 dark:text-gray-200 dark:hover:text-blue-600 h-${size} w-${size}`}
+      <FontAwesomeIcon
+        icon={kind === 'rss' ? faRss : kind === 'email' ? faEnvelope : kind === 'github' ? faGithub : kind === 'youtube' ? faYoutube : kind === 'linkedin' ? faLinkedin : kind === 'twitter' ? faTwitter : kind === 'telegram' ? faTelegram : faTelegram}
+        className='text-teal-600 fill-current hover:text-teal-900 dark:text-teal-400 dark:hover:text-teal-300'
+        size='2x'
       />
     </a>
   )
 }
-
-export default SocialIcon

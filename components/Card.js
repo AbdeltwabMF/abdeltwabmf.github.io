@@ -1,6 +1,8 @@
 import Image from './Image'
 import Link from './Link'
-import GitHub from '../public/icons/github.svg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 
 export default function Card (props) {
   const { banner, title, description, tools, keywords, source, link, href } = props
@@ -71,7 +73,10 @@ export default function Card (props) {
                   rel='noopener noreferrer'
                   className='flex items-center justify-center'
                 >
-                  <GitHub className='inline-block w-5 h-5 mr-2 align-middle fill-current' />
+                  <FontAwesomeIcon
+                    icon={faGithub}
+                    className='inline-block w-5 h-5 mr-2 align-middle fill-current'
+                  />
                   <span>Source Code</span>
                 </a>
               </p>}
@@ -84,7 +89,11 @@ export default function Card (props) {
                   rel='noopener noreferrer'
                   className='flex items-center justify-center'
                 >
-                  <span>Live &rarr;</span>
+                  <FontAwesomeIcon
+                    icon={faUpRightFromSquare}
+                    className='inline-block w-5 h-5 mr-2 align-middle fill-current'
+                  />
+                  <span>Live</span>
                 </a>
               </p>}
           </div>
