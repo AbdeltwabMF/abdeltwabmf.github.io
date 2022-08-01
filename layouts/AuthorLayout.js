@@ -23,7 +23,7 @@ export default function AuthorLayout ({ children, frontMatter }) {
               height='256px'
               className='w-48 h-48 rounded-full'
             />
-            <h3 className='pt-4 pb-2 text-2xl font-bold tracking-tight font-primary leading-8'>
+            <h3 className='pt-4 pb-2 text-2xl font-bold tracking-tight leading-8'>
               {name}
             </h3>
             <div className='flex flex-col items-center justify-center text-gray-500 dark:text-gray-400'>

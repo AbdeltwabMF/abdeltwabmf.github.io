@@ -99,3 +99,51 @@
   src: url('../public/fonts/LibreBaskerville-Bold.ttf');
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'amiri-italic';
+  src: url('../public/fonts/Amiri-Italic.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'amiri-regular';
+  src: url('../public/fonts/Amiri-Regular.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'amiri-bold';
+  src: url('../public/fonts/Amiri-Bold.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'baloobhai-regular';
+  src: url('../public/fonts/BalooBhaijaan2-Regular.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'baloobhai-bold';
+  src: url('../public/fonts/BalooBhaijaan2-Bold.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'jozoor-regular';
+  src: url('../public/fonts/AraJozoor-Regular.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'kufi-bold';
+  src: url('../public/fonts/NotoKufiArabic-Bold.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'kufi-regular';
+  src: url('../public/fonts/NotoKufiArabic-Regular.ttf');
+  font-style: normal;
+}

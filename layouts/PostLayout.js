@@ -13,6 +13,8 @@ const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day:
 export default function PostLayout ({ frontMatter, authorDetails, next, prev, children }) {
   const { slug, date, title, tags, readingTime, dir } = frontMatter
   const url = `${siteMetadata.siteUrl}/blog/${slug}`
+  const headerFont = dir === 'rtl' ? 'font-baloob' : ''
+  const contentFont = dir === 'rtl' ? 'font-jazoor' : ''
 
   return (
     <SectionContainer>
@@ -37,7 +39,7 @@ export default function PostLayout ({ frontMatter, authorDetails, next, prev, ch
                 </div>
               </dl>
               <div dir={dir}>
-                <PageTitle>{title}</PageTitle>
+                <PageTitle font={headerFont}>{title}</PageTitle>
               </div>
               <p className='text-base text-gray-500 leading-6 dark:text-gray-400'>
                 {readingTime?.text}
@@ -50,7 +52,7 @@ export default function PostLayout ({ frontMatter, authorDetails, next, prev, ch
             style={{ gridTemplateRows: 'auto 1fr' }}
           >
             <div className='divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0'>
-              <div className='pt-10 pb-8 prose max-w-none dark:prose-dark' dir={dir}>{children}</div>
+              <div className={'pt-10 pb-8 prose max-w-none dark:prose-dark ' + contentFont} dir={dir}>{children}</div>
               <Comments frontMatter={frontMatter} />
             </div>
             <footer>
