@@ -7,15 +7,12 @@ import siteMetadata from '@/data/siteMetadata'
 import Comments from '@/components/Comments'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import Share from '@/components/Share'
-import Conditional from '@/components/Conditional'
 
 const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
 
 export default function PostLayout ({ frontMatter, authorDetails, next, prev, children }) {
-  const { slug, date, title, tags, readingTime, dir } = frontMatter
+  const { slug, date, title, tags, readingTime } = frontMatter
   const url = `${siteMetadata.siteUrl}/blog/${slug}`
-  const headerFont = dir === 'rtl' ? 'font-baloob' : ''
-  const contentFont = dir === 'rtl' ? 'font-jazoor' : ''
 
   return (
     <SectionContainer>
@@ -39,8 +36,8 @@ export default function PostLayout ({ frontMatter, authorDetails, next, prev, ch
                   </dd>
                 </div>
               </dl>
-              <div dir={dir}>
-                <PageTitle font={headerFont}>{title}</PageTitle>
+              <div>
+                <PageTitle>{title}</PageTitle>
               </div>
               <p className='text-base text-gray-500 leading-6 dark:text-gray-400'>
                 {readingTime?.text}
@@ -52,12 +49,10 @@ export default function PostLayout ({ frontMatter, authorDetails, next, prev, ch
             className='pb-8 divide-y divide-gray-200 dark:divide-gray-700 xl:grid xl:grid-cols-4 xl:gap-x-6 xl:divide-y-0'
             style={{ gridTemplateRows: 'auto 1fr' }}
           >
-            <Conditional condition={!dir}>
-              <div className='divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0'>
-                <div className={'pt-10 pb-8 prose max-w-none dark:prose-dark ' + contentFont} dir={dir}>{children}</div>
-                <Comments frontMatter={frontMatter} />
-              </div>
-            </Conditional>
+            <div className='divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0'>
+              <div className='pt-10 pb-8 prose max-w-none dark:prose-dark'>{children}</div>
+              <Comments frontMatter={frontMatter} />
+            </div>
             <footer>
               <div className='text-sm font-medium divide-gray-200 leading-5 dark:divide-gray-700 xl:col-start-1 xl:row-start-2 xl:divide-y'>
                 {tags && (
@@ -106,12 +101,6 @@ export default function PostLayout ({ frontMatter, authorDetails, next, prev, ch
                 </Link>
               </div>
             </footer>
-            <Conditional condition={!!dir}>
-              <div className='divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0'>
-                <div className={'pt-10 pb-8 prose max-w-none dark:prose-dark ' + contentFont} dir={dir}>{children}</div>
-                <Comments frontMatter={frontMatter} />
-              </div>
-            </Conditional>
           </div>
         </div>
       </article>

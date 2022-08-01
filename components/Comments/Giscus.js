@@ -3,9 +3,10 @@ import { useTheme } from 'next-themes'
 
 import siteMetadata from '@/data/siteMetadata'
 
-const Giscus = () => {
+const Giscus = ({ frontMatter }) => {
   const [enableLoadComments, setEnabledLoadComments] = useState(true)
   const { theme, resolvedTheme } = useTheme()
+  const { locale } = frontMatter
   const commentsTheme =
     siteMetadata.comment.giscusConfig.themeURL === ''
       ? theme === 'dark' || resolvedTheme === 'dark'
@@ -27,7 +28,6 @@ const Giscus = () => {
       reactions,
       metadata,
       inputPosition,
-      lang,
     } = siteMetadata?.comment?.giscusConfig
 
     const script = document.createElement('script')
@@ -54,6 +54,8 @@ const Giscus = () => {
     }
   }, [commentsTheme])
 
+  const lang = locale === 'ar-EG' ? 'ar' : 'en'
+
   // Reload on theme change
   useEffect(() => {
     const iframe = document.querySelector('iframe.giscus-frame')
@@ -63,7 +65,11 @@ const Giscus = () => {
 
   return (
     <div className="pt-6 pb-6 text-center text-gray-700 dark:text-gray-300">
-      {enableLoadComments && <button onClick={LoadComments}>Load Comments</button>}
+      {enableLoadComments && (
+        <button onClick={LoadComments}>
+          {lang === 'ar' ? 'تحميل التعليقات' : 'Load Comments'}
+        </button>
+      )}
       <div className="giscus" id={COMMENTS_ID} />
     </div>
   )
