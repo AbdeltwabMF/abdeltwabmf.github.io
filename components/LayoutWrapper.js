@@ -6,8 +6,11 @@ import Footer from './Footer'
 import Image from 'next/image'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
+import { useRouter } from 'next/router'
 
 const LayoutWrapper = ({ children }) => {
+  const router = useRouter()
+
   return (
     <SectionContainer>
       <div className='flex flex-col justify-between h-screen'>
@@ -21,11 +24,11 @@ const LayoutWrapper = ({ children }) => {
           </div>
           <div className='flex items-center text-base leading-5'>
             <div className='hidden sm:block'>
-              {headerNavLinks.map((link) => (
+              {headerNavLinks.map((link, index) => (
                 <Link
-                  key={link.title}
+                  key={index}
                   href={link.href}
-                  className='p-1 font-medium text-gray-900 dark:text-gray-100 sm:p-4'
+                  className={'p-1 font-medium text-gray-900 hover:text-violet-600 active:text-violet-700 dark:hover:text-violet-400 dark:active:text-violet-500 dark:text-gray-100 sm:p-4 ' + (router.pathname === link.href ? 'text-sky-800' : '')}
                 >
                   {link.title}
                 </Link>
