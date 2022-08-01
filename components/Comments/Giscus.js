@@ -55,6 +55,7 @@ const Giscus = ({ frontMatter }) => {
   }, [commentsTheme])
 
   const lang = locale === 'ar-EG' ? 'ar' : 'en'
+  const fontClass = lang === 'ar' ? 'font-kufi font-medium text-md text-purple-500' : ''
 
   // Reload on theme change
   useEffect(() => {
@@ -66,7 +67,7 @@ const Giscus = ({ frontMatter }) => {
   return (
     <div className="pt-6 pb-6 text-center text-gray-700 dark:text-gray-300">
       {enableLoadComments && (
-        <button onClick={LoadComments}>
+        <button onClick={LoadComments} className={fontClass}>
           {lang === 'ar' ? 'تحميل التعليقات' : 'Load Comments'}
         </button>
       )}
