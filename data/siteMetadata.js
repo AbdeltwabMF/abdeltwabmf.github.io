@@ -7,8 +7,8 @@ const siteMetadata = {
   theme: 'system', // system, dark or light
   siteUrl: 'https://abdeltwabmf.github.io',
   siteRepo: 'https://github.com/AbdeltwabMF/abdeltwabmf.github.io.git',
-  siteLogo: '../images/logo.png',
-  avatar: '../images/avatar.png',
+  siteLogo: 'https://abdeltwabmf.github.io/images/logo.png',
+  avatar: 'https://abdeltwabmf.github.io/images/avatar.png',
   socialBanner: '/images/social-banner.png',
   email: 'abdeltwab.m.fakhry@protonmail.com',
   github: 'https://github.com/AbdeltwabMF',
