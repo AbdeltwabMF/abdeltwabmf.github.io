@@ -7,11 +7,11 @@ import {
   faTelegram,
   faReddit,
   faFacebook,
-  faWhatsapp,
+  faWhatsapp
 } from '@fortawesome/free-brands-svg-icons'
 import { faRss, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
-export default function SocialIcon(props) {
+export default function SocialIcon (props) {
   const { kind, size, color } = props
   const sizeClass = size > 0 ? `h-${size} w-${size}` : 'h-6 w-6'
   let icon
@@ -54,7 +54,7 @@ export default function SocialIcon(props) {
   let colorClass
   switch (color) {
     case 'blue':
-      colorClass = 'text-blue-500 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300'
+      colorClass = 'text-blue-500 hover:text-blue-700 dark:text-blue-500 dark:hover:text-blue-700'
       break
     case 'red':
       colorClass = 'text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300'
@@ -80,7 +80,7 @@ export default function SocialIcon(props) {
       break
     case 'indigo':
       colorClass =
-        'text-indigo-500 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300'
+        'text-indigo-500 hover:text-indigo-700 dark:text-indigo-600 dark:hover:text-indigo-800'
       break
     case 'teal':
       colorClass = 'text-teal-500 hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-300'
@@ -100,8 +100,8 @@ export default function SocialIcon(props) {
   return (
     <FontAwesomeIcon
       icon={icon}
-      className={`${sizeClass} fill-current ${colorClass} inline-block`}
-      size="2x"
+      className={`${sizeClass} fill-current ${colorClass} inline-block align-middle`}
+      size='2x'
     />
   )
 }

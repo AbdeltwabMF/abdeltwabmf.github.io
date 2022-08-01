@@ -1,6 +1,6 @@
 import SocialIcon from '@/components/SocialIcons'
 import siteMetadata from '@/data/siteMetadata'
-import { H2, H3 } from '@/components/Form'
+import { H1, H2, H3 } from '@/components/Form'
 import Link from '@/components/Link'
 import { PageSEO } from '@/components/SEO'
 import Tag from '@/components/Tag'
@@ -18,17 +18,16 @@ export default function Home ({ tags }) {
   return (
     <>
       <PageSEO title={`Home - ${siteMetadata.author}`} description='Who am I' />
-      <div className='flex flex-col mt-8'>
-        <H2 className='text-center text-sky-800'>Hi, my name is Abd El-Twab M. Fakhry (amf) 👋 </H2>
-
+      <div className='flex flex-col mt-12'>
+        <H1 className='text-center text-sky-800'>Hi, my name is Abd El-Twab M. Fakhry (amf) 👋 </H1>
         <p className='mt-3 me-2'>
-          <span className='text-4xl text-blue-700'>A</span>nd this is my little corner on the web. I
+          <span className='text-2xl text-blue-700 dark:text-slate-400'>A</span>nd this is my little corner on the web. I
           am Egyptian,{' '}
           <a
             target='_blank'
             href='https://en.wikipedia.org/wiki/Al-Azhar_University'
             rel='noopener noreferrer'
-            className='text-indigo-400'
+            className='text-sky-400 dark:text-sky-300'
           >
             Azhari
           </a>
@@ -47,18 +46,19 @@ export default function Home ({ tags }) {
         </p>
 
         <p className='mt-2'>
-          <a className='inline-block px-1 text-sky-600' href={`mailto:${siteMetadata.email}`}>
-            <SocialIcon kind='email' color='indigo' /> E-Mail
+          I’m reachable through
+          <a className='inline-block px-1 text-sky-600 dark:text-sky-500 text-md' href={`mailto:${siteMetadata.email}`}>
+            <SocialIcon kind='email' color='indigo' size='5' /> E-Mail
           </a>
           ; You can use my
-          <a href='/documents/amf-key.gpg'> PGP-key</a>
+          <a href='/documents/amf-key.gpg' className='inline-block px-1 text-sky-600 dark:text-sky-500'> PGP-key</a>
           if it’s top-secret. I’m also reachable through my
-          <a className='inline-block px-1 text-sky-600' href={siteMetadata.telegram}>
-            <SocialIcon kind='telegram' /> Telegram
+          <a className='inline-block px-1 text-md text-sky-600' href={siteMetadata.telegram}>
+            <SocialIcon kind='telegram' color='blue' size='5' /> Telegram
           </a>
           and
-          <a className='inline-block px-1 text-sky-600' href={siteMetadata.twitter}>
-            <SocialIcon kind='twitter' color='blue' /> Twitter
+          <a className='inline-block px-1 text-sky-600 text-md' href={siteMetadata.twitter}>
+            <SocialIcon kind='twitter' color='blue' size='5' /> Twitter
           </a>
           .
         </p>
