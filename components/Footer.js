@@ -13,7 +13,7 @@ export default function Footer () {
           <SocialIconLink kind='telegram' href={siteMetadata.telegram} size={6} color='blue' />
           <SocialIconLink kind='github' href={siteMetadata.github} size={6} color='slate' />
         </div>
-        <div className='flex items-center mb-2 font-mono text-teal-700 text-md space-x-2 dark:text-teal-600'>
+        <div className='flex items-center mb-6 font-mono text-teal-700 text-md space-x-2 dark:text-teal-600'>
           <Image
             src={siteMetadata.siteLogo}
             alt='logo'
