@@ -11,7 +11,7 @@ import Share from '@/components/Share'
 const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
 
 export default function PostLayout ({ frontMatter, authorDetails, next, prev, children }) {
-  const { slug, date, title, tags, readingTime } = frontMatter
+  const { slug, date, title, tags, readingTime, dir } = frontMatter
   const url = `${siteMetadata.siteUrl}/blog/${slug}`
 
   return (
@@ -22,7 +22,7 @@ export default function PostLayout ({ frontMatter, authorDetails, next, prev, ch
         {...frontMatter}
       />
       <ScrollTopAndComment />
-      <article>
+      <article dir={dir}>
         <div className='xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700'>
           <header className='pt-6 xl:pb-6'>
             <div className='text-center space-y-1'>
