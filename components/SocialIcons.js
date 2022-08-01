@@ -1,8 +1,17 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faYoutube, faLinkedin, faTwitter, faTelegram, faReddit, faFacebook, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
+import {
+  faGithub,
+  faYoutube,
+  faLinkedin,
+  faTwitter,
+  faTelegram,
+  faReddit,
+  faFacebook,
+  faWhatsapp,
+} from '@fortawesome/free-brands-svg-icons'
 import { faRss, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
-export default function SocialIcon (props) {
+export default function SocialIcon(props) {
   const { kind, size, color } = props
   const sizeClass = size > 0 ? `h-${size} w-${size}` : 'h-6 w-6'
   let icon
@@ -51,22 +60,27 @@ export default function SocialIcon (props) {
       colorClass = 'text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300'
       break
     case 'green':
-      colorClass = 'text-green-500 hover:text-green-700 dark:text-green-400 dark:hover:text-green-300'
+      colorClass =
+        'text-green-500 hover:text-green-700 dark:text-green-400 dark:hover:text-green-300'
       break
     case 'yellow':
-      colorClass = 'text-yellow-500 hover:text-yellow-700 dark:text-yellow-400 dark:hover:text-yellow-300'
+      colorClass =
+        'text-yellow-500 hover:text-yellow-700 dark:text-yellow-400 dark:hover:text-yellow-300'
       break
     case 'purple':
-      colorClass = 'text-purple-500 hover:text-purple-700 dark:text-purple-400 dark:hover:text-purple-300'
+      colorClass =
+        'text-purple-500 hover:text-purple-700 dark:text-purple-400 dark:hover:text-purple-300'
       break
     case 'orange':
-      colorClass = 'text-orange-500 hover:text-orange-700 dark:text-orange-400 dark:hover:text-orange-300'
+      colorClass =
+        'text-orange-500 hover:text-orange-700 dark:text-orange-400 dark:hover:text-orange-300'
       break
     case 'pink':
       colorClass = 'text-pink-500 hover:text-pink-700 dark:text-pink-400 dark:hover:text-pink-300'
       break
     case 'indigo':
-      colorClass = 'text-indigo-500 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300'
+      colorClass =
+        'text-indigo-500 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300'
       break
     case 'teal':
       colorClass = 'text-teal-500 hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-300'
@@ -75,7 +89,8 @@ export default function SocialIcon (props) {
       colorClass = 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'
       break
     case 'slate':
-      colorClass = 'text-slate-700 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-300'
+      colorClass =
+        'text-slate-700 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-300'
       break
     default:
       colorClass = 'text-teal-500 hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-300'
@@ -85,8 +100,8 @@ export default function SocialIcon (props) {
   return (
     <FontAwesomeIcon
       icon={icon}
-      className={`${sizeClass} fill-current ${colorClass}`}
-      size='2x'
+      className={`${sizeClass} fill-current ${colorClass} inline-block`}
+      size="2x"
     />
   )
 }
