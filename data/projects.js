@@ -31,7 +31,7 @@ const projects = [
   },
   {
     slug: 'anthology-of-algorithms-and-data-structures',
-    title: 'anthology-of-algorithms-and-data-structures',
+    title: 'Anthology of Algorithms and Data structures',
     banner: '/images/projects/banners/anthology-of-algorithms-and-data-structures.png',
     description: 'Common Code for Competitive Programming in C++',
     shortDescription: 'Common Code for Competitive Programming in C++',

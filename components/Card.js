@@ -3,7 +3,7 @@ import Link from './Link'
 import Conditional from '@/components/Conditional'
 
 export default function Card (props) {
-  const { slug, banner, title, description, href } = props
+  const { banner, title, description, href } = props
 
   return (
     <div className='p-4 md md:w-1/2' style={{ maxWidth: '544px' }}>
@@ -13,7 +13,7 @@ export default function Card (props) {
       }  overflow-hidden rounded-md border-2 border-gray-200 border-opacity-60 dark:border-gray-700`}
       >
         <Conditional condition={!!banner}>
-          <Link href={`/projects/${slug}`} aria-label={`Link to ${title}`}>
+          <Link href={href} aria-label={`Link to ${title}`}>
             <Image
               alt={title}
               src={banner}
@@ -24,7 +24,7 @@ export default function Card (props) {
           </Link>
         </Conditional>
         <div className='p-6'>
-          <h2 className='mb-3 text-2xl font-bold tracking-tight leading-8'>
+          <h2 className='mb-3 text-2xl font-bold tracking-tight leading-8 line-clamp-1 '>
             <Link href={href} aria-label={`Link to ${title}`}>
               {title}
             </Link>
