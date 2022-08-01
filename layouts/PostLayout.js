@@ -22,7 +22,7 @@ export default function PostLayout ({ frontMatter, authorDetails, next, prev, ch
         {...frontMatter}
       />
       <ScrollTopAndComment />
-      <article dir={dir}>
+      <article>
         <div className='xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700'>
           <header className='pt-6 xl:pb-6'>
             <div className='text-center space-y-1'>
@@ -36,7 +36,7 @@ export default function PostLayout ({ frontMatter, authorDetails, next, prev, ch
                   </dd>
                 </div>
               </dl>
-              <div>
+              <div dir={dir}>
                 <PageTitle>{title}</PageTitle>
               </div>
               <p className='text-base text-gray-500 leading-6 dark:text-gray-400'>
@@ -50,7 +50,7 @@ export default function PostLayout ({ frontMatter, authorDetails, next, prev, ch
             style={{ gridTemplateRows: 'auto 1fr' }}
           >
             <div className='divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0'>
-              <div className='pt-10 pb-8 prose max-w-none dark:prose-dark'>{children}</div>
+              <div className='pt-10 pb-8 prose max-w-none dark:prose-dark' dir={dir}>{children}</div>
               <Comments frontMatter={frontMatter} />
             </div>
             <footer>
