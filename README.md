@@ -1,9 +1,5 @@
-<div align="center">
-  <img alt="Logo" src="https://avatars.githubusercontent.com/u/55063723?s=100" width="100px" />
-</div>
-
 <h1 align="center">
-   abdeltwabmf.github.com
+   abdeltwabmf.github.io
 </h1>
 
 ## Make it your own!
