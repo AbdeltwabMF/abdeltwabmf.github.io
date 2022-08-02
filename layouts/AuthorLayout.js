@@ -1,6 +1,8 @@
 import Image from '@/components/Image'
 import { PageSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
+import SocialIconLink from '@/components/SocialIconsLink'
+import { H3 } from '@/components/Form'
 
 export default function AuthorLayout ({ children, frontMatter }) {
   const { name, occupation, company } = frontMatter
@@ -35,6 +37,68 @@ export default function AuthorLayout ({ children, frontMatter }) {
           </div>
           <div className='pt-8 pb-8 prose max-w-none dark:prose-dark xl:col-span-2'>
             {children}
+
+            <H3 className='pt-8 pb-2 text-2xl font-bold tracking-tight leading-8'>
+              Social
+            </H3>
+            <div className=''>
+              <SocialIconLink
+                href={siteMetadata.twitter}
+                rules='no-underline mx-2'
+                kind='twitter'
+                color='slate'
+                size='8'
+              />
+              <SocialIconLink
+                href={siteMetadata.linkedin}
+                rules='no-underline mx-2'
+                kind='linkedin'
+                color='slate'
+                size='8'
+              />
+              <SocialIconLink
+                href={siteMetadata.github}
+                rules='no-underline mx-2'
+                kind='github'
+                color='slate'
+                size='8'
+              />
+              <SocialIconLink
+                href={`mailto:${siteMetadata.email}`}
+                rules='no-underline mx-2'
+                kind='email'
+                color='slate'
+                size='8'
+              />
+              <SocialIconLink
+                href={siteMetadata.telegram}
+                rules='no-underline mx-2'
+                kind='telegram'
+                color='slate'
+                size='8'
+              />
+              <SocialIconLink
+                href={siteMetadata.youtube}
+                rules='no-underline mx-2'
+                kind='youtube'
+                color='slate'
+                size='8'
+              />
+              <SocialIconLink
+                href={siteMetadata.researchgate}
+                rules='no-underline mx-2'
+                kind='researchgate'
+                color='slate'
+                size='8'
+              />
+              <SocialIconLink
+                href={siteMetadata.docker}
+                rules='no-underline mx-2'
+                kind='docker'
+                color='slate'
+                size='8'
+              />
+            </div>
           </div>
         </div>
       </div>

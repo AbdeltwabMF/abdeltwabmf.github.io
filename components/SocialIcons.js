@@ -7,7 +7,11 @@ import {
   faTelegram,
   faReddit,
   faFacebook,
-  faWhatsapp
+  faWhatsapp,
+  faInstagram,
+  faPinterest,
+  faDocker,
+  faResearchgate
 } from '@fortawesome/free-brands-svg-icons'
 import { faRss, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
@@ -30,6 +34,12 @@ export default function SocialIcon (props) {
       break
     case 'github':
       icon = faGithub
+      break
+    case 'researchgate':
+      icon = faResearchgate
+      break
+    case 'docker':
+      icon = faDocker
       break
     case 'youtube':
       icon = faYoutube
