@@ -6,8 +6,9 @@ This portfolio was built on top of [Tailwind Next JS Starter Blog](https://githu
 
 ## Features in this portfolio
 
-- Support Arabic blogs
-- Support for personal projects
+- Arabic blogs
+- Personal projects
+- Hijri date for blogs
 
 ## Development
 

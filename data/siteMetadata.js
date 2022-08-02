@@ -16,6 +16,8 @@ const siteMetadata = {
   youtube: 'https://www.youtube.com/channel/UCyenpZrfrwtgCGXut-t5AYg',
   linkedin: 'https://www.linkedin.com/in/abdeltwabmf/',
   telegram: 'https://t.me/AbdeltwabMF',
+  researchgate: 'https://www.researchgate.net/profile/Abd-El-Twab-Fakhry',
+  docker: 'https://hub.docker.com/u/abdeltwabmf',
   rss: 'https://abdeltwabmf.github.io/feed.xml',
   locale: 'en-US',
   analytics: {
