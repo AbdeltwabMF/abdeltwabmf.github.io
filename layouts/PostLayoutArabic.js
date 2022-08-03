@@ -44,12 +44,12 @@ export default function PostLayout ({ frontMatter, authorDetails, next, prev, ch
               <dl className='space-y-10'>
                 <div>
                   <dt className='sr-only'>Published on</dt>
-                  <dd className='text-base font-medium text-gray-500 leading-6 dark:text-gray-400'>
+                  <dd className='text-base font-medium text-gray-500 font-kufi leading-6 dark:text-gray-400'>
                     <time dateTime={date}>
                       {weekday}{'، '}
                       {hijriDay} {hijriMonth} {hijriYear}
                     </time>
-                    <div className='inline text-2xl align-middle text-bold'>{' • '}</div>
+                    <div className='inline text-xl text-bold'>{' • '}</div>
                     <time dateTime={date}>
                       {gregorianDate}
                     </time>
@@ -70,7 +70,7 @@ export default function PostLayout ({ frontMatter, authorDetails, next, prev, ch
             style={{ gridTemplateRows: 'auto 1fr' }}
           >
             <div className='divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0'>
-              <div className='pt-10 pb-8 prose max-w-none dark:prose-dark font-jazoor' dir='rtl'>
+              <div className='pt-10 pb-8 prose max-w-none dark:prose-dark font-kufi' dir='rtl'>
                 {children}
               </div>
               <Comments frontMatter={frontMatter} />

@@ -3,35 +3,34 @@ import projects from '@/data/projects'
 import Card from '@/components/Card'
 import { PageSEO } from '@/components/SEO'
 
-const projectRepository = projects.map(project => {
+const projectRepo = projects.map(project => {
   return {
-    repository: project.repository,
-    title: project.title
+    slug: project.repository
   }
 })
 
 export const getStaticProps = async () => {
-  const stars = projectRepository.map(async project => {
-    const data = await fetch(`https://api.github.com/repos/AbdeltwabMF/${project.repository}`, {
+  const reposStars = await projectRepo.map(async project => {
+    const data = await fetch(`https://api.github.com/repos/AbdeltwabMF/${project.slug}`, {
       auth: { user: 'AbdeltwabMF', password: `${process.env.REPO_STARS_PERSONAL_ACCESS_TOKEN}` }
     })
     const json = await data.json()
     const repoStars = json.stargazers_count
     return {
-      repository: project.repository,
-      title: project.title,
+      slug: project.slug,
       repoStars
     }
   })
-
+  const reposStarsData = await Promise.all(reposStars)
   return {
     props: {
-      stars: await Promise.all(stars)
+      reposStarsData
     }
   }
 }
 
-export default function Projects (props) {
+export default function Projects ({ reposStarsData }) {
+  console.log(reposStarsData)
   return (
     <>
       <PageSEO title={`Projects - ${siteMetadata.author}`} description={siteMetadata.description} />
@@ -44,14 +43,14 @@ export default function Projects (props) {
         <div className='container py-12'>
           <div className='flex flex-wrap -m-4'>
             {projects.map((d, index) => {
-              const stars = props.stars.find(star => star.repository === d.repository)
+              const stars = reposStarsData.find(repo => repo.slug === d.repository)
               return (
                 <Card
                   key={index}
                   title={d.title}
                   repository={d.repository}
-                  description={d.description}
                   stars={stars.repoStars}
+                  description={d.description}
                   banner={d.banner}
                   href={`/projects/${d.slug}`}
                 />
