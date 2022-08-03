@@ -2,6 +2,16 @@ import Image from './Image'
 import Link from './Link'
 import Conditional from '@/components/Conditional'
 
+const getStaticProps = async () => {
+  const data = await fetch('https://api.github.com/repos/AbdeltwabMF/devault')
+  const json = await data.json()
+  return {
+    props: {
+      data: json
+    }
+  }
+}
+
 export default function Card (props) {
   const { banner, title, description, href } = props
 
@@ -30,6 +40,7 @@ export default function Card (props) {
             </Link>
           </h2>
           <p className='mb-3 text-gray-500 prose max-w-none line-clamp-2 dark:text-gray-400'>{description}</p>
+
           <Link
             href={href}
             className='text-base font-medium leading-6 text-primary-500 hover:text-primary-600 dark:hover:text-primary-400'
