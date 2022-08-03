@@ -15,15 +15,18 @@ export default function Projects () {
         </div>
         <div className='container py-12'>
           <div className='flex flex-wrap -m-4'>
-            {projects.map((d) => (
-              <Card
-                key={d.slug}
-                title={d.title}
-                description={d.description}
-                banner={d.banner}
-                href={`/projects/${d.slug}`}
-              />
-            ))}
+            {projects.map((d, index) => {
+              return (
+                <Card
+                  key={index}
+                  title={d.title}
+                  repository={d.repository}
+                  description={d.description}
+                  banner={d.banner}
+                  href={`/projects/${d.slug}`}
+                />
+              )
+            })}
           </div>
         </div>
       </div>
