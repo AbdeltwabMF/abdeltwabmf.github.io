@@ -100,7 +100,7 @@ export default function SocialIcon (props) {
       break
     case 'slate':
       colorClass =
-        'text-slate-700 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-300'
+        'text-slate-700 hover:text-slate-800 dark:text-slate-800 dark:hover:text-slate-500'
       break
     default:
       colorClass = 'text-teal-500 hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-300'
