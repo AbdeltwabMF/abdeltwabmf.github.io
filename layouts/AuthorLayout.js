@@ -46,56 +46,56 @@ export default function AuthorLayout ({ children, frontMatter }) {
                 href={siteMetadata.twitter}
                 rules='no-underline mx-2'
                 kind='twitter'
-                color='slate'
+                color='neutral'
                 size='8'
               />
               <SocialIconLink
                 href={siteMetadata.linkedin}
                 rules='no-underline mx-2'
                 kind='linkedin'
-                color='slate'
+                color='neutral'
                 size='8'
               />
               <SocialIconLink
                 href={siteMetadata.github}
                 rules='no-underline mx-2'
                 kind='github'
-                color='slate'
+                color='neutral'
                 size='8'
               />
               <SocialIconLink
                 href={`mailto:${siteMetadata.email}`}
                 rules='no-underline mx-2'
                 kind='email'
-                color='slate'
+                color='neutral'
                 size='8'
               />
               <SocialIconLink
                 href={siteMetadata.telegram}
                 rules='no-underline mx-2'
                 kind='telegram'
-                color='slate'
+                color='neutral'
                 size='8'
               />
               <SocialIconLink
                 href={siteMetadata.youtube}
                 rules='no-underline mx-2'
                 kind='youtube'
-                color='slate'
+                color='neutral'
                 size='8'
               />
               <SocialIconLink
                 href={siteMetadata.researchgate}
                 rules='no-underline mx-2'
                 kind='researchgate'
-                color='slate'
+                color='neutral'
                 size='8'
               />
               <SocialIconLink
                 href={siteMetadata.docker}
                 rules='no-underline mx-2'
                 kind='docker'
-                color='slate'
+                color='neutral'
                 size='8'
               />
             </div>
