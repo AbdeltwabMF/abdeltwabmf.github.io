@@ -1,11 +1,12 @@
 import SocialIcon from '@/components/SocialIcons'
 import siteMetadata from '@/data/siteMetadata'
-import { H1, H2, H3 } from '@/components/Form'
+import { H1, H3 } from '@/components/Form'
 import Link from '@/components/Link'
 import { PageSEO } from '@/components/SEO'
 import Tag from '@/components/Tag'
 import { getAllTags } from '@/lib/tags'
 import kebabCase from '@/lib/utils/kebabCase'
+import NewsletterForm from '@/components/NewsletterForm'
 
 export async function getStaticProps () {
   const tags = await getAllTags('blog')
@@ -93,6 +94,11 @@ export default function Home ({ tags }) {
             )
           })}
         </div>
+        {siteMetadata.newsletter.provider !== '' && (
+          <div className='flex items-center justify-center mt-12'>
+            <NewsletterForm />
+          </div>
+        )}
       </div>
     </>
   )
