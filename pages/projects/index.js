@@ -3,7 +3,35 @@ import projects from '@/data/projects'
 import Card from '@/components/Card'
 import { PageSEO } from '@/components/SEO'
 
-export default function Projects () {
+const projectRepository = projects.map(project => {
+  return {
+    repository: project.repository,
+    title: project.title
+  }
+})
+
+export const getStaticProps = async () => {
+  const stars = projectRepository.map(async project => {
+    const data = await fetch(`https://api.github.com/repos/AbdeltwabMF/${project.repository}`, {
+      auth: { user: 'AbdeltwabMF', password: `${process.env.REPO_STARS_PERSONAL_ACCESS_TOKEN}` }
+    })
+    const json = await data.json()
+    const repoStars = json.stargazers_count
+    return {
+      repository: project.repository,
+      title: project.title,
+      repoStars
+    }
+  })
+
+  return {
+    props: {
+      stars: await Promise.all(stars)
+    }
+  }
+}
+
+export default function Projects (props) {
   return (
     <>
       <PageSEO title={`Projects - ${siteMetadata.author}`} description={siteMetadata.description} />
@@ -16,12 +44,14 @@ export default function Projects () {
         <div className='container py-12'>
           <div className='flex flex-wrap -m-4'>
             {projects.map((d, index) => {
+              const stars = props.stars.find(star => star.repository === d.repository)
               return (
                 <Card
                   key={index}
                   title={d.title}
                   repository={d.repository}
                   description={d.description}
+                  stars={stars.repoStars}
                   banner={d.banner}
                   href={`/projects/${d.slug}`}
                 />
