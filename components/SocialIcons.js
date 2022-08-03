@@ -64,7 +64,7 @@ export default function SocialIcon (props) {
   let colorClass
   switch (color) {
     case 'blue':
-      colorClass = 'text-blue-500 hover:text-blue-700 dark:text-blue-500 dark:hover:text-blue-700'
+      colorClass = 'text-blue-500 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-700'
       break
     case 'red':
       colorClass = 'text-red-500 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300'
@@ -100,7 +100,11 @@ export default function SocialIcon (props) {
       break
     case 'slate':
       colorClass =
-        'text-slate-700 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-300'
+        'text-slate-700 hover:text-slate-800 dark:text-slate-800 dark:hover:text-slate-500'
+      break
+    case 'neutral':
+      colorClass =
+        'text-neutral-700 hover:text-neutral-800 dark:text-neutral-300 dark:hover:text-neutral-100'
       break
     default:
       colorClass = 'text-teal-500 hover:text-teal-700 dark:text-teal-400 dark:hover:text-teal-300'
