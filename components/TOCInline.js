@@ -20,8 +20,12 @@
  * }} props
  *
  */
+
+import Conditional from '@/components/Conditional'
+
 const TOCInline = ({
   toc,
+  locale,
   indentDepth = 3,
   fromHeading = 1,
   toHeading = 6,
@@ -49,16 +53,23 @@ const TOCInline = ({
 
   return (
     <>
-      {asDisclosure
-        ? (
+      <Conditional condition={!!asDisclosure}>
+        <Conditional condition={locale === 'ar-EG'}>
+          <details open>
+            <summary className='pt-2 pb-2 mr-6 text-xl font-bold font-amiri'>جدول المحتويات</summary>
+            <div className='mr-12 font-kufi'>{tocList}</div>
+          </details>
+        </Conditional>
+        <Conditional condition={locale !== 'ar-EG'}>
           <details open>
             <summary className='pt-2 pb-2 ml-6 text-xl font-bold'>Table of Contents</summary>
             <div className='ml-6'>{tocList}</div>
           </details>
-          )
-        : (
-            tocList
-          )}
+        </Conditional>
+      </Conditional>
+      <Conditional condition={!asDisclosure}>
+        tocList
+      </Conditional>
     </>
   )
 }
