@@ -1,7 +1,5 @@
 import { useRef, useState } from 'react'
 
-import siteMetadata from '@/data/siteMetadata'
-
 const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
   const inputEl = useRef(null)
   const [error, setError] = useState(false)
@@ -11,28 +9,34 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
   const subscribe = async (e) => {
     e.preventDefault()
 
-    const res = await fetch(`/api/${siteMetadata.newsletter.provider}`, {
-      body: JSON.stringify({
-        email: inputEl.current.value
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      method: 'POST'
-    })
+    try {
+      // Send request to ConvertKit
+      const API_KEY = process.env.CONVERTKIT_API_KEY
+      const API_URL = process.env.CONVERTKIT_API_URL
+      const FORM_ID = process.env.CONVERTKIT_FORM_ID
 
-    const { error } = await res.json()
-    if (error) {
+      const data = { email: inputEl.current.value, api_key: API_KEY }
+
+      const response = await fetch(`${API_URL}forms/${FORM_ID}/subscribe`, {
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        method: 'POST'
+      })
+
+      if (response.status >= 400) {
+        console.error('There was an error subscribing to the list.')
+      } else {
+        inputEl.current.value = ''
+        setError(false)
+        setSubscribed(true)
+        setMessage('Successfully! 🎉 You are now subscribed.')
+      }
+    } catch (error) {
       setError(true)
-      console.log(error)
       setMessage('Your e-mail address is invalid or you are already subscribed!')
-      return
     }
-
-    inputEl.current.value = ''
-    setError(false)
-    setSubscribed(true)
-    setMessage('Successfully! 🎉 You are now subscribed.')
   }
 
   return (
