@@ -1,10 +1,11 @@
 import Conditional from '@/components/Conditional'
-import { H1, H2 } from '@/components/Form'
+import { H1, H2, H3 } from '@/components/Form'
 import { PageSEO } from '@/components/SEO'
 import Image from '@/components/Image'
 import React, { useCallback } from 'react'
 import ScrollContainer from 'react-indiana-drag-scroll'
 import projects, { defaultDimensions } from '@/data/projects'
+import Link from '@/components/Link'
 
 export async function getStaticPaths () {
   return {
@@ -27,14 +28,10 @@ export default function Project ({ project }) {
   const {
     title,
     description,
-    shortDescription,
     banner,
     deployment,
     stack,
     keywords,
-    repository,
-    website,
-    slug,
     screenshots
   } = project
 
@@ -66,22 +63,19 @@ export default function Project ({ project }) {
     [height, width]
   )
 
-  const hasDeployments = !!deployment
-  const hasScreenshots = !!screenshots.length
-
   return (
     <>
       <PageSEO
         title={title}
-        description={shortDescription || description}
+        description={description}
         imageUrl={banner}
       />
-      <H1 className='mt-12 mb-4 text-3xl font-bold lg:text-5x dark:text-white'>
+      <H1 className='mt-12 mb-4 text-3xl font-bold text-slate-600 lg:text-5x dark:text-neutral-300'>
         {title}
       </H1>
-      <p className='mb-4 font-light'>{description}</p>
+      <p className='mb-4 text-gray-600 dark:text-gray-400'>{description}</p>
 
-      <H2>Stack</H2>
+      <H2 className='text-slate-600 dark:text-neutral-300'>Stack</H2>
       <Conditional condition={stack.length > 0}>
         <div className='flex flex-wrap justify-start mb-4'>
           {stack.map((keyword, index) => (
@@ -90,7 +84,7 @@ export default function Project ({ project }) {
         </div>
       </Conditional>
 
-      <H2>Keywords</H2>
+      <H2 className='text-slate-600 dark:text-neutral-300'>Keywords</H2>
       <Conditional condition={stack.length > 0}>
         <div className='flex flex-wrap justify-start mb-4'>
           {keywords.map((keyword, index) => (
@@ -99,14 +93,33 @@ export default function Project ({ project }) {
         </div>
       </Conditional>
 
-      <H2>Deployments</H2>
+      <Conditional condition={!!deployment}>
+        <H2 className='text-slate-600 dark:text-neutral-300'>Deployments</H2>
+        {Object.entries(deployment).map(deploy => {
+          console.log(deploy)
+          return (
+            <div key={deploy[0]} className='mb-4'>
+              <H3 className='text-slate-600 dark:text-neutral-300'>{deploy[0]}</H3>
+              <a
+                className='text-blue-700 dark:text-neutral-300'
+                href={deploy[1]}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <ul>
+                  {deploy[1].map((url, index) => (
+                    <li className='' key={index}>{url}</li>
+                  ))}
+                </ul>
+              </a>
+            </div>
+          )
+        })}
+      </Conditional>
 
-      <Conditional condition={hasScreenshots}>
-        <H2 className='my-4'>Screenshots</H2>
-        <ScrollContainer
-          className='flex mt-4 mb-1 overflow-auto list'
-          hideScrollbars={false}
-        >
+      <Conditional condition={!!screenshots.length}>
+        <H2 className='text-slate-600 dark:text-neutral-300'>Screenshots</H2>
+        <ScrollContainer className='flex flex-wrap justify-start mb-4'>
           {React.Children.toArray(screenshots.map(renderScreenShotList))}
         </ScrollContainer>
       </Conditional>
