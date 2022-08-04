@@ -12,7 +12,7 @@ const projectRepo = projects.map(project => {
 export const getStaticProps = async () => {
   const reposStars = await projectRepo.map(async project => {
     const data = await fetch(`https://api.github.com/repos/AbdeltwabMF/${project.slug}`, {
-      auth: { user: 'AbdeltwabMF', password: `${process.env.REPO_STARS_PERSONAL_ACCESS_TOKEN}` }
+      auth: { user: 'AbdeltwabMF', password: `${process.env.PAT_GITHUB_REPO}` }
     })
     const json = await data.json()
     const repoStars = json.stargazers_count

@@ -53,6 +53,16 @@ const securityHeaders = [
 ]
 
 module.exports = withBundleAnalyzer({
+  env: {
+    NEXT_PUBLIC_GISCUS_REPO: process.env.NEXT_PUBLIC_GISCUS_REPO,
+    NEXT_PUBLIC_GISCUS_REPOSITORY_ID: process.env.NEXT_PUBLIC_GISCUS_REPOSITORY_ID,
+    NEXT_PUBLIC_GISCUS_CATEGORY: process.env.NEXT_PUBLIC_GISCUS_CATEGORY,
+    NEXT_PUBLIC_GISCUS_CATEGORY_ID: process.env.NEXT_PUBLIC_GISCUS_CATEGORY_ID,
+    CONVERTKIT_API_URL: process.env.CONVERTKIT_API_URL,
+    CONVERTKIT_API_KEY: process.env.CONVERTKIT_API_KEY,
+    CONVERTKIT_FORM_ID: process.env.CONVERTKIT_FORM_ID,
+    PAT_GITHUB_REPO: process.env.PAT_GITHUB_REPO
+  },
   reactStrictMode: true,
   experimental: {
     outputStandalone: true
