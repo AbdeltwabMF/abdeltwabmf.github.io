@@ -5,7 +5,7 @@ import { PageSEO } from '@/components/SEO'
 
 const projectRepo = projects.map(project => {
   return {
-    slug: project.repository
+    slug: project.slug
   }
 })
 
@@ -43,12 +43,12 @@ export default function Projects ({ reposStarsData }) {
         <div className='container py-12'>
           <div className='flex flex-wrap -m-4'>
             {projects.map((d, index) => {
-              const stars = reposStarsData.find(repo => repo.slug === d.repository)
+              const stars = reposStarsData.find(repo => repo.slug === d.slug)
               return (
                 <Card
                   key={index}
                   title={d.title}
-                  repository={d.repository}
+                  slug={d.slug}
                   stars={stars.repoStars}
                   description={d.description}
                   banner={d.banner}

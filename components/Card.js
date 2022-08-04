@@ -5,7 +5,7 @@ import SocialIcon from '@/components/SocialIcons'
 import siteMetadata from '@/data/siteMetadata'
 
 export default function Card (props) {
-  const { banner, title, description, href, repository, stars } = props
+  const { banner, title, description, href, slug, stars } = props
 
   return (
     <div className='p-4 md md:w-1/2' style={{ maxWidth: '544px' }}>
@@ -36,7 +36,7 @@ export default function Card (props) {
           <p className='mb-3 text-gray-500 prose max-w-none line-clamp-2 dark:text-gray-400'>
             <a
               className='inline-block text-gray-500 no-underline fill-current transition hover:text-gray-600'
-              href={`${siteMetadata.github}/${repository}/stargazers`}
+              href={`${siteMetadata.github}/${slug}/stargazers`}
               target='_blank'
               rel='noopener noreferrer'
             >
@@ -44,7 +44,7 @@ export default function Card (props) {
                 className='inline-block px-3 no-underline border border-gray-500 fill-current bg-neutral-200 rounded-l-md text-slate-700 transition hover:text-gray-600 border-opacity-60 dark:border-gray-400'
               >
                 <SocialIcon
-                  aria-label={`Link to ${repository} on GitHub`}
+                  aria-label={`Link to ${slug} on GitHub`}
                   kind='github'
                   size='5'
                   color='slate'
