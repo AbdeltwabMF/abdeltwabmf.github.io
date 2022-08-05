@@ -100,18 +100,20 @@ export default function Project ({ project }) {
           return (
             <div key={deploy[0]} className='mb-4'>
               <H3 className='text-slate-600 dark:text-neutral-300'>{deploy[0]}</H3>
-              <a
-                className='text-blue-700 dark:text-neutral-300'
-                href={deploy[1]}
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                <ul>
-                  {deploy[1].map((url, index) => (
-                    <li className='' key={index}>{url}</li>
-                  ))}
-                </ul>
-              </a>
+              <ul>
+                {deploy[1].map((url, index) => (
+                  <li className='' key={index}>
+                    <a
+                      className='text-blue-700 dark:text-neutral-300'
+                      href={url}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                    >
+                      {url}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
           )
         })}

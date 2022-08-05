@@ -1,18 +1,21 @@
 import { PageSEO } from '@/components/SEO'
-import { H1 } from '@/components/Form'
+import { H1, H3 } from '@/components/Form'
 import siteMetadata from '@/data/siteMetadata'
+import Twemoji from '@/components/Twemoji'
 
 export default function Credit () {
   return (
     <>
       <PageSEO title={`Credit - ${siteMetadata.author}`} description='Acknowledgement' />
       <div className='flex flex-col mt-12'>
-        <H1 className='text-center text-neutral-600'>Acknowledgement 🤝</H1>
+        <H1 className='text-center text-neutral-600'><span className='pr-4'>Acknowledgement</span>
+          <Twemoji emoji='folded-hands' className='' />
+        </H1>
         <p className='text-xl text-center text-slate-600 dark:text-slate-500'>
-          I would like to thank the all the people who have helped me to create this website.
+          I would like to thank all the people who have helped me to create this website.
         </p>
         <ul className='mt-8 text-neutral-600 dark:text-neutral-500'>
-          <li>
+          <li className='sr-only'>
             <a
               href='https://unsplash.com/'
               className='inline-block fill-current text-sky-600 dark:text-sky-400'
@@ -34,7 +37,7 @@ export default function Credit () {
               className='inline-block fill-current text-sky-600 dark:text-sky-400'
               rel='noopener noreferrer'
               target='_blank'
-            >Timothy Lin
+            ><H3>Timothy Lin</H3>
             </a> - for the lightweight and easy-to-customize {' '}
             <a
               href='https://github.com/timlrx/tailwind-nextjs-starter-blog'
@@ -50,7 +53,7 @@ export default function Credit () {
               className='inline-block fill-current text-sky-600 dark:text-sky-400'
               rel='noopener noreferrer'
               target='_blank'
-            >Abdennour
+            ><H3>Abdennour</H3>
             </a> - for {' '}
             <a
               href='https://github.com/abdennour/hijri-date'
