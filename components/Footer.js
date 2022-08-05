@@ -2,6 +2,7 @@ import Link from '@/components/Link'
 import Image from '@/components/Image'
 import siteMetadata from '@/data/siteMetadata'
 import SocialIconLink from '@/components/SocialIconsLink'
+import Twemoji from './Twemoji'
 
 export default function Footer () {
   return (
@@ -13,7 +14,15 @@ export default function Footer () {
           <SocialIconLink kind='telegram' href={siteMetadata.telegram} size={6} color='neutral' />
           <SocialIconLink kind='github' href={siteMetadata.github} size={6} color='neutral' />
         </div>
-        <div className='flex items-center mb-2 font-mono text-neutral-700 text-md space-x-2 dark:text-neutral-600'>
+        <div className='flex flex-row flex-wrap items-center justify-center mt-2 mb-2 font-mono text-neutral-700 text-md space-x-2 dark:text-neutral-600'>
+          <Link href='/credit' className='text-sky-600'>Credit</Link>
+          <div className=''>{' • '}</div>
+          <p className='text-sky-600'>
+            Viva Palestina
+          </p>
+          <Twemoji emoji='palestinian-territories' size='twa-lg' />
+        </div>
+        <div className='flex items-center mb-4 font-mono text-neutral-700 text-md space-x-2 dark:text-neutral-600'>
           <Link
             href='/'
           >
@@ -28,11 +37,6 @@ export default function Footer () {
           <div>{`© ${new Date().getFullYear()}`}</div>
           <div className='sr-only'>{' • '}</div>
           <Link href='/about'>{siteMetadata.author}</Link>
-        </div>
-        <div className='flex flex-row flex-wrap items-center justify-center mb-6 font-mono text-neutral-700 text-md space-x-2 dark:text-neutral-600'>
-          <Link href='/credit' className='text-sky-600'>Credit</Link>
-          <div className=''>{' • '}</div>
-          <p className='text-sky-600'>Viva Palestina</p>
         </div>
       </div>
     </footer>
