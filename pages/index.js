@@ -26,9 +26,9 @@ export default function Home ({ tags, posts }) {
     <>
       <PageSEO title={`Home - ${siteMetadata.author}`} description='Who am I' />
       <div className='flex flex-col mt-12'>
-        <H1 className='mb-4 text-center text-sky-800'>Hi, I'm Abd El-Twab M. Fakhry (aka AMF) {'   '}
-          <Twemoji emoji='waving-hand' className='pl-4' />
-        </H1>
+        <h1 className='mt-8 mb-4 font-bold text-center text-transparent text-sky-800 dark:text-transparent bg-gradient-to-r dark:bg-gradient-to-r from-sky-800 via-teal-400 to-violet-600 dark:from-sky-800 dark:via-teal-400 dark:to-violet-600 bg-clip-text lg:text-4xl sm:text-2xl'>Hi, I'm Abd El-Twab M. Fakhry (aka AMF) {'   '}
+          <Twemoji emoji='waving-hand' className='pl-4 mt-4' />
+        </h1>
         <TypedBios className='mt-2 text-gray-600 me-2 dark:text-gray-400' />
         <p className='mt-4 text-gray-600 me-2 dark:text-gray-400'>
           <span className='text-2xl'>A</span>nd this is my little corner on the web. I

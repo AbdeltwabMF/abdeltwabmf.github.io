@@ -1,4 +1,4 @@
-export const defaultDimensions = [450, 220]
+export const defaultDimensions = [640, 320]
 
 const projects = [
   {
@@ -16,7 +16,15 @@ const projects = [
       'Cloud Storage',
       'Peer-to-Peer Network'
     ],
-    screenshots: ['/images/projects/banners/devault.png'],
+    screenshots: [
+      '../images/projects/screenshots/devault/1.png',
+      '../images/projects/screenshots/devault/2.png',
+      '../images/projects/screenshots/devault/3.png',
+      '../images/projects/screenshots/devault/4.png',
+      '../images/projects/screenshots/devault/5.png',
+      '../images/projects/screenshots/devault/6.png',
+      '../images/projects/screenshots/devault/7.png',
+      '../images/projects/screenshots/devault/8.png'],
     deployment: {
       web: ['https://devault.vercel.app', 'https://devault.on.fleek.co'],
       docker: ['https://hub.docker.com/r/abdeltwabmf/devault', '']
@@ -29,7 +37,9 @@ const projects = [
     description: 'Islamic prayers reminder for your *nix status bar.',
     stack: ['C++', 'Python', 'Docker', 'Make'],
     keywords: ['Prayer Times', 'Status Bar', 'Hijri Date'],
-    screenshots: ['/images/projects/banners/next-prayer.png'],
+    screenshots: [
+      '../images/projects/screenshots/next-prayer/1.png',
+      '../images/projects/screenshots/next-prayer/2.png'],
     deployment: {
       package: ['https://aur.archlinux.org/packages/next-prayer', ''],
       docker: ['https://hub.docker.com/r/abdeltwabmf/next-prayer', '']
@@ -50,7 +60,8 @@ const projects = [
       'Ad-hoc',
       'String Processing'
     ],
-    screenshots: ['/images/projects/banners/anthology-of-algorithms-and-data-structures.png'],
+    screenshots: [
+      '../images/projects/screenshots/anthology-of-algorithms-and-data-structures/1.png'],
     deployment: {
       package: ['https://abdeltwabmf.github.io/anthology-of-algorithms-and-data-structures', '']
     }
@@ -63,7 +74,16 @@ const projects = [
       'A software created for the calculation of characteristics of different queues having the BMAP (batch Markovian Arrival Process) as input, and the deterministic queues characterized by units of input (i.e. customers) arrive at known points in time and the service times are fixed intervals.',
     stack: ['Python', 'Tkinter'],
     keywords: ['Queueing Theory', 'BMAP', 'Deterministic Queue', 'Stochastic Queue'],
-    screenshots: ['/images/projects/banners/queueing-modelsim.png'],
+    screenshots: [
+      '../images/projects/screenshots/queueing-modelsim/1.png',
+      '../images/projects/screenshots/queueing-modelsim/2.png',
+      '../images/projects/screenshots/queueing-modelsim/3.png',
+      '../images/projects/screenshots/queueing-modelsim/4.png',
+      '../images/projects/screenshots/queueing-modelsim/5.png',
+      '../images/projects/screenshots/queueing-modelsim/6.png',
+      '../images/projects/screenshots/queueing-modelsim/7.png',
+      '../images/projects/screenshots/queueing-modelsim/8.png',
+      '../images/projects/screenshots/queueing-modelsim/9.png'],
     deployment: {
       package: ['https://abdeltwabmf.github.io/queueing-modelsim', '']
     }
