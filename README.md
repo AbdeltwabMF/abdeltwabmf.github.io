@@ -37,4 +37,4 @@ You can start editing the page by modifying pages/index.js. The page auto-update
 
 ## License
 
-Licensed under the [GPL v3](LICENSE) License.
+Licensed under the [MIT](LICENSE) License.
