@@ -22,10 +22,10 @@ const TypedBios = ({ className }) => {
   return (
     <div className='mx-4 text-center'>
       <ul id='bios' className='hidden'>
-        <li>I'm a <span className='text-sky-500 dark:text-sky-600'>Cryptographer</span></li>
         <li>I'm a <span className='text-purple-500 dark:text-purple-600'>Software Engineer</span></li>
-        <li>I'm a <span className='text-blue-500 dark:text-blue-600'>dApp Developer</span></li>
         <li>I'm a <span className='text-green-500 dark:text-green-600'>Competitive Programmer</span></li>
+        <li>I'm a <span className='text-blue-500 dark:text-blue-600'>dApp Developer</span></li>
+        <li>I'm a <span className='text-sky-500 dark:text-sky-600 '>Cryptographer</span></li>
       </ul>
       <span ref={el} className={'text-slate-500 dark:text-slate-600 text-2xl font-bold ' + ' ' + className} />
     </div>
