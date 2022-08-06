@@ -27,7 +27,7 @@ const projects = [
       '../images/projects/screenshots/devault/8.png'],
     deployment: {
       web: ['https://devault.vercel.app', 'https://devault.on.fleek.co'],
-      docker: ['https://hub.docker.com/r/abdeltwabmf/devault', '']
+      docker: ['https://hub.docker.com/r/abdeltwabmf/devault']
     }
   },
   {
@@ -41,8 +41,8 @@ const projects = [
       '../images/projects/screenshots/next-prayer/1.png',
       '../images/projects/screenshots/next-prayer/2.png'],
     deployment: {
-      package: ['https://aur.archlinux.org/packages/next-prayer', ''],
-      docker: ['https://hub.docker.com/r/abdeltwabmf/next-prayer', '']
+      package: ['https://aur.archlinux.org/packages/next-prayer'],
+      docker: ['https://hub.docker.com/r/abdeltwabmf/next-prayer']
     }
   },
   {
@@ -63,7 +63,7 @@ const projects = [
     screenshots: [
       '../images/projects/screenshots/anthology-of-algorithms-and-data-structures/1.png'],
     deployment: {
-      package: ['https://abdeltwabmf.github.io/anthology-of-algorithms-and-data-structures', '']
+      package: ['https://abdeltwabmf.github.io/anthology-of-algorithms-and-data-structures']
     }
   },
   {
@@ -85,7 +85,7 @@ const projects = [
       '../images/projects/screenshots/queueing-modelsim/8.png',
       '../images/projects/screenshots/queueing-modelsim/9.png'],
     deployment: {
-      package: ['https://abdeltwabmf.github.io/queueing-modelsim', '']
+      package: ['https://abdeltwabmf.github.io/queueing-modelsim']
     }
   }
 ]

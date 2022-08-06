@@ -6,6 +6,9 @@ import React, { useCallback } from 'react'
 import ScrollContainer from 'react-indiana-drag-scroll'
 import projects, { defaultDimensions } from '@/data/projects'
 import siteMetadata from '@/data/siteMetadata'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLink } from '@fortawesome/free-solid-svg-icons'
+import SocialIcon from '@/components/SocialIcons'
 
 export async function getStaticPaths () {
   return {
@@ -73,12 +76,12 @@ export default function Project ({ project }) {
         description={description}
         imageUrl={banner}
       />
-      <H1 className='z-10 mt-12 mb-4 font-bold text-center text-transparent dark:text-transparent xxs:text-5xl sm:text-8xl text-slate-600 lg:text-5x dark:text-neutral-300 dark:bg-gradient-to-r dark:from-sky-400 dark:via-purple-400 dark:to-red-400 dark:bg-clip-text bg-gradient-to-r from-sky-400 via-purple-400 to-red-400 bg-clip-text'>
+      <H1 className='z-10 mt-12 text-center '>
         {title}
       </H1>
       <p className='mb-4 text-gray-600 dark:text-gray-400'>{description}</p>
 
-      <H2 className='text-transparent text-slate-600 dark:text-transparent dark:text-neutral-300 bg-gradient-to-r from-sky-400 dark:bg-gradient-to-r dark:from-green-400 dark:via-teal-400 dark:to-red-400 dark:bg-clip-text via-neutral-400 to-red-400 bg-clip-text'>Stack</H2>
+      <H2 className=''>Stack</H2>
       <Conditional condition={stack.length > 0}>
         <div className='flex flex-wrap justify-start mb-4'>
           {stack.map((keyword, index) => (
@@ -87,7 +90,7 @@ export default function Project ({ project }) {
         </div>
       </Conditional>
 
-      <H2 className='text-transparent text-slate-600 dark:text-neutral-300 dark:text-transparent bg-gradient-to-r dark:bg-gradient-to-r dark:from-green-400 dark:via-teal-400 dark:to-red-400 dark:bg-clip-text from-sky-400 via-neutral-400 to-red-400 bg-clip-text'>Keywords</H2>
+      <H2 className=''>Keywords</H2>
       <Conditional condition={stack.length > 0}>
         <div className='flex flex-wrap justify-start mb-4'>
           {keywords.map((keyword, index) => (
@@ -96,7 +99,7 @@ export default function Project ({ project }) {
         </div>
       </Conditional>
 
-      <H2 className='text-transparent dark:text-transparent text-slate-600 dark:text-neutral-300 dark:bg-gradient-to-r dark:from-green-400 dark:via-teal-400 dark:to-red-400 dark:bg-clip-text bg-gradient-to-r from-green-400 via-teal-400 to-red-400 bg-clip-text'>Source Code</H2>
+      <H2 className=''>Source Code</H2>
       <div className='mb-4'>
         <a
           className='text-blue-700 dark:text-blue-300'
@@ -104,12 +107,22 @@ export default function Project ({ project }) {
           target='_blank'
           rel='noopener noreferrer'
         >
-          {`${siteMetadata.github}/${slug}`}
+          <button
+            className='inline-block px-5 py-1 no-underline border border-gray-500 rounded fill-current bg-neutral-200 text-slate-700 transition hover:text-gray-600 border-opacity-60 dark:border-gray-400'
+          >
+            <SocialIcon
+              aria-label={`Link to ${slug} on GitHub`}
+              kind='github'
+              size='5'
+              color='slate'
+            />
+            <span className='ml-2 font-mono'>GitHub</span>
+          </button>
         </a>
       </div>
 
       <Conditional condition={!!deployment}>
-        <H2 className='text-transparent text-slate-600 dark:text-neutral-300 bg-gradient-to-r dark:text-transparent from-purple-400 via-teal-400 to-blue-400 bg-clip-text'>Deployments</H2>
+        <H2 className=''>Deployments</H2>
         {Object.entries(deployment).map(deploy => {
           console.log(deploy)
           return (
@@ -124,7 +137,7 @@ export default function Project ({ project }) {
                       target='_blank'
                       rel='noopener noreferrer'
                     >
-                      {url}
+                      <FontAwesomeIcon icon={faLink} size='2x' className='w-8 h-8' />
                     </a>
                   </li>
                 ))}
@@ -135,7 +148,7 @@ export default function Project ({ project }) {
       </Conditional>
 
       <Conditional condition={!!screenshots.length}>
-        <H2 className='z-10 text-2xl font-bold text-transparent text-slate-600 dark:text-transparent dark:text-neutral-300 bg-gradient-to-r from-red-400 via-sky-400 to-red-400 bg-clip-text'>Screenshots</H2>
+        <H2 className=''>Screenshots</H2>
         <ScrollContainer className='flex mt-4 mb-1 overflow-auto list'>
           {React.Children.toArray(screenshots.map(renderScreenShotList))}
         </ScrollContainer>
