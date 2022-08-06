@@ -2,7 +2,8 @@ import Image from '@/components/Image'
 import { PageSEO } from '@/components/SEO'
 import siteMetadata from '@/data/siteMetadata'
 import SocialIconLink from '@/components/SocialIconsLink'
-import { H3 } from '@/components/Form'
+import { H2, H3, H4 } from '@/components/Form'
+import Twemoji from '@/components/Twemoji'
 
 export default function AuthorLayout ({ children, frontMatter }) {
   const { name, occupation, company } = frontMatter
@@ -25,9 +26,9 @@ export default function AuthorLayout ({ children, frontMatter }) {
               height='256px'
               className='w-48 h-48 rounded-full'
             />
-            <h3 className='pt-4 pb-2 text-2xl font-bold tracking-tight leading-8'>
+            <H4 className='pt-4 pb-2'>
               {name}
-            </h3>
+            </H4>
             <div className='flex flex-col items-center justify-center text-gray-500 dark:text-gray-400'>
               {occupation.map((item, index) => (
                 <span className={`text-${index + 1}x`} key={index}>{item}</span>
@@ -36,6 +37,9 @@ export default function AuthorLayout ({ children, frontMatter }) {
             <div className='text-gray-500 dark:text-gray-400'>{company}</div>
           </div>
           <div className='pt-8 pb-8 prose max-w-none dark:prose-dark xl:col-span-2'>
+            <H2 className='mt-8 mb-4 text-center'>Hi, As-salamu alaykum {'   '}
+              <Twemoji emoji='waving-hand' className='pl-4 mt-4' />
+            </H2>
             {children}
 
             <H3 className='pt-8 pb-2 text-2xl font-bold tracking-tight leading-8'>

@@ -3,6 +3,7 @@ import Link from './Link'
 import Conditional from '@/components/Conditional'
 import SocialIcon from '@/components/SocialIcons'
 import siteMetadata from '@/data/siteMetadata'
+import { H2 } from '@/components/Form'
 
 export default function Card (props) {
   const { banner, title, description, href, slug, stars } = props
@@ -27,11 +28,11 @@ export default function Card (props) {
           </Link>
         </Conditional>
         <div className='p-6'>
-          <h2 className='mb-3 text-2xl font-bold tracking-tight leading-8 line-clamp-1 '>
+          <H2 className='mb-3 text-2xl font-bold tracking-tight leading-8 line-clamp-1 '>
             <Link href={href} aria-label={`Link to ${title}`}>
               {title}
             </Link>
-          </h2>
+          </H2>
           <p className='mb-3 text-gray-500 prose max-w-none line-clamp-2 dark:text-gray-400'>{description}</p>
           <p className='mb-3 text-gray-500 prose max-w-none line-clamp-2 dark:text-gray-400'>
             <a

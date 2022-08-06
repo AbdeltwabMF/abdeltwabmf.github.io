@@ -26,9 +26,9 @@ export default function Home ({ tags, posts }) {
     <>
       <PageSEO title={`Home - ${siteMetadata.author}`} description='Who am I' />
       <div className='flex flex-col mt-12'>
-        <h1 className='mt-8 mb-4 font-bold text-center text-transparent text-sky-800 dark:text-transparent bg-gradient-to-r dark:bg-gradient-to-r from-sky-800 via-teal-400 to-violet-600 dark:from-sky-800 dark:via-teal-400 dark:to-violet-600 bg-clip-text lg:text-4xl sm:text-2xl'>Hi, I'm Abd El-Twab M. Fakhry (aka AMF) {'   '}
+        <H1 className='mt-8 mb-4 text-center'>Hi, I'm Abd El-Twab M. Fakhry (aka AMF) {'   '}
           <Twemoji emoji='waving-hand' className='pl-4 mt-4' />
-        </h1>
+        </H1>
         <TypedBios className='mt-2 text-gray-600 me-2 dark:text-gray-400' />
         <p className='mt-4 text-gray-600 me-2 dark:text-gray-400'>
           <span className='text-2xl'>A</span>nd this is my little corner on the web. I
@@ -65,7 +65,7 @@ export default function Home ({ tags, posts }) {
           if it’s top-secret.
         </p>
 
-        <H2 className='mt-12 mb-3 text-sky-800'>Why this webpage exist?</H2>
+        <H2 className='mt-12 mb-3'>Why this webpage exist?</H2>
         <ul className='text-gray-600 list-disc list-inside me-2 dark:text-gray-400'>
           <li>
             This place is a home for all my thoughts, philosophy, publications, experiences, and
@@ -78,7 +78,7 @@ export default function Home ({ tags, posts }) {
           <li>A place where my words don't get mixed up with noise.</li>
         </ul>
 
-        <H2 className='mt-12 mb-3 text-sky-800'>My articles by topics</H2>
+        <H2 className='mt-12 mb-3'>My articles by topics</H2>
         <div className='flex flex-wrap'>
           {Object.keys(tags).length === 0 && 'No tags found.'}
           {sortedTags.map((t) => {
@@ -97,7 +97,7 @@ export default function Home ({ tags, posts }) {
         </div>
 
         <div className='divide-y divide-gray-200 dark:divide-gray-700'>
-          <H2 className='mt-12 mb-3 text-sky-800'>Recent articles</H2>
+          <H2 className='mt-12 mb-3'>Recent articles</H2>
           <ul className='divide-y divide-gray-200 dark:divide-gray-700'>
             {!posts.length && 'No posts found.'}
             {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {

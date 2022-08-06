@@ -3,6 +3,7 @@ import Image from '@/components/Image'
 import siteMetadata from '@/data/siteMetadata'
 import SocialIconLink from '@/components/SocialIconsLink'
 import Twemoji from './Twemoji'
+import { GradientColor } from '@/components/GradientColor'
 
 export default function Footer () {
   return (
@@ -18,7 +19,9 @@ export default function Footer () {
           <Link href='/credit' className='text-sky-600'>Credit</Link>
           <div className=''>{' • '}</div>
           <p className='text-sky-600'>
-            Viva Palestina
+            <GradientColor from='rose' via='violet' to='blue'>
+              Viva Palestina
+            </GradientColor>
           </p>
           <Twemoji emoji='palestinian-territories' size='twa-lg' />
         </div>
@@ -36,7 +39,7 @@ export default function Footer () {
           </Link>
           <div>{`© ${new Date().getFullYear()}`}</div>
           <div className='sr-only'>{' • '}</div>
-          <Link href='/about'>{siteMetadata.author}</Link>
+          <Link href='/about'><GradientColor from='' via='' to=''>{siteMetadata.author}</GradientColor></Link>
         </div>
       </div>
     </footer>
