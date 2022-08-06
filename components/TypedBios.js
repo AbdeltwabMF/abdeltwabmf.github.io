@@ -1,6 +1,5 @@
 import React from 'react'
 import Typed from 'typed.js'
-import Twemoji from '@/components/Twemoji'
 import { GradientColor } from '@/components/GradientColor'
 
 const TypedBios = ({ className }) => {
@@ -23,10 +22,10 @@ const TypedBios = ({ className }) => {
   return (
     <div className='mx-4 text-center'>
       <ul id='bios' className='hidden'>
-        <li>I'm a <GradientColor from='rose' via='violet' to='blue'>Software Engineer</GradientColor></li>
-        <li>I'm a <GradientColor from='lime' via='teal' to='green'>Competitive Programmer</GradientColor></li>
-        <li>I'm a <GradientColor from='teal' via='violet' to='red'>dApp Developer</GradientColor></li>
-        <li>I'm a <GradientColor from='sky' via='indigo'>Cryptographer</GradientColor></li>
+        <li>I'm a <GradientColor from='teal'>Software Engineer</GradientColor></li>
+        <li>I'm a <GradientColor from='lime' via='green'>Competitive Programmer</GradientColor></li>
+        <li>I'm a <GradientColor from='sky'>dApp Developer</GradientColor></li>
+        <li>I'm a <GradientColor from='rose'>Cryptographer</GradientColor></li>
       </ul>
       <span ref={el} className={'text-neutral-600 dark:text-slate-600 text-2xl font-bold ' + ' ' + className} />
     </div>

@@ -19,7 +19,7 @@ export default function Footer () {
           <Link href='/credit' className='text-sky-600'>Credit</Link>
           <div className=''>{' • '}</div>
           <p className='text-sky-600'>
-            <GradientColor from='rose' via='violet' to='blue'>
+            <GradientColor from='rose'>
               Viva Palestina
             </GradientColor>
           </p>
