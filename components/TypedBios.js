@@ -22,7 +22,7 @@ const TypedBios = ({ className }) => {
   return (
     <div className='mx-4 text-center'>
       <ul id='bios' className='hidden'>
-        <li>I'm a <GradientColor from='teal'>Software Engineer</GradientColor></li>
+        <li>I'm a <GradientColor>Software Engineer</GradientColor></li>
         <li>I'm a <GradientColor from='lime' via='green'>Competitive Programmer</GradientColor></li>
         <li>I'm a <GradientColor from='sky'>dApp Developer</GradientColor></li>
         <li>I'm a <GradientColor from='rose'>Cryptographer</GradientColor></li>
