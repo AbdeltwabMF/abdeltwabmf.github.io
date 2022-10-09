@@ -16,9 +16,6 @@ export default function FourZeroFour () {
           <p className='mb-4 text-xl font-bold leading-normal md:text-2xl'>
             Sorry we couldn't find this page.
           </p>
-          <p className='mb-8'>
-            But do not worry, you can find plenty of other things on my homepage.
-          </p>
           <Link href='/'>
             <button className='inline px-4 py-2 text-sm font-medium text-white bg-teal-600 border border-transparent rounded-lg shadow focus:shadow-outline-teal leading-5 transition-colors duration-150 hover:bg-teal-700 focus:outline-none dark:hover:bg-teal-500'>
               Back to homepage
