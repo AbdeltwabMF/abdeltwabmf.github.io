@@ -7,11 +7,15 @@ const Giscus = ({ frontMatter }) => {
   const [enableLoadComments, setEnabledLoadComments] = useState(true)
   const { theme, resolvedTheme } = useTheme()
   const { locale } = frontMatter
+
+  const lang = locale === 'ar-EG' ? 'ar' : 'en'
+  const fontClass = lang === 'ar' ? 'font-kufi font-medium text-md text-purple-500' : ''
+
   const commentsTheme =
     siteMetadata.comment.giscusConfig.themeURL === ''
       ? theme === 'dark' || resolvedTheme === 'dark'
-        ? siteMetadata.comment.giscusConfig.darkTheme
-        : siteMetadata.comment.giscusConfig.theme
+          ? siteMetadata.comment.giscusConfig.darkTheme
+          : siteMetadata.comment.giscusConfig.theme
       : siteMetadata.comment.giscusConfig.themeURL
 
   const COMMENTS_ID = 'comments-container'
@@ -27,8 +31,10 @@ const Giscus = ({ frontMatter }) => {
       mapping,
       reactions,
       metadata,
-      inputPosition,
+      inputPosition
     } = siteMetadata?.comment?.giscusConfig
+
+    console.log('giscus :\n', repo + repositoryId + categoryId)
 
     const script = document.createElement('script')
     script.src = 'https://giscus.app/client.js'
@@ -52,10 +58,7 @@ const Giscus = ({ frontMatter }) => {
       const comments = document.getElementById(COMMENTS_ID)
       if (comments) comments.innerHTML = ''
     }
-  }, [commentsTheme])
-
-  const lang = locale === 'ar-EG' ? 'ar' : 'en'
-  const fontClass = lang === 'ar' ? 'font-kufi font-medium text-md text-purple-500' : ''
+  }, [commentsTheme, lang])
 
   // Reload on theme change
   useEffect(() => {
@@ -65,13 +68,13 @@ const Giscus = ({ frontMatter }) => {
   }, [LoadComments])
 
   return (
-    <div className="pt-6 pb-6 text-center text-gray-700 dark:text-gray-300">
+    <div className='pt-6 pb-6 text-center text-gray-700 dark:text-gray-300'>
       {enableLoadComments && (
         <button onClick={LoadComments} className={fontClass}>
           {lang === 'ar' ? 'تحميل التعليقات' : 'Load Comments'}
         </button>
       )}
-      <div className="giscus" id={COMMENTS_ID} />
+      <div className='giscus' id={COMMENTS_ID} />
     </div>
   )
 }
