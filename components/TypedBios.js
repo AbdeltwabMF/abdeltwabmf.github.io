@@ -25,7 +25,6 @@ const TypedBios = ({ className }) => {
         <li>I'm a <GradientColor>Software Engineer</GradientColor></li>
         <li>I'm a <GradientColor from='lime' via='green'>Competitive Programmer</GradientColor></li>
         <li>I'm a <GradientColor from='sky'>dApp Developer</GradientColor></li>
-        <li>I'm a <GradientColor from='rose'>Cryptographer</GradientColor></li>
       </ul>
       <span ref={el} className={'text-neutral-600 dark:text-slate-600 text-2xl font-bold ' + ' ' + className} />
     </div>

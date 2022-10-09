@@ -1,7 +1,7 @@
 ---
 name: Abd El-Twab M. Fakhry
 avatar: ../images/avatar.png
-occupation: [Software Engineer, Competitive Programmer, Cryptographer, dApp Developer]
+occupation: [Software Engineer, Competitive Programmer, dApp Developer]
 company: []
 ---
 
