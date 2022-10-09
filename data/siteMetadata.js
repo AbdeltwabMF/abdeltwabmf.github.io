@@ -56,12 +56,13 @@ const siteMetadata = {
       // transparent_dark, preferred_color_scheme, custom
       theme: 'light',
       // Place the comment box above the comments. options: bottom, top
-      inputPosition: 'bottom',
+      inputPosition: 'top',
       // Choose the language giscus will be displayed in. options: en, es, zh-CN, zh-TW, ko, ja etc
       lang: 'en',
       loading: 'lazy', // supported options: lazy
       // theme when dark mode
       darkTheme: 'transparent_dark',
+      term: 'Welcome to Abd El-Twab M. Fakhry Personal Website!',
       // If the theme option above is set to 'custom`
       // please provide a link below to your custom theme css file.
       // example: https://giscus.app/themes/custom_example.css

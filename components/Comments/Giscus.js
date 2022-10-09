@@ -1,9 +1,9 @@
-import React, { useEffect, useCallback } from 'react'
 import { useTheme } from 'next-themes'
+import Giscus from '@giscus/react'
 
 import siteMetadata from '@/data/siteMetadata'
 
-const Giscus = ({ frontMatter }) => {
+export default function Comments ({ frontMatter }) {
   const { theme, resolvedTheme } = useTheme()
   const { locale } = frontMatter
 
@@ -16,62 +16,36 @@ const Giscus = ({ frontMatter }) => {
           : siteMetadata.comment.giscusConfig.theme
       : siteMetadata.comment.giscusConfig.themeURL
 
-  const COMMENTS_ID = 'comments-container'
-
-  const LoadComments = useCallback(() => {
-    const {
-      repo,
-      repositoryId,
-      category,
-      categoryId,
-      mapping,
-      reactions,
-      loading,
-      metadata,
-      inputPosition
-    } = siteMetadata?.comment?.giscusConfig
-
-    const script = document.createElement('script')
-    script.src = 'https://giscus.app/client.js'
-    script.setAttribute('data-repo', repo)
-    script.setAttribute('data-repo-id', repositoryId)
-    script.setAttribute('data-category', category)
-    script.setAttribute('data-category-id', categoryId)
-    script.setAttribute('data-mapping', mapping)
-    script.setAttribute('data-reactions-enabled', reactions)
-    script.setAttribute('data-emit-metadata', metadata)
-    script.setAttribute('data-input-position', inputPosition)
-    script.setAttribute('data-lang', lang)
-    script.setAttribute('data-loading', loading)
-    script.setAttribute('data-theme', commentsTheme)
-    script.setAttribute('crossorigin', 'anonymous')
-    script.async = true
-
-    const comments = document.getElementById(COMMENTS_ID)
-    if (comments) comments.appendChild(script)
-
-    return () => {
-      const comments = document.getElementById(COMMENTS_ID)
-      if (comments) comments.innerHTML = ''
-    }
-  }, [commentsTheme, lang])
-
-  // Reload on theme change
-  useEffect(() => {
-    const iframe = document.querySelector('iframe.giscus-frame')
-    if (!iframe) return
-    LoadComments()
-  }, [LoadComments])
-
-  useEffect(() => {
-    LoadComments()
-  }, [LoadComments])
+  const {
+    repo,
+    repositoryId,
+    category,
+    categoryId,
+    mapping,
+    reactions,
+    loading,
+    term,
+    metadata,
+    inputPosition
+  } = siteMetadata?.comment?.giscusConfig
 
   return (
     <div className='pt-6 pb-6 text-center text-gray-700 dark:text-gray-300'>
-      <div className='giscus' id={COMMENTS_ID} />
+      <Giscus
+        id='comments'
+        repo={repo}
+        repoId={repositoryId}
+        category={category}
+        categoryId={categoryId}
+        mapping={mapping}
+        term={term}
+        reactionsEnabled={reactions}
+        emitMetadata={metadata}
+        inputPosition={inputPosition}
+        theme={commentsTheme}
+        lang={lang}
+        loading={loading}
+      />
     </div>
   )
 }
-
-export default Giscus
