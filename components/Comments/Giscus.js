@@ -1,15 +1,13 @@
-import React, { useState, useEffect, useCallback } from 'react'
+import React, { useEffect, useCallback } from 'react'
 import { useTheme } from 'next-themes'
 
 import siteMetadata from '@/data/siteMetadata'
 
 const Giscus = ({ frontMatter }) => {
-  const [enableLoadComments, setEnabledLoadComments] = useState(true)
   const { theme, resolvedTheme } = useTheme()
   const { locale } = frontMatter
 
   const lang = locale === 'ar-EG' ? 'ar' : 'en'
-  const fontClass = lang === 'ar' ? 'font-kufi font-medium text-md text-purple-500' : ''
 
   const commentsTheme =
     siteMetadata.comment.giscusConfig.themeURL === ''
@@ -21,8 +19,6 @@ const Giscus = ({ frontMatter }) => {
   const COMMENTS_ID = 'comments-container'
 
   const LoadComments = useCallback(() => {
-    setEnabledLoadComments(false)
-
     const {
       repo,
       repositoryId,
@@ -30,11 +26,10 @@ const Giscus = ({ frontMatter }) => {
       categoryId,
       mapping,
       reactions,
+      loading,
       metadata,
       inputPosition
     } = siteMetadata?.comment?.giscusConfig
-
-    console.log('giscus :\n', repo + repositoryId + categoryId)
 
     const script = document.createElement('script')
     script.src = 'https://giscus.app/client.js'
@@ -47,6 +42,7 @@ const Giscus = ({ frontMatter }) => {
     script.setAttribute('data-emit-metadata', metadata)
     script.setAttribute('data-input-position', inputPosition)
     script.setAttribute('data-lang', lang)
+    script.setAttribute('data-loading', loading)
     script.setAttribute('data-theme', commentsTheme)
     script.setAttribute('crossorigin', 'anonymous')
     script.async = true
@@ -67,13 +63,12 @@ const Giscus = ({ frontMatter }) => {
     LoadComments()
   }, [LoadComments])
 
+  useEffect(() => {
+    LoadComments()
+  }, [LoadComments])
+
   return (
     <div className='pt-6 pb-6 text-center text-gray-700 dark:text-gray-300'>
-      {enableLoadComments && (
-        <button onClick={LoadComments} className={fontClass}>
-          {lang === 'ar' ? 'تحميل التعليقات' : 'Load Comments'}
-        </button>
-      )}
       <div className='giscus' id={COMMENTS_ID} />
     </div>
   )
