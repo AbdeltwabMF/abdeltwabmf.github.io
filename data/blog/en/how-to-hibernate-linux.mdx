@@ -6,25 +6,25 @@ draft: false
 summary: 'Learn how to suspend and hibernate artix linux using kernel parameter and elogind'
 ---
 
-<TOCInline toc={props.toc} toHeading={3} asDisclosure />
+<TOCInline toc={props.toc} toHeading={5} asDisclosure />
 
-# Introduction
+## Introduction
 
 There are three methods of suspending:
 
-## Sleep (suspend to ram)
-
-Works by cutting off power to most parts of the machine aside from the RAM, which is required to restore the machine's state. Because of the large power savings, it is advisable for laptops to automatically enter this mode when the computer is running on batteries and the lid is closed (or the user is inactive for some time).
-
-## Hibernate (suspend to disk)
+### Hibernate (suspend to disk)
 
 Saves the machine's state into swap space and completely powers off the machine. When the machine is powered on, the state is restored. Until then, there is zero power consumption.
 
-## Suspend to both
+### Sleep (suspend to RAM)
+
+Works by cutting off power to most parts of the machine aside from the RAM, which is required to restore the machine's state. Because of the large power savings, it is advisable for laptops to automatically enter this mode when the computer is running on batteries and the lid is closed (or the user is inactive for some time).
+
+### Suspend to both
 
 A hybrid of the aforementioned methods. Saves the machine's state into swap space, but does not power off the machine. Instead, it invokes usual suspend to RAM. Therefore, if the battery is not depleted, the system can resume from RAM. If the battery is depleted, the system can be resumed from disk, which is much slower than resuming from RAM, but the machine's state has not been lost.
 
-# Hibernation
+## Hibernation
 
 To be able to use hibernation you should do:
 
@@ -123,6 +123,26 @@ And finally test your setup:
 
 ```bash
 loginctl hibernate
+```
+
+## Sleep
+
+```bash
+loginctl suspend
+```
+
+## Hybrid Sleep (suspend to both)
+
+```bash
+loginctl hybrid-sleep
+```
+
+## Suspend then hibernate
+
+Suspend the system and hibernate it after the delay specified in logind.conf.
+
+```bash
+loginctl suspend-then-hibernate
 ```
 
 # References
