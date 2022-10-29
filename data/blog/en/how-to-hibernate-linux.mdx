@@ -1,0 +1,132 @@
+---
+title: 'How to Hibernate and Suspend Your Artix Linux'
+date: '2022-10-29'
+tags: ['linux', 'artix', 'hibernate', 'suspend']
+draft: false
+summary: 'Learn how to suspend and hybernate non-just-works distro like arch linux'
+---
+
+<TOCInline toc={props.toc} toHeading={3} asDisclosure />
+
+# Introduction
+
+There are three methods of suspending:
+
+## Sleep (suspend to ram)
+
+Works by cutting off power to most parts of the machine aside from the RAM, which is required to restore the machine's state. Because of the large power savings, it is advisable for laptops to automatically enter this mode when the computer is running on batteries and the lid is closed (or the user is inactive for some time).
+
+## Hibernate (suspend to disk)
+
+Saves the machine's state into swap space and completely powers off the machine. When the machine is powered on, the state is restored. Until then, there is zero power consumption.
+
+## Suspend to both
+
+A hybrid of the aforementioned methods. Saves the machine's state into swap space, but does not power off the machine. Instead, it invokes usual suspend to RAM. Therefore, if the battery is not depleted, the system can resume from RAM. If the battery is depleted, the system can be resumed from disk, which is much slower than resuming from RAM, but the machine's state has not been lost.
+
+# Hibernation
+
+To be able to use hibernation you should do:
+
+1. Uncomment all parameters in Sleep section and update `SuspendMode=suspend` in file `/etc/elogind/logind.conf`.
+
+```bash
+# /etc/elogind/logind.conf
+
+[Sleep]
+AllowSuspend=yes
+AllowHibernation=yes
+AllowSuspendThenHibernate=yes
+AllowHybridSleep=yes
+AllowPowerOffInterrupts=no
+BroadcastPowerOffInterrupts=yes
+AllowSuspendInterrupts=no
+BroadcastSuspendInterrupts=yes
+HandleNvidiaSleep=no
+SuspendState=mem standby freeze
+SuspendMode=suspend
+HibernateState=disk
+HibernateMode=platform shutdown
+HybridSleepState=disk
+HybridSleepMode=suspend platform shutdown
+HibernateDelaySec=10800
+```
+
+2. Add `resume` hook after `udev` in file `/etc/mkinitcpio.conf`.
+
+```bash
+# /etc/mkinitcpio.conf
+
+HOOKS=(base udev autodetect modconf block filesystems keyboard resume fsck)
+```
+
+_The reason why after `udev` because the swap partition is referred to with a `udev` device node, so the `resume` hook must go after the `udev` hook._
+
+Then regenerate the `initramfs` for these changes to take effect.
+
+```bash
+sudo mkinitcpio -p linux
+```
+
+3. Add `resume` kernel parameter.
+
+You Need to check what is `UUID` of your swap partition.
+
+```
+$ lsblk -fs
+
+NAME  FSTYPE  LABEL  UUID                                  MOUNTPOINTS
+. . . SOME OUTPUT . . .
+sda3  swap    SWAP   5b069c37-9ece-41cf-abf6-74b9d35758ac  [SWAP]
+└─sda
+. . . MORE OUTPUT . . .
+```
+
+So `resume=UUID=5b069c37-9ece-41cf-abf6-74b9d35758ac`.
+
+Now lets use it and put it in `/etc/default/grub`.
+
+```bash
+# /etc/default/grub
+
+GRUB_CMDLINE_LINUX="resume=UUID=5b069c37-9ece-41cf-abf6-74b9d35758ac"
+```
+
+The kernel parameters will only take effect after rebooting. To be able to hibernate right away, obtain the volume's major and minor device numbers from `lsblk`:
+
+```
+lsblk --include=8
+
+
+NAME    MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+sda       8:0    0 465.8G  0 disk
+... output ...
+├─sda3    8:3    0    10G  0 part [SWAP]
+... more output ...
+```
+
+And echo them in format `major:minor` to `/sys/power/resume`.
+
+```bash
+echo 8:3 > /sys/power/resume
+```
+
+**If using a swap file refere to [archwiki](https://wiki.archlinux.org/title/Power_management/Suspend_and_hibernate#Hibernation_into_swap_file)**
+
+And then regenerate grub.cfg via:
+
+```bash
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+And finally test your setup:
+
+```bash
+loginctl hibernate
+```
+
+# References
+
+1. [Power management/Suspend and hibernate (Archwiki)](https://wiki.archlinux.org/title/Power_management/Suspend_and_hibernate)
+2. [elogind ](https://wiki.artixlinux.org/Main/Elogind)
+3. [logind.conf](https://manpages.debian.org/testing/elogind/logind.conf.5.en.html)
