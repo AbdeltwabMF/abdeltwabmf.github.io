@@ -28,7 +28,7 @@ A hybrid of the aforementioned methods. Saves the machine's state into swap spac
 
 To be able to use hibernation you should do:
 
-1. Uncomment all parameters in Sleep section and update `SuspendMode=suspend` in file `/etc/elogind/logind.conf`.
+1. Uncomment all parameters in Sleep section in file `/etc/elogind/logind.conf`.
 
 ```bash
 # /etc/elogind/logind.conf
@@ -44,7 +44,7 @@ AllowSuspendInterrupts=no
 BroadcastSuspendInterrupts=yes
 HandleNvidiaSleep=no
 SuspendState=mem standby freeze
-SuspendMode=suspend
+SuspendMode=deep
 HibernateState=disk
 HibernateMode=platform shutdown
 HybridSleepState=disk
