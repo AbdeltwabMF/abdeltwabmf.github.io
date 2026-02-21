@@ -64,9 +64,7 @@ module.exports = withBundleAnalyzer({
     PAT_GITHUB_REPO: process.env.PAT_GITHUB_REPO
   },
   reactStrictMode: true,
-  experimental: {
-    outputStandalone: true
-  },
+  output: 'export',
   images: {
     loader: 'akamai',
     path: ''
