@@ -37,7 +37,12 @@ const siteMetadata = {
       appId: process.env.NEXT_PUBLIC_CUSDIS_APP_ID,
       // Optional: if you're self-hosting, provide your host URL
       // Leave empty to use the default hosted version at https://cusdis.com
-      host: process.env.NEXT_PUBLIC_CUSDIS_HOST || ''
+      host: process.env.NEXT_PUBLIC_CUSDIS_HOST || '',
+      // Optional: Override the language for comments
+      // Supported: en, zh-cn, zh-tw, ja, es, fr, de, pt, ru, ar, id, ko, tr, vi
+      // If not set, will use the site's language setting
+      // Can be set via NEXT_PUBLIC_CUSDIS_LANG environment variable
+      lang: process.env.NEXT_PUBLIC_CUSDIS_LANG || '' // e.g., 'ar' for Arabic, 'es' for Spanish, 'fr' for French
     }
   }
 }

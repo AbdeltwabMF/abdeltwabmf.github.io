@@ -3,12 +3,54 @@ import { useTheme } from 'next-themes'
 import { ReactCusdis } from 'react-cusdis'
 import siteMetadata from '@/data/siteMetadata'
 
+// Map common locale formats to Cusdis language codes
+const mapLanguage = (locale) => {
+  const languageMap = {
+    'en': 'en',
+    'en-US': 'en',
+    'en-us': 'en',
+    'zh': 'zh-cn',
+    'zh-CN': 'zh-cn',
+    'zh-cn': 'zh-cn',
+    'zh-TW': 'zh-tw',
+    'zh-tw': 'zh-tw',
+    'ja': 'ja',
+    'ja-JP': 'ja',
+    'es': 'es',
+    'es-ES': 'es',
+    'fr': 'fr',
+    'fr-FR': 'fr',
+    'de': 'de',
+    'de-DE': 'de',
+    'pt': 'pt',
+    'pt-BR': 'pt',
+    'ru': 'ru',
+    'ru-RU': 'ru',
+    'ar': 'ar',
+    'ar-SA': 'ar',
+    'id': 'id',
+    'id-ID': 'id',
+    'ko': 'ko',
+    'ko-KR': 'ko',
+    'tr': 'tr',
+    'tr-TR': 'tr',
+    'vi': 'vi',
+    'vi-VN': 'vi',
+  }
+
+  // Try exact match first, then base language
+  return languageMap[locale] || languageMap[locale.split('-')[0]] || 'en'
+}
+
 export default function Cusdis({ frontMatter }) {
   const { theme, resolvedTheme } = useTheme()
   const [showComments, setShowComments] = useState(false)
   const currentTheme = theme === 'dark' || resolvedTheme === 'dark' ? 'dark' : 'light'
 
-  const { appId, host } = siteMetadata?.comment?.cusdisConfig
+  const { appId, host, lang } = siteMetadata?.comment?.cusdisConfig
+
+  // Use configured language, fallback to site language, then to 'en'
+  const cusdisLang = lang || mapLanguage(siteMetadata.language || siteMetadata.locale || 'en')
 
   if (!appId) {
     return (
@@ -109,7 +151,7 @@ export default function Cusdis({ frontMatter }) {
               pageTitle: frontMatter.title,
               theme: currentTheme,
             }}
-            lang="en"
+            lang={cusdisLang}
           />
         </div>
       )}

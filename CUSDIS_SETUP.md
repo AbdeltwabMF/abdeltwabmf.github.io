@@ -77,6 +77,53 @@ Make sure to add the environment variables to your deployment platform:
 
 ## Customization
 
+### Language (i18n)
+
+Cusdis supports multiple languages automatically! The comment widget will use your site's language by default.
+
+**Supported Languages:**
+- English (en)
+- Chinese Simplified (zh-cn)
+- Chinese Traditional (zh-tw)
+- Japanese (ja)
+- Spanish (es)
+- French (fr)
+- German (de)
+- Portuguese (pt)
+- Russian (ru)
+- Arabic (ar)
+- Indonesian (id)
+- Korean (ko)
+- Turkish (tr)
+- Vietnamese (vi)
+
+**Option 1: Use Site Language (Automatic)**
+
+The comment system automatically uses the language from `siteMetadata.language` or `siteMetadata.locale`.
+
+To change your site's language, edit `data/siteMetadata.js`:
+
+```js
+language: 'ar', // For Arabic
+// or
+locale: 'fr-FR', // For French
+```
+
+**Option 2: Override Comment Language**
+
+To set a different language just for comments, edit `data/siteMetadata.js`:
+
+```js
+comment: {
+  provider: 'cusdis',
+  cusdisConfig: {
+    appId: process.env.NEXT_PUBLIC_CUSDIS_APP_ID,
+    host: process.env.NEXT_PUBLIC_CUSDIS_HOST || '',
+    lang: 'ar' // Force Arabic for comments only
+  }
+}
+```
+
 ### Colors
 Edit `/styles/tailwind.css` to change the comment section colors. Look for the `#cusdis_thread` section.
 
