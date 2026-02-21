@@ -1,23 +1,17 @@
 const siteMetadata = {
-  title: 'Abd El-Twab M. Fakhry | Personal Website',
-  author: 'Abd El-Twab M. Fakhry',
+  title: 'Abdeltwab M. Fakhry | Personal Website',
+  author: 'Abdeltwab M. Fakhry',
   headerTitle: 'AbdeltwabMF',
-  description: 'Abd El-Twab M. Fakhry | Personal Website',
+  description: 'Abdeltwab M. Fakhry | Personal Website',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://abdeltwabmf.github.io',
   siteRepo: 'https://github.com/AbdeltwabMF/abdeltwabmf.github.io.git',
-  siteLogo: 'https://abdeltwabmf.github.io/images/logo.png',
-  avatar: 'https://abdeltwabmf.github.io/images/avatar.png',
-  socialBanner: '/images/social-banner.png',
-  email: 'abdeltwab.m.fakhry@gmail.com',
-  github: 'https://github.com/AbdeltwabMF',
-  twitter: 'https://twitter.com/AbdeltwabMF',
-  youtube: 'https://www.youtube.com/channel/UCyenpZrfrwtgCGXut-t5AYg',
-  linkedin: 'https://www.linkedin.com/in/abdeltwabmf',
-  telegram: 'https://AbdeltwabMF.t.me',
-  researchgate: 'https://www.researchgate.net/profile/Abd-El-Twab-Fakhry',
-  docker: 'https://hub.docker.com/u/abdeltwabmf',
+  siteLogo: 'https://abdeltwabmf.github.io/logo.png',
+  avatar: '',
+  socialBanner: '',
+  email: 'me@abdeltwab.xyz',
+  github: 'https://github.com/AbdeltwabMF/abdeltwabmf.github.io',
   rss: 'https://abdeltwabmf.github.io/feed.xml',
   locale: 'en-US',
   analytics: {
@@ -31,9 +25,7 @@ const siteMetadata = {
     posthogAnalyticsId: '' // posthog.init e.g. phc_5yXvArzvRdqtZIsHkEm3Fkkhm3d0bEYUXCaFISzqPSQ
   },
   newsletter: {
-    // supports mailchimp, buttondown, convertkit, klaviyo, revue, emailoctopus
-    // Please add your .env file and modify it according to your selection
-    provider: 'convertkit'
+    provider: ''
   },
   comment: {
     // If you want to use a commenting system other than giscus you have to add it to the
@@ -62,7 +54,7 @@ const siteMetadata = {
       loading: 'lazy', // supported options: lazy
       // theme when dark mode
       darkTheme: 'transparent_dark',
-      term: 'Welcome to Abd El-Twab M. Fakhry Personal Website!',
+      term: 'Welcome to Abdeltwab M. Fakhry Personal Website!',
       // If the theme option above is set to 'custom`
       // please provide a link below to your custom theme css file.
       // example: https://giscus.app/themes/custom_example.css
