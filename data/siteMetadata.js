@@ -53,7 +53,7 @@ const siteMetadata = {
       lang: 'en',
       loading: 'lazy', // supported options: lazy
       // theme when dark mode
-      darkTheme: 'transparent_dark',
+      darkTheme: 'dark_dimmed',
       term: 'Welcome to Abdeltwab M. Fakhry Personal Website!',
       // If the theme option above is set to 'custom`
       // please provide a link below to your custom theme css file.

@@ -18,7 +18,7 @@ const LayoutWrapper = ({ children }) => {
           <div>
             <Link href='/' aria-label={siteMetadata.headerTitle}>
               <div>
-                <Image src={siteMetadata.siteLogo} alt={siteMetadata.headerTitle} width={48} height={48} />
+                <Image src={siteMetadata.siteLogo} alt={siteMetadata.headerTitle} width={48} height={32} />
               </div>
             </Link>
           </div>

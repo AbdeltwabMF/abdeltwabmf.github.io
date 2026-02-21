@@ -32,8 +32,8 @@ export default function Footer () {
             <Image
               src={siteMetadata.siteLogo}
               alt='logo'
-              width='32px'
-              height='32px'
+              width={48}
+              height={32}
               className='align-middle'
             />
           </Link>
