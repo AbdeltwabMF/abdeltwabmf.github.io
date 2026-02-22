@@ -23,27 +23,6 @@ const siteMetadata = {
     umamiWebsiteId: '', // e.g. 123e4567-e89b-12d3-a456-426614174000
     googleAnalyticsId: '', // e.g. UA-000000-2 or G-XXXXXXX
     posthogAnalyticsId: '' // posthog.init e.g. phc_5yXvArzvRdqtZIsHkEm3Fkkhm3d0bEYUXCaFISzqPSQ
-  },
-  newsletter: {
-    provider: ''
-  },
-  comment: {
-    // Cusdis is a lightweight, privacy-friendly commenting system
-    // Visit https://cusdis.com/ to create an account and get your App ID
-    provider: 'cusdis',
-    cusdisConfig: {
-      // You can use the hosted version (cusdis.com) or self-host
-      // Supports anonymous comments without requiring user login
-      appId: process.env.NEXT_PUBLIC_CUSDIS_APP_ID,
-      // Optional: if you're self-hosting, provide your host URL
-      // Leave empty to use the default hosted version at https://cusdis.com
-      host: process.env.NEXT_PUBLIC_CUSDIS_HOST || '',
-      // Optional: Override the language for comments
-      // Supported: en, zh-cn, zh-tw, ja, es, fr, de, pt, ru, ar, id, ko, tr, vi
-      // If not set, will use the site's language setting
-      // Can be set via NEXT_PUBLIC_CUSDIS_LANG environment variable
-      lang: process.env.NEXT_PUBLIC_CUSDIS_LANG || '' // e.g., 'ar' for Arabic, 'es' for Spanish, 'fr' for French
-    }
   }
 }
 

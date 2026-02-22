@@ -4,9 +4,7 @@ import SectionContainer from '@/components/SectionContainer'
 import { BlogSEO } from '@/components/SEO'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
-import Comments from '@/components/Comments'
-import ScrollTopAndComment from '@/components/ScrollTopAndComment'
-import Share from '@/components/Share'
+import ScrollTop from '@/components/ScrollTop'
 
 const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
 
@@ -21,7 +19,7 @@ export default function PostLayout ({ frontMatter, authorDetails, next, prev, ch
         authorDetails={authorDetails}
         {...frontMatter}
       />
-      <ScrollTopAndComment />
+      <ScrollTop />
       <article>
         <div className='xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700'>
           <header className='pt-6 xl:pb-6'>
@@ -42,7 +40,6 @@ export default function PostLayout ({ frontMatter, authorDetails, next, prev, ch
               <p className='text-base text-gray-500 leading-6 dark:text-gray-400'>
                 {readingTime?.text}
               </p>
-              <Share title={title} url={url} />
             </div>
           </header>
           <div
@@ -51,7 +48,6 @@ export default function PostLayout ({ frontMatter, authorDetails, next, prev, ch
           >
             <div className='divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0'>
               <div className='pt-10 pb-8 prose max-w-none dark:prose-dark'>{children}</div>
-              <Comments frontMatter={frontMatter} />
             </div>
             <footer>
               <div className='text-sm font-medium divide-gray-200 leading-5 dark:divide-gray-700 xl:col-start-1 xl:row-start-2 xl:divide-y'>

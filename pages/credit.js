@@ -6,46 +6,35 @@ import Twemoji from '@/components/Twemoji'
 export default function Credit () {
   return (
     <>
-      <PageSEO title={`Credit - ${siteMetadata.author}`} description='Acknowledgement' />
+      <PageSEO title={`Credits - ${siteMetadata.author}`} description='Acknowledgements and Credits' />
       <div className='flex flex-col mt-12'>
-        <H1 className='text-center text-neutral-600'><span className='pr-4'>Acknowledgement</span>
-          <Twemoji emoji='folded-hands' className='' />
+        <H1 className='text-center text-neutral-600'>
+          <span className='pr-4'>Acknowledgements</span>
+          <Twemoji emoji='folded-hands' />
         </H1>
         <p className='text-xl text-center text-slate-600 dark:text-slate-500'>
-          I would like to thank all the people who have helped me to create this website.
+          This website wouldn't be possible without the amazing work of these individuals and projects.
         </p>
-        <ul className='mt-8 text-neutral-600 dark:text-neutral-500'>
-          <li className='sr-only'>
-            <a
-              href='https://unsplash.com/'
-              className='inline-block fill-current text-sky-600 dark:text-sky-400'
-              rel='noopener noreferrer'
-              target='_blank'
-            >Unsplash
-            </a>, {' '}
-            <a
-              href='https://wallhaven.cc/'
-              className='inline-block fill-current text-sky-600 dark:text-sky-400'
-              rel='noopener noreferrer'
-              target='_blank'
-            >Wallhaven
-            </a> - for the images used on this website.
-          </li>
+        <ul className='mt-8 space-y-4 text-neutral-600 dark:text-neutral-500'>
           <li>
             <a
               href='https://www.timlrx.com/about'
               className='inline-block fill-current text-sky-600 dark:text-sky-400'
               rel='noopener noreferrer'
               target='_blank'
-            ><H3>Timothy Lin</H3>
-            </a> - for the lightweight and easy-to-customize {' '}
+            >
+              <H3>Timothy Lin</H3>
+            </a>
+            {' '}— for creating the excellent{' '}
             <a
               href='https://github.com/timlrx/tailwind-nextjs-starter-blog'
               className='inline-block fill-current text-sky-600 dark:text-sky-400'
               rel='noopener noreferrer'
               target='_blank'
-            >blog starter
-            </a>.
+            >
+              Tailwind Next.js Starter Blog
+            </a>
+            , a lightweight and highly customizable blog template.
           </li>
           <li>
             <a
@@ -53,18 +42,20 @@ export default function Credit () {
               className='inline-block fill-current text-sky-600 dark:text-sky-400'
               rel='noopener noreferrer'
               target='_blank'
-            ><H3>Abdennour</H3>
-            </a> - for {' '}
+            >
+              <H3>Abdennour</H3>
+            </a>
+            {' '}— for the{' '}
             <a
               href='https://github.com/abdennour/hijri-date'
               className='inline-block fill-current text-sky-600 dark:text-sky-400'
               rel='noopener noreferrer'
               target='_blank'
-            >hijri-date
+            >
+              hijri-date
             </a>
-            {' '} to gregorian converter.
+            {' '}library, enabling seamless Hijri to Gregorian date conversion.
           </li>
-
         </ul>
       </div>
     </>

@@ -1,34 +1,36 @@
 ---
 title: 'How to Hibernate and Suspend Your Artix Linux'
 date: '2022-10-29'
-tags: ['linux', 'artix', 'hibernate', 'suspend']
+tags: ['linux', 'power-management', 'tutorial']
 draft: false
-summary: 'Learn how to suspend and hibernate artix linux using kernel parameter and elogind'
+summary: 'A comprehensive guide to configuring suspend and hibernation on Artix Linux using kernel parameters and elogind'
 ---
 
 <TOCInline toc={props.toc} toHeading={5} asDisclosure />
 
 ## Introduction
 
-There are three methods of suspending:
+Modern Linux systems offer three distinct power-saving methods to help preserve battery life and quickly resume your work:
 
-### Hibernate (suspend to disk)
+### Hibernate (Suspend to Disk)
 
-Saves the machine's state into swap space and completely powers off the machine. When the machine is powered on, the state is restored. Until then, there is zero power consumption.
+Hibernation saves your system's complete state to the swap partition and then powers off the machine entirely. When you power it back on, your session is restored exactly as you left it. This method consumes zero power while the system is off, making it ideal for extended periods away from your computer.
 
-### Sleep (suspend to RAM)
+### Sleep (Suspend to RAM)
 
-Works by cutting off power to most parts of the machine aside from the RAM, which is required to restore the machine's state. Because of the large power savings, it is advisable for laptops to automatically enter this mode when the computer is running on batteries and the lid is closed (or the user is inactive for some time).
+Sleep mode preserves your system state in RAM while cutting power to most other components. This allows for near-instant wake-up times while still saving significant power. It's particularly useful for laptops when you close the lid or during short breaks, though it requires minimal power to maintain the RAM's contents.
 
-### Suspend to both
+### Hybrid Sleep (Suspend to Both)
 
-A hybrid of the aforementioned methods. Saves the machine's state into swap space, but does not power off the machine. Instead, it invokes usual suspend to RAM. Therefore, if the battery is not depleted, the system can resume from RAM. If the battery is depleted, the system can be resumed from disk, which is much slower than resuming from RAM, but the machine's state has not been lost.
+This clever approach combines the best of both worlds. Your system state is saved to both RAM and the swap partition. If your battery remains charged, you get the quick resume from RAM. If the battery dies, you can still recover your session from disk—slower than RAM, but your work remains safe.
 
-## Hibernation
+## Setting Up Hibernation
 
-To be able to use hibernation you should do:
+To enable hibernation on your Artix Linux system, follow these steps carefully:
 
-1. Uncomment all parameters in Sleep section in file `/etc/elogind/logind.conf`.
+### Step 1: Configure elogind
+
+First, uncomment and configure the Sleep section parameters in `/etc/elogind/logind.conf`:
 
 ```bash
 # /etc/elogind/logind.conf
@@ -52,7 +54,9 @@ HybridSleepMode=suspend platform shutdown
 HibernateDelaySec=10800
 ```
 
-2. Add `resume` hook after `udev` in file `/etc/mkinitcpio.conf`.
+### Step 2: Add the Resume Hook
+
+Edit `/etc/mkinitcpio.conf` and add the `resume` hook after `udev`:
 
 ```bash
 # /etc/mkinitcpio.conf
@@ -60,19 +64,19 @@ HibernateDelaySec=10800
 HOOKS=(base udev autodetect modconf block filesystems keyboard resume fsck)
 ```
 
-_The reason why after `udev` because the swap partition is referred to with a `udev` device node, so the `resume` hook must go after the `udev` hook._
+**Important:** The `resume` hook must come after `udev` because the swap partition is referenced using a udev device node.
 
-Then regenerate the `initramfs` for these changes to take effect.
+Next, regenerate the initramfs to apply these changes:
 
 ```bash
 sudo mkinitcpio -p linux
 ```
 
-3. Add `resume` kernel parameter.
+### Step 3: Configure the Resume Kernel Parameter
 
-You Need to check what is `UUID` of your swap partition.
+First, identify your swap partition's UUID by running:
 
-```
+```bash
 $ lsblk -fs
 
 NAME  FSTYPE  LABEL  UUID                                  MOUNTPOINTS
@@ -82,9 +86,9 @@ sda3  swap    SWAP   5b069c37-9ece-41cf-abf6-74b9d35758ac  [SWAP]
 . . . MORE OUTPUT . . .
 ```
 
-So `resume=UUID=5b069c37-9ece-41cf-abf6-74b9d35758ac`.
+In this example, the swap UUID is `5b069c37-9ece-41cf-abf6-74b9d35758ac`.
 
-Now lets use it and put it in `/etc/default/grub`.
+Now, add this UUID to your GRUB configuration in `/etc/default/grub`:
 
 ```bash
 # /etc/default/grub
@@ -92,11 +96,12 @@ Now lets use it and put it in `/etc/default/grub`.
 GRUB_CMDLINE_LINUX="resume=UUID=5b069c37-9ece-41cf-abf6-74b9d35758ac"
 ```
 
-The kernel parameters will only take effect after rebooting. To be able to hibernate right away, obtain the volume's major and minor device numbers from `lsblk`:
+### Step 4: Test Hibernation Before Rebooting (Optional)
 
-```
-lsblk --include=8
+To test hibernation immediately without rebooting, you'll need to configure the resume device manually. First, find your swap partition's major and minor device numbers:
 
+```bash
+$ lsblk --include=8
 
 NAME    MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
 sda       8:0    0 465.8G  0 disk
@@ -105,48 +110,72 @@ sda       8:0    0 465.8G  0 disk
 ... more output ...
 ```
 
-And echo them in format `major:minor` to `/sys/power/resume`.
+Then write these numbers in `major:minor` format to `/sys/power/resume`:
 
 ```bash
 echo 8:3 > /sys/power/resume
 ```
 
-**If using a swap file refere to [archwiki](https://wiki.archlinux.org/title/Power_management/Suspend_and_hibernate#Hibernation_into_swap_file)**
+**Note:** If you're using a swap file instead of a partition, refer to the [Arch Wiki guide on swap file hibernation](https://wiki.archlinux.org/title/Power_management/Suspend_and_hibernate#Hibernation_into_swap_file).
 
-And then regenerate grub.cfg via:
+### Step 5: Regenerate GRUB Configuration
+
+Finally, regenerate your GRUB configuration to apply the kernel parameters:
 
 ```bash
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-And finally test your setup:
+### Step 6: Test Your Setup
+
+Now you're ready to test hibernation:
 
 ```bash
 loginctl hibernate
 ```
 
-## Sleep
+If everything is configured correctly, your system will save its state and power off. When you turn it back on, your session should resume exactly where you left off.
+
+## Using Different Power Modes
+
+Once hibernation is properly configured, you can use these commands to manage your system's power state:
+
+### Suspend (Sleep)
+
+Quickly suspend your system to RAM for fast resume:
 
 ```bash
 loginctl suspend
 ```
 
-## Hybrid Sleep (suspend to both)
+### Hibernate
+
+Save your session to disk and power off completely:
+
+```bash
+loginctl hibernate
+```
+
+### Hybrid Sleep
+
+Combine suspend and hibernation for maximum flexibility:
 
 ```bash
 loginctl hybrid-sleep
 ```
 
-## Suspend then hibernate
+### Suspend-Then-Hibernate
 
-Suspend the system and hibernate it after the delay specified in logind.conf.
+Suspend to RAM initially, then automatically hibernate after the delay specified in `logind.conf` (default: 3 hours):
 
 ```bash
 loginctl suspend-then-hibernate
 ```
 
-# References
+This is particularly useful for laptops—enjoy quick resumes for short breaks while ensuring your work is saved to disk if you're away longer.
 
-1. [Power management/Suspend and hibernate (Archwiki)](https://wiki.archlinux.org/title/Power_management/Suspend_and_hibernate)
-2. [elogind ](https://wiki.artixlinux.org/Main/Elogind)
-3. [logind.conf](https://manpages.debian.org/testing/elogind/logind.conf.5.en.html)
+## References
+
+1. [Power Management/Suspend and Hibernate - Arch Wiki](https://wiki.archlinux.org/title/Power_management/Suspend_and_hibernate)
+2. [Elogind - Artix Linux Wiki](https://wiki.artixlinux.org/Main/Elogind)
+3. [logind.conf Manual Page](https://manpages.debian.org/testing/elogind/logind.conf.5.en.html)

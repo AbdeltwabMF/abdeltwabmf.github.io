@@ -5,13 +5,12 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 // You might need to insert additional domains in script-src if you are using external services
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' cusdis.com;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline';
   style-src 'self' 'unsafe-inline';
   img-src * blob: data:;
   media-src 'none';
   connect-src *;
   font-src 'self';
-  frame-src cusdis.com
 `
 
 const securityHeaders = [
@@ -54,11 +53,6 @@ const securityHeaders = [
 
 module.exports = withBundleAnalyzer({
   env: {
-    NEXT_PUBLIC_CUSDIS_APP_ID: process.env.NEXT_PUBLIC_CUSDIS_APP_ID,
-    NEXT_PUBLIC_CUSDIS_HOST: process.env.NEXT_PUBLIC_CUSDIS_HOST,
-    CONVERTKIT_API_URL: process.env.CONVERTKIT_API_URL,
-    CONVERTKIT_API_KEY: process.env.CONVERTKIT_API_KEY,
-    CONVERTKIT_FORM_ID: process.env.CONVERTKIT_FORM_ID,
     PAT_GITHUB_REPO: process.env.PAT_GITHUB_REPO
   },
   reactStrictMode: true,
