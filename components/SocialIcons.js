@@ -13,7 +13,7 @@ import {
   faDocker,
   faResearchgate
 } from '@fortawesome/free-brands-svg-icons'
-import { faRss, faEnvelope, faKey } from '@fortawesome/free-solid-svg-icons'
+import { faRss, faEnvelope, faKey, faFileText } from '@fortawesome/free-solid-svg-icons'
 
 export default function SocialIcon (props) {
   const { kind, size, color } = props
@@ -58,6 +58,9 @@ export default function SocialIcon (props) {
       break
     case 'key':
       icon = faKey
+      break
+    case 'cv':
+      icon = faFileText
       break
     default:
       icon = faGithub
