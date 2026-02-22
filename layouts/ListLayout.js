@@ -3,6 +3,8 @@ import Tag from '@/components/Tag'
 import { useState } from 'react'
 import Pagination from '@/components/Pagination'
 import formatDate from '@/lib/utils/formatDate'
+import { H1 } from '@/components/Form'
+import Twemoji from '@/components/Twemoji'
 
 export default function ListLayout ({ posts, title, initialDisplayPosts = [], pagination }) {
   const [searchValue, setSearchValue] = useState('')
@@ -18,11 +20,12 @@ export default function ListLayout ({ posts, title, initialDisplayPosts = [], pa
   return (
     <>
       <div className='divide-y divide-gray-200 dark:divide-gray-700'>
-        <div className='pt-6 pb-8 space-y-2 md:space-y-5'>
-          <h1 className='text-3xl font-extrabold tracking-tight text-gray-900 leading-9 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14'>
-            {title}
-          </h1>
-          <div className='relative max-w-lg'>
+        <div className='pt-6 pb-8 space-y-4 md:space-y-5'>
+          <H1>
+            <span className='pr-4'>{title}</span>
+            <Twemoji emoji="pencil" />
+          </H1>
+          <div className='relative w-full'>
             <input
               aria-label='Search articles'
               type='text'

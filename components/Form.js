@@ -24,7 +24,7 @@ export function H1 (props) {
   return (
     <h1
       className={clsx(
-        'lg:text-5xl xl:text-6xl sm:text-3xl text-3xl mb-4 md:text-4xl font-bold text-transparent dark:text-transparent bg-gradient-to-r dark:bg-gradient-to-r from-sky-800 via-teal-400 to-violet-600 dark:from-sky-800 dark:via-teal-400 dark:to-violet-600 bg-clip-text dark:bg-clip-text',
+        'lg:text-4xl xl:text-5xl sm:text-2xl text-2xl mb-4 md:text-3xl font-bold text-transparent dark:text-transparent bg-gradient-to-r dark:bg-gradient-to-r from-sky-800 via-teal-400 to-violet-600 dark:from-sky-800 dark:via-teal-400 dark:to-violet-600 bg-clip-text dark:bg-clip-text',
         className
       )}
     >

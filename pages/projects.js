@@ -15,11 +15,11 @@ export default function Projects() {
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
         {/* Header */}
         <div className="space-y-4 pb-8 pt-6 md:space-y-5">
-          <H1 className="text-center text-neutral-600">
+          <H1>
             <span className="pr-4">Projects</span>
             <Twemoji emoji="rocket" />
           </H1>
-          <p className="text-center text-lg leading-7 text-gray-600 dark:text-gray-400">
+          <p className="text-lg leading-7 text-gray-600 dark:text-gray-400">
             Stuff I've built and actually use. Mostly tools that scratch my own itch.
           </p>
         </div>

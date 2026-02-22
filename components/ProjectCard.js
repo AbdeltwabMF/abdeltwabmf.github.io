@@ -37,7 +37,7 @@ const ProjectCard = ({ title, description, imgSrc, href, tags, stats, highlights
       <div className="p-6">
         {/* Title and Stats */}
         <div className="mb-3 flex items-start justify-between">
-          <h3 className="text-2xl font-bold leading-8 tracking-tight text-gray-900 dark:text-gray-100">
+          <h3 className="text-xl font-bold leading-8 tracking-tight text-gray-900 dark:text-gray-100">
             <Link
               href={href}
               className="hover:text-blue-600 dark:hover:text-blue-400"
