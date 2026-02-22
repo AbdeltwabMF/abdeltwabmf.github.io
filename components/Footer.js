@@ -26,17 +26,13 @@ export default function Footer () {
           <Twemoji emoji='palestinian-territories' size='twa-lg' />
         </div>
         <div className='flex items-center mb-4 font-mono text-neutral-700 text-md space-x-2 dark:text-neutral-600'>
-          <Link
-            href='/'
-          >
-            <Image
-              src={siteMetadata.siteLogo}
-              alt='logo'
-              width={48}
-              height={32}
-              className='align-middle'
-            />
-          </Link>
+          <Image
+            src={siteMetadata.siteLogo}
+            alt='logo'
+            width={36}
+            height={20}
+            className='h-auto'
+          />
           <div>{`© ${new Date().getFullYear()}`}</div>
           <div className='sr-only'>{' • '}</div>
           <div><GradientColor from='' via='' to=''>{siteMetadata.author}</GradientColor></div>

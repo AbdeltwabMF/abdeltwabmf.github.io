@@ -17,8 +17,14 @@ const LayoutWrapper = ({ children }) => {
         <header className='flex items-center justify-between py-2'>
           <div>
             <Link href='/' aria-label={siteMetadata.headerTitle}>
-              <div>
-                <Image src={siteMetadata.siteLogo} alt={siteMetadata.headerTitle} width={48} height={32} />
+              <div className='h-6'>
+                <Image
+                  src={siteMetadata.siteLogo}
+                  alt={siteMetadata.headerTitle}
+                  width={48}
+                  height={32}
+                  className='h-full w-auto object-contain'
+                />
               </div>
             </Link>
           </div>
