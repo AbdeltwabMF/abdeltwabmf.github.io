@@ -14,7 +14,7 @@ export default function Footer () {
           <SocialIconLink kind='email' href={`mailto:${siteMetadata.email}`} size={6} color='neutral' />
           <SocialIconLink kind='github' href={siteMetadata.github} size={6} color='neutral' />
           <SocialIconLink kind='cv' href='https://cv.abdeltwab.xyz' size={6} color='neutral' />
-          <SocialIconLink kind='key' href='/documents/pubkey.gpg' size={6} color='neutral' />
+          <SocialIconLink kind='key' href='/pubkey.gpg' size={6} color='neutral' />
         </div>
         <div className='flex flex-row flex-wrap items-center justify-center mt-2 mb-2 font-mono text-neutral-700 text-md space-x-2 dark:text-neutral-600'>
           <Link href='/credit' className='text-sky-600'>Credit</Link>
