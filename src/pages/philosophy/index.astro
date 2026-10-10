@@ -1,0 +1,72 @@
+---
+import ManPageLayout from '../../layouts/ManPageLayout.astro';
+const links = [
+  { id: 'name', label: 'NAME' },
+  { id: 'principles', label: 'PRINCIPLES' },
+  { id: 'software', label: 'SOFTWARE' },
+  { id: 'revision', label: 'REVISION' },
+  { id: 'also', label: 'SEE ALSO' }
+];
+---
+
+<ManPageLayout
+  title="Philosophy"
+  description="Working principles about software, simplicity, ownership, and changing one's mind."
+  manual="PHILOSOPHY(7)"
+  links={links}
+>
+  <section id="name" class="man-section">
+    <h2>NAME</h2>
+    <h1>
+      Philosophy <small>Working beliefs, not commandments.</small>
+    </h1>
+  </section>
+  <section id="principles" class="man-section">
+    <h2>PRINCIPLES</h2>
+    <dl class="definition-list">
+      <dt>understand first</dt>
+      <dd>
+        Abstraction is useful after the underlying problem is understood, not as a substitute for
+        understanding it.
+      </dd>
+      <dt>complexity costs</dt>
+      <dd>
+        A complicated system needs to earn its complexity. “Enterprise” and “modern” are not reasons
+        by themselves.
+      </dd>
+      <dt>users matter</dt>
+      <dd>
+        Tools should respect the person running them: their privacy, agency, data, attention, and
+        ability to leave.
+      </dd>
+      <dt>specific beats grand</dt>
+      <dd>
+        A small tool that solves one real problem is often more valuable than a broad promise.
+      </dd>
+    </dl>
+  </section>
+  <section id="software" class="man-section">
+    <h2>SOFTWARE</h2>
+    <p class="lede">I prefer software I can inspect, adapt, keep, and share.</p>
+    <p>
+      Free and open-source software is not automatically good software, but it preserves
+      possibilities that closed systems remove. It lets curiosity continue past the interface and
+      gives users a meaningful form of ownership.
+    </p>
+  </section>
+  <section id="revision" class="man-section">
+    <h2>REVISION</h2>
+    <p>
+      These views are expected to change. A belief that cannot survive better evidence is not a
+      principle; it is an attachment.
+    </p>
+  </section>
+  <section id="also" class="man-section">
+    <h2>SEE ALSO</h2>
+    <div class="see-also">
+      <a href="/about/">about(7)</a>
+      <a href="/uses/">uses(7)</a>
+      <a href="/writing/">writing(5)</a>
+    </div>
+  </section>
+</ManPageLayout>

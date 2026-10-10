@@ -1,0 +1,204 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import {
+  articleHref,
+  getProjects,
+  getPublishedArticles,
+  projectPrimaryHref,
+  formatDate
+} from '../lib/content';
+import { site } from '../data/site';
+import { now } from '../data/now';
+const articles = await getPublishedArticles();
+const projects = await getProjects();
+const featured = projects.filter((project) => project.data.featured).slice(0, 4);
+---
+
+<BaseLayout>
+  <section class="home-hero">
+    <div class="path">/home/abdeltwab</div>
+    <h1>
+      Abdeltwab
+      <br />
+      M. Fakhry
+    </h1>
+    <p class="role">C++ software engineer · FOSS enthusiast · cryptography admirer</p>
+    <p class="intro">
+      This is my small corner of the web: source code, field notes, unfinished opinions, and enough
+      personal history for friends and strangers to know the person behind the commits.
+    </p>
+    <nav class="quick-links" aria-label="Quick links">
+      <a href="#directory">browse</a>
+      <a href="#latest">latest</a>
+      <a href="#now">now</a>
+      <a
+        class="rtl-link"
+        href={articleHref(articles.find((article) => article.data.locale === 'ar')!)}
+        lang="ar"
+      >
+        عربي
+      </a>
+    </nav>
+  </section>
+
+  <section id="directory" class="directory" aria-labelledby="directory-title">
+    <h2 id="directory-title" class="sr-only">
+      Personal directory
+    </h2>
+    <div class="directory-head" aria-hidden="true">
+      <span>mode</span>
+      <span>name</span>
+      <span>description</span>
+    </div>
+    <ul class="directory-list">
+      <li>
+        <details open>
+          <summary>
+            <span class="file-mode">-rw-r--r--</span>
+            <span class="file-name">/about.7</span>
+            <span class="file-description">Who I am, formatted for humans and man(1).</span>
+            <span class="directory-marker" aria-hidden="true"></span>
+          </summary>
+          <div class="directory-preview manual-excerpt">
+            <h3>NAME</h3>
+            <p>
+              <b>abdeltwab</b> C++ software engineer · FOSS enthusiast · cryptography admirer
+            </p>
+            <h3>SYNOPSIS</h3>
+            <p class="synopsis">
+              <code>abdeltwab [--build systems] [--prefer source] [--stay curious]</code>
+            </p>
+            <h3>DESCRIPTION</h3>
+            <p>
+              I write C++ for a living and small tools to solve my own problems. GNU/Linux shaped
+              how I think about software: something to inspect, understand, modify, and share. My
+              interests lean toward systems programming, cryptography, distributed systems,
+              performance, and the occasional algorithmic challenge.
+            </p>
+            <div class="file-links">
+              <a href="/about/">open full manpage →</a>
+              <a href="/philosophy/">philosophy(7)</a>
+            </div>
+          </div>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>
+            <span class="file-mode">drwxr-xr-x</span>
+            <span class="file-name">/projects</span>
+            <span class="file-description">Things built, broken, measured, and shipped.</span>
+            <span class="directory-marker" aria-hidden="true"></span>
+          </summary>
+          <div class="directory-preview">
+            <p>
+              Selected software described through the problem and constraints rather than a wall of
+              technology badges.
+            </p>
+            <div class="file-links">
+              {featured.map((project) => (
+                <a href={projectPrimaryHref(project)}>{project.data.title}</a>
+              ))}
+              <a href="/projects/">all projects →</a>
+            </div>
+          </div>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>
+            <span class="file-mode">drwxr-xr-x</span>
+            <span class="file-name">/writing</span>
+            <span class="file-description">Technical notes in English and Arabic.</span>
+            <span class="directory-marker" aria-hidden="true"></span>
+          </summary>
+          <div class="directory-preview">
+            <div class="file-links">
+              {articles.slice(0, 4).map((article) => (
+                <a href={articleHref(article)} lang={article.data.locale}>
+                  {article.data.title}
+                </a>
+              ))}
+              <a href="/writing/">all writing →</a>
+              <a href="/feed.xml">feed.xml</a>
+            </div>
+          </div>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>
+            <span class="file-mode">drwxr-xr-x</span>
+            <span class="file-name">/uses</span>
+            <span class="file-description">Tools and systems chosen deliberately.</span>
+            <span class="directory-marker" aria-hidden="true"></span>
+          </summary>
+          <div class="directory-preview">
+            <p>
+              Artix with runit, suckless tools, Neovim, Zsh, C++, and LaTeX—the parts of my setup
+              that have earned their place.
+            </p>
+            <div class="file-links">
+              <a href="/uses/">open uses(7) →</a>
+            </div>
+          </div>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>
+            <span class="file-mode">-rw-r--r--</span>
+            <span class="file-name">/contact.txt</span>
+            <span class="file-description">Email, GitHub, résumé, and public key.</span>
+            <span class="directory-marker" aria-hidden="true"></span>
+          </summary>
+          <div class="directory-preview">
+            <div class="file-links">
+              <a href={`mailto:${site.email}`}>email</a>
+              <a href={site.github}>github</a>
+              <a href={site.cv}>résumé</a>
+              <a href={site.publicKey}>pubkey.gpg</a>
+            </div>
+          </div>
+        </details>
+      </li>
+    </ul>
+  </section>
+
+  <section id="latest" class="home-section">
+    <h2>cat ./pinned/*</h2>
+    <ul class="index-list">
+      {articles.slice(0, 3).map((article) => (
+        <li>
+          <time datetime={article.data.publishedAt.toISOString()}>
+            {formatDate(article.data.publishedAt, article.data.locale)}
+          </time>
+          <a href={articleHref(article)} lang={article.data.locale}>
+            {article.data.title}
+          </a>
+          <span class="label">{article.data.locale.toUpperCase()}</span>
+        </li>
+      ))}
+    </ul>
+  </section>
+  <section id="now" class="home-section">
+    <h2>watch ./now</h2>
+    <div class="now-grid">
+      <div>
+        <b>BUILDING</b>
+        <span>{now.building}</span>
+      </div>
+      <div>
+        <b>EXPLORING</b>
+        <span>{now.exploring}</span>
+      </div>
+      <div>
+        <b>WRITING</b>
+        <span>{now.writing}</span>
+      </div>
+    </div>
+    <p>
+      <a href="/now/">open now(1) →</a>
+    </p>
+  </section>
+</BaseLayout>

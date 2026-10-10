@@ -1,0 +1,82 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import ManPageLayout from '../../layouts/ManPageLayout.astro';
+import { slugFromId } from '../../lib/content';
+export async function getStaticPaths() {
+  return (await getCollection('projects')).map((project) => ({
+    params: { slug: slugFromId(project.id) },
+    props: { project }
+  }));
+}
+interface Props {
+  project: CollectionEntry<'projects'>;
+}
+const { project } = Astro.props;
+const { Content } = await render(project);
+const links = [
+  { id: 'name', label: 'NAME' },
+  { id: 'description', label: 'DESCRIPTION' },
+  { id: 'features', label: 'FEATURES' },
+  { id: 'links', label: 'LINKS' },
+  { id: 'also', label: 'SEE ALSO' }
+];
+---
+
+<ManPageLayout
+  title={project.data.title}
+  description={project.data.description}
+  manual={`${project.data.title.toUpperCase().replaceAll(' ', '-')}(5)`}
+  links={links}
+>
+  <section id="name" class="man-section">
+    <h2>NAME</h2>
+    <h1>
+      {project.data.title} <small>{project.data.description}</small>
+    </h1>
+  </section>
+  <section id="description" class="man-section prose">
+    <h2>DESCRIPTION</h2>
+    <Content />
+  </section>
+  <section id="features" class="man-section">
+    <h2>FEATURES</h2>
+    <dl class="definition-list">
+      <dt>status</dt>
+      <dd>{project.data.status}</dd>
+      <dt>stack</dt>
+      <dd>{project.data.stack.join(', ')}</dd>
+      {project.data.license && (
+        <>
+          <dt>license</dt>
+          <dd>{project.data.license}</dd>
+        </>
+      )}
+      {project.data.highlights.length > 0 && (
+        <>
+          <dt>highlights</dt>
+          <dd>
+            <ul>
+              {project.data.highlights.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </dd>
+        </>
+      )}
+    </dl>
+  </section>
+  <section id="links" class="man-section">
+    <h2>LINKS</h2>
+    <div class="see-also">
+      {project.data.repository && <a href={project.data.repository}>source repository</a>}
+      {project.data.homepage && <a href={project.data.homepage}>project homepage</a>}
+    </div>
+  </section>
+  <section id="also" class="man-section">
+    <h2>SEE ALSO</h2>
+    <div class="see-also">
+      <a href="/projects/">projects(5)</a>
+      <a href="/uses/">uses(7)</a>
+    </div>
+  </section>
+</ManPageLayout>

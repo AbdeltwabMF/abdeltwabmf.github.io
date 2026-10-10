@@ -1,0 +1,84 @@
+---
+import '../styles/global.css';
+import ThemeToggle from '../components/ThemeToggle.astro';
+import { primaryLinks, site } from '../data/site';
+interface Props {
+  title?: string;
+  description?: string;
+  locale?: 'en' | 'ar';
+  image?: string;
+}
+const { title = site.title, description = site.description, locale = 'en', image } = Astro.props;
+const canonical = new URL(Astro.url.pathname, site.url);
+const dir = locale === 'ar' ? 'rtl' : 'ltr';
+---
+
+<!doctype html>
+<html lang={locale === 'ar' ? 'ar-EG' : 'en'} dir={dir}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#f4f1e8" />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" type="application/rss+xml" title="Abdeltwab's writing" href="/feed.xml" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    {image && <meta property="og:image" content={new URL(image, site.url)} />}
+    <meta name="twitter:card" content={image ? 'summary_large_image' : 'summary'} />
+    <title>{title}</title>
+    <script is:inline>
+      (() => {
+        try {
+          const saved = localStorage.getItem('theme');
+          const value =
+            saved === 'dark' || saved === 'light'
+              ? saved
+              : matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light';
+          document.documentElement.dataset.theme = value;
+          document.documentElement.style.colorScheme = value;
+          document
+            .querySelector('meta[name="theme-color"]')
+            ?.setAttribute('content', value === 'dark' ? '#121518' : '#f4f1e8');
+        } catch {}
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">
+      Skip to main content
+    </a>
+    <div class="site-shell">
+      <header class="site-bar">
+        <a class="host" href="/" aria-label="Abdeltwab home">
+          abdeltwab@web:~
+        </a>
+        <nav aria-label="Primary">
+          {primaryLinks.map((link) => (
+            <a href={link.href}>{link.label}</a>
+          ))}
+        </nav>
+        <ThemeToggle />
+      </header>
+      <main id="main-content">
+        <slot />
+      </main>
+      <footer class="site-footer">
+        <span>source available · no trackers</span>
+        <span>
+          <a href={`mailto:${site.email}`}>mail</a> · <a href={site.github}>github</a> ·{' '}
+          <a href={site.cv}>cv</a> · <a href="/feed.xml">rss</a> ·{' '}
+          <a href={site.repository}>source</a>
+        </span>
+      </footer>
+    </div>
+  </body>
+</html>

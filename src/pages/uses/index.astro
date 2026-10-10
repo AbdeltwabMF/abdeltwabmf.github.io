@@ -1,0 +1,55 @@
+---
+import { getCollection } from 'astro:content';
+import ManPageLayout from '../../layouts/ManPageLayout.astro';
+const tools = (await getCollection('tools')).sort((a, b) => a.data.order - b.data.order);
+const groups = [
+  ['languages', 'LANGUAGES'],
+  ['systems', 'SYSTEMS'],
+  ['workflow', 'WORKFLOW'],
+  ['writing', 'WRITING']
+] as const;
+const links = [
+  { id: 'name', label: 'NAME' },
+  ...groups.map(([id, label]) => ({ id, label })),
+  { id: 'also', label: 'SEE ALSO' }
+];
+---
+
+<ManPageLayout
+  title="Uses"
+  description="Tools and systems Abdeltwab uses, and why they remain useful."
+  manual="USES(7)"
+  links={links}
+>
+  <section id="name" class="man-section">
+    <h2>NAME</h2>
+    <h1>
+      Uses <small>Tools chosen deliberately, not an inventory dump.</small>
+    </h1>
+  </section>
+  {groups.map(([category, label]) => (
+    <section id={category} class="man-section tool-group">
+      <h2>{label}</h2>
+      <ul class="tool-list">
+        {tools
+          .filter((tool) => tool.data.category === category)
+          .map((tool) => (
+            <li>
+              <strong>
+                {tool.data.url ? <a href={tool.data.url}>{tool.data.name}</a> : tool.data.name}
+              </strong>
+              <p>{tool.data.description}</p>
+            </li>
+          ))}
+      </ul>
+    </section>
+  ))}
+  <section id="also" class="man-section">
+    <h2>SEE ALSO</h2>
+    <div class="see-also">
+      <a href="/about/">about(7)</a>
+      <a href="/projects/">projects(5)</a>
+      <a href="/philosophy/">philosophy(7)</a>
+    </div>
+  </section>
+</ManPageLayout>

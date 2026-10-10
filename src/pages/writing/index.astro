@@ -1,0 +1,54 @@
+---
+import ManPageLayout from '../../layouts/ManPageLayout.astro';
+import { articleHref, formatDate, getPublishedArticles } from '../../lib/content';
+const articles = await getPublishedArticles();
+const links = [
+  { id: 'name', label: 'NAME' },
+  { id: 'articles', label: 'ARTICLES' },
+  { id: 'also', label: 'SEE ALSO' }
+];
+---
+
+<ManPageLayout
+  title="Writing"
+  description="Technical articles and personal notes by Abdeltwab M. Fakhry in English and Arabic."
+  manual="WRITING(5)"
+  links={links}
+>
+  <section id="name" class="man-section">
+    <h2>NAME</h2>
+    <h1>
+      Writing <small>Notes for future me and internet strangers.</small>
+    </h1>
+  </section>
+  <section id="articles" class="man-section">
+    <h2>ARTICLES</h2>
+    <ol class="project-list">
+      {articles.map((article) => (
+        <li lang={article.data.locale} dir={article.data.locale === 'ar' ? 'rtl' : 'ltr'}>
+          <span class="status-label">
+            {article.data.locale.toUpperCase()} ·{' '}
+            {formatDate(article.data.publishedAt, article.data.locale)}
+          </span>
+          <h3>
+            <a href={articleHref(article)}>{article.data.title}</a>
+          </h3>
+          <p>{article.data.description}</p>
+          <div class="meta-row">
+            {article.data.tags.map((tag) => (
+              <a href={`/tags/${tag}/`}>{tag}</a>
+            ))}
+          </div>
+        </li>
+      ))}
+    </ol>
+  </section>
+  <section id="also" class="man-section">
+    <h2>SEE ALSO</h2>
+    <div class="see-also">
+      <a href="/feed.xml">feed.xml</a>
+      <a href="/tags/">tags(5)</a>
+      <a href="/projects/">projects(5)</a>
+    </div>
+  </section>
+</ManPageLayout>

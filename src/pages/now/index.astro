@@ -1,0 +1,51 @@
+---
+import ManPageLayout from '../../layouts/ManPageLayout.astro';
+import { now } from '../../data/now';
+
+const links = [
+  { id: 'name', label: 'NAME' },
+  { id: 'current', label: 'CURRENT' },
+  { id: 'also', label: 'SEE ALSO' }
+];
+---
+
+<ManPageLayout
+  title="Now"
+  description="What Abdeltwab is currently building, exploring, and writing."
+  manual="NOW(1)"
+  links={links}
+>
+  <section id="name" class="man-section">
+    <h2>NAME</h2>
+    <h1>
+      Now
+      <small>A deliberately small snapshot.</small>
+    </h1>
+  </section>
+
+  <section id="current" class="man-section">
+    <h2>CURRENT</h2>
+    <dl class="definition-list">
+      <dt>building</dt>
+      <dd>{now.building}</dd>
+
+      <dt>exploring</dt>
+      <dd>{now.exploring}</dd>
+
+      <dt>writing</dt>
+      <dd>{now.writing}</dd>
+
+      <dt>updated</dt>
+      <dd>{now.updated}</dd>
+    </dl>
+  </section>
+
+  <section id="also" class="man-section">
+    <h2>SEE ALSO</h2>
+    <div class="see-also">
+      <a href="/about/">about(7)</a>
+      <a href="/projects/">projects(5)</a>
+      <a href="/writing/">writing(5)</a>
+    </div>
+  </section>
+</ManPageLayout>

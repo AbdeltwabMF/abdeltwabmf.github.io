@@ -1,0 +1,96 @@
+---
+import ManPageLayout from '../../layouts/ManPageLayout.astro';
+const links = [
+  { id: 'name', label: 'NAME' },
+  { id: 'synopsis', label: 'SYNOPSIS' },
+  { id: 'description', label: 'DESCRIPTION' },
+  { id: 'history', label: 'HISTORY' },
+  { id: 'interests', label: 'INTERESTS' },
+  { id: 'also', label: 'SEE ALSO' }
+];
+---
+
+<ManPageLayout
+  title="About"
+  description="About Abdeltwab M. Fakhry: software, open systems, interests, and the person behind the code."
+  manual="ABDELTWAB(7)"
+  links={links}
+>
+  <section id="name" class="man-section">
+    <h2>NAME</h2>
+    <h1>
+      Abdeltwab
+      <br />
+      M. Fakhry <small>C++ software engineer · FOSS enthusiast · cryptography admirer</small>
+    </h1>
+  </section>
+  <section id="synopsis" class="man-section">
+    <h2>SYNOPSIS</h2>
+    <p class="synopsis">
+      <code>abdeltwab [--build systems] [--prefer source] [--stay curious]</code>
+    </p>
+  </section>
+  <section id="description" class="man-section">
+    <h2>DESCRIPTION</h2>
+    <p class="lede">I write C++ for a living and small tools to solve my own problems.</p>
+    <p>
+      GNU/Linux shaped my interest in open, inspectable software. I'm drawn to systems programming,
+      cryptography, performance, and algorithmic challenges.
+    </p>
+    <p>This site is where I share my projects, thoughts, experiences, and interests beyond code.</p>
+  </section>
+  <section id="history" class="man-section">
+    <h2>HISTORY</h2>
+    <ul class="timeline">
+      <li>
+        <b>FIRST PRINCIPLE</b>
+        <span>Prefer understanding a system to merely operating it.</span>
+      </li>
+      <li>
+        <b>THE TURN</b>
+        <span>
+          Linux and free software turned the computer from an appliance into something inspectable
+          and alterable.
+        </span>
+      </li>
+      <li>
+        <b>CURRENT</b>
+        <span>
+          Building software, maintaining small tools, and writing down what was difficult enough to
+          remember.
+        </span>
+      </li>
+    </ul>
+  </section>
+  <section id="interests" class="man-section">
+    <h2>INTERESTS</h2>
+    <dl class="definition-list">
+      <dt>systems</dt>
+      <dd>C++, Linux, performance, and software close to the machine.</dd>
+      <dt>trust</dt>
+      <dd>
+        Cryptography, blockchain, decentralization, privacy, and the design of verifiable systems.
+      </dd>
+      <dt>problems</dt>
+      <dd>
+        Competitive programming when a compact, difficult puzzle is the right kind of diversion.
+      </dd>
+      <dt>outside code</dt>
+      <dd>
+        This part will grow through stories and recommendations rather than a manufactured list of
+        personality traits.
+      </dd>
+    </dl>
+  </section>
+  <section id="also" class="man-section">
+    <h2>SEE ALSO</h2>
+    <div class="see-also">
+      <a href="https://cv.abdeltwab.xyz">cv(1) ↗</a>
+      <a href="/projects/">projects(5)</a>
+      <a href="/philosophy/">philosophy(7)</a>
+      <a href="/uses/">uses(7)</a>
+      <a href="/writing/">writing(5)</a>
+      <a href="mailto:me@abdeltwab.xyz">mail(1)</a>
+    </div>
+  </section>
+</ManPageLayout>

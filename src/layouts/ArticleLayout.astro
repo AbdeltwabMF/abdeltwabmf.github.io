@@ -1,0 +1,61 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import { formatDate } from '../lib/content';
+interface Props {
+  title: string;
+  description: string;
+  publishedAt: Date;
+  updatedAt?: Date;
+  tags: string[];
+  locale: 'en' | 'ar';
+  headings: { depth: number; slug: string; text: string }[];
+}
+const { title, description, publishedAt, updatedAt, tags, locale, headings } = Astro.props;
+const toc = headings.filter((heading) => heading.depth >= 2 && heading.depth <= 3);
+---
+
+<BaseLayout title={`${title} — Abdeltwab M. Fakhry`} description={description} locale={locale}>
+  <div class="article-grid">
+    <aside class="article-aside">
+      <a href="/writing/">← writing(5)</a>
+      {toc.length > 0 && (
+        <nav aria-label="Table of contents">
+          <strong>CONTENTS</strong>
+          {toc.map((heading) => (
+            <a class={`depth-${heading.depth}`} href={`#${heading.slug}`}>
+              {heading.text}
+            </a>
+          ))}
+        </nav>
+      )}
+    </aside>
+    <article class="article prose">
+      <header>
+        <p class="path">/writing/{locale}/</p>
+        <h1>{title}</h1>
+        <p class="article-description">{description}</p>
+        <dl class="article-meta">
+          <dt>published</dt>
+          <dd>
+            <time datetime={publishedAt.toISOString()}>{formatDate(publishedAt, locale)}</time>
+          </dd>
+          {updatedAt && (
+            <>
+              <dt>updated</dt>
+              <dd>
+                <time datetime={updatedAt.toISOString()}>{formatDate(updatedAt, locale)}</time>
+              </dd>
+            </>
+          )}
+          <dt>tags</dt>
+          <dd>
+            {tags.map((tag) => (
+              <a href={`/tags/${tag}/`}>{tag}</a>
+            ))}
+          </dd>
+        </dl>
+      </header>
+      <slot />
+    </article>
+  </div>
+</BaseLayout>

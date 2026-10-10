@@ -1,0 +1,32 @@
+---
+import BaseLayout from './BaseLayout.astro';
+interface Link {
+  id: string;
+  label: string;
+}
+interface Props {
+  title: string;
+  description: string;
+  manual: string;
+  links: Link[];
+  locale?: 'en' | 'ar';
+}
+const { title, description, manual, links, locale = 'en' } = Astro.props;
+---
+
+<BaseLayout title={`${title} — Abdeltwab M. Fakhry`} description={description} locale={locale}>
+  <div class="man-top">
+    <a href="/">~/abdeltwab/</a>
+    <span>{manual}</span>
+  </div>
+  <div class="man-layout">
+    <nav class="man-nav" aria-label="Manual sections">
+      {links.map((link) => (
+        <a href={`#${link.id}`}>{link.label}</a>
+      ))}
+    </nav>
+    <article class="man-page">
+      <slot />
+    </article>
+  </div>
+</BaseLayout>
